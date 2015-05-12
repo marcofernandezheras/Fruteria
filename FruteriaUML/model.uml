@@ -6,6 +6,7 @@
       <ownedAttribute xmi:id="_rEeqIPiZEeS_k4uWeiG0mA" name="nombre" visibility="private" type="_c3HzkPiZEeS_k4uWeiG0mA"/>
       <ownedAttribute xmi:id="_vMQ-4PiZEeS_k4uWeiG0mA" name="apellidos" visibility="private" type="_c3HzkPiZEeS_k4uWeiG0mA"/>
       <ownedAttribute xmi:id="_95GmwPiZEeS_k4uWeiG0mA" name="colorPelo" visibility="private" type="_8AdDEPiZEeS_k4uWeiG0mA"/>
+      <interfaceRealization xmi:id="_LzHI4PitEeSpVbHaJ2qujg" client="_qpRxUPiYEeS_k4uWeiG0mA" supplier="_74I58PisEeSpVbHaJ2qujg" contract="_74I58PisEeSpVbHaJ2qujg"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_JemDMPiaEeS_k4uWeiG0mA" name="Articulo">
       <ownedAttribute xmi:id="_JemDMviaEeS_k4uWeiG0mA" name="nombre" visibility="private" type="_c3HzkPiZEeS_k4uWeiG0mA"/>
@@ -19,7 +20,14 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wa11YPiaEeS_k4uWeiG0mA" value="1"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_IGGw0PibEeS_k4uWeiG0mA" name="Pedido"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IGGw0PibEeS_k4uWeiG0mA" name="Pedido">
+      <ownedAttribute xmi:id="_gyzrYPisEeSpVbHaJ2qujg" name="numeroPedido" type="_sQGTQPiaEeS_k4uWeiG0mA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_74I58PisEeSpVbHaJ2qujg" name="Modificable">
+      <ownedOperation xmi:id="_CTXQ8PitEeSpVbHaJ2qujg" name="identificador">
+        <ownedParameter xmi:id="_EkQVgPitEeSpVbHaJ2qujg" name="identificador" type="_df8mwPicEeS_k4uWeiG0mA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_P1ZiUPicEeS_k4uWeiG0mA" name="IAccesoFicheros">
       <ownedOperation xmi:id="_lpikEPicEeS_k4uWeiG0mA" name="leerObjeto">
         <ownedParameter xmi:id="_moVHkPicEeS_k4uWeiG0mA" name="object" type="_df8mwPicEeS_k4uWeiG0mA" direction="return"/>
@@ -29,7 +37,7 @@
         <ownedParameter xmi:id="_-KgYcPicEeS_k4uWeiG0mA" name="success" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:id="_zOO4IPicEeS_k4uWeiG0mA" name="modificarObjeto">
-        <ownedParameter xmi:id="_0oiS8PicEeS_k4uWeiG0mA" name="objeto" type="_df8mwPicEeS_k4uWeiG0mA"/>
+        <ownedParameter xmi:id="_0oiS8PicEeS_k4uWeiG0mA" name="objeto" type="_74I58PisEeSpVbHaJ2qujg"/>
         <ownedParameter xmi:id="_BmGVkPidEeS_k4uWeiG0mA" name="success" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
     </packagedElement>
