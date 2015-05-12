@@ -85,4 +85,67 @@
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_O3JU4PidEeS_k4uWeiG0mA" name="File"/>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_8AdDEPiZEeS_k4uWeiG0mA" name="awt.Color"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_lHFAIPiwEeSpVbHaJ2qujg" name="Controlador">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_hK6iAPivEeSpVbHaJ2qujg" name="IListaArticulos">
+      <ownedOperation xmi:id="_tFnZcPivEeSpVbHaJ2qujg" name="buscarArticulo">
+        <ownedParameter xmi:id="_0b2AIPivEeSpVbHaJ2qujg" name="nombre" type="_c3HzkPiZEeS_k4uWeiG0mA"/>
+        <ownedParameter xmi:id="_3KRVQPivEeSpVbHaJ2qujg" name="articulo" type="_JemDMPiaEeS_k4uWeiG0mA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="__O4E4PivEeSpVbHaJ2qujg" name="insertarArticulo">
+        <ownedParameter xmi:id="_BxWosPiwEeSpVbHaJ2qujg" name="articulo" type="_JemDMPiaEeS_k4uWeiG0mA"/>
+        <ownedParameter xmi:id="_EUXYAPiwEeSpVbHaJ2qujg" name="exito" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_K1_R8PiwEeSpVbHaJ2qujg" name="ListaArticulos">
+      <interfaceRealization xmi:id="_QPyoMPiwEeSpVbHaJ2qujg" client="_K1_R8PiwEeSpVbHaJ2qujg" supplier="_hK6iAPivEeSpVbHaJ2qujg" contract="_hK6iAPivEeSpVbHaJ2qujg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_tFm88PiwEeSpVbHaJ2qujg" name="listaArticulossToArticulos" memberEnd="_tFnkAPiwEeSpVbHaJ2qujg _tGftwPiwEeSpVbHaJ2qujg" navigableOwnedEnd="_tGftwPiwEeSpVbHaJ2qujg">
+      <ownedEnd xmi:id="_tFnkAPiwEeSpVbHaJ2qujg" name="listaArticuloss" type="_K1_R8PiwEeSpVbHaJ2qujg" aggregation="composite" association="_tFm88PiwEeSpVbHaJ2qujg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tGfGsPiwEeSpVbHaJ2qujg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tGfGsfiwEeSpVbHaJ2qujg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_tGftwPiwEeSpVbHaJ2qujg" name="articulos" type="_JemDMPiaEeS_k4uWeiG0mA" association="_tFm88PiwEeSpVbHaJ2qujg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tHRw4PiwEeSpVbHaJ2qujg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tHSX8PiwEeSpVbHaJ2qujg" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_BBfckPixEeSpVbHaJ2qujg" name="listaArticulossToIAccesoFicheross" memberEnd="_BBgDoPixEeSpVbHaJ2qujg _BCRfsvixEeSpVbHaJ2qujg" navigableOwnedEnd="_BCRfsvixEeSpVbHaJ2qujg">
+      <ownedEnd xmi:id="_BBgDoPixEeSpVbHaJ2qujg" name="listaArticuloss" type="_K1_R8PiwEeSpVbHaJ2qujg" aggregation="shared" association="_BBfckPixEeSpVbHaJ2qujg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BCRfsPixEeSpVbHaJ2qujg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BCRfsfixEeSpVbHaJ2qujg" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_BCRfsvixEeSpVbHaJ2qujg" name="iAccesoFicheross" type="_P1ZiUPicEeS_k4uWeiG0mA" association="_BBfckPixEeSpVbHaJ2qujg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BC8OEPixEeSpVbHaJ2qujg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BC8OEfixEeSpVbHaJ2qujg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_QsxCoPixEeSpVbHaJ2qujg" name="ParaAltaArticulo">
+      <generalization xmi:id="__M6rIPixEeSpVbHaJ2qujg" general="_34y9QPixEeSpVbHaJ2qujg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_VxXk8PixEeSpVbHaJ2qujg" name="ParaBuscarArticulo">
+      <generalization xmi:id="_Ejr7gPiyEeSpVbHaJ2qujg" general="_AVYvEPiyEeSpVbHaJ2qujg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_gZsOgPixEeSpVbHaJ2qujg" name="paraAltaArticulosToIListaArticuloss" memberEnd="_gZsOgfixEeSpVbHaJ2qujg _gZuDsPixEeSpVbHaJ2qujg" navigableOwnedEnd="_gZuDsPixEeSpVbHaJ2qujg">
+      <ownedEnd xmi:id="_gZsOgfixEeSpVbHaJ2qujg" name="paraAltaArticulos" type="_QsxCoPixEeSpVbHaJ2qujg" aggregation="shared" association="_gZsOgPixEeSpVbHaJ2qujg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gZtcoPixEeSpVbHaJ2qujg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gZtcofixEeSpVbHaJ2qujg" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_gZuDsPixEeSpVbHaJ2qujg" name="iListaArticuloss" type="_hK6iAPivEeSpVbHaJ2qujg" association="_gZsOgPixEeSpVbHaJ2qujg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_gZuqwPixEeSpVbHaJ2qujg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_gZuqwfixEeSpVbHaJ2qujg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hT4l4PixEeSpVbHaJ2qujg" name="paraBuscarArticulosToIListaArticuloss" memberEnd="_hT4l4fixEeSpVbHaJ2qujg _hT6bEfixEeSpVbHaJ2qujg" navigableOwnedEnd="_hT6bEfixEeSpVbHaJ2qujg">
+      <ownedEnd xmi:id="_hT4l4fixEeSpVbHaJ2qujg" name="paraBuscarArticulos" type="_VxXk8PixEeSpVbHaJ2qujg" aggregation="shared" association="_hT4l4PixEeSpVbHaJ2qujg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hT50APixEeSpVbHaJ2qujg"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hT6bEPixEeSpVbHaJ2qujg" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_hT6bEfixEeSpVbHaJ2qujg" name="iListaArticuloss" type="_hK6iAPivEeSpVbHaJ2qujg" association="_hT4l4PixEeSpVbHaJ2qujg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hT7CIPixEeSpVbHaJ2qujg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hT7pMPixEeSpVbHaJ2qujg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_34y9QPixEeSpVbHaJ2qujg" name="AltaArticuloUI"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AVYvEPiyEeSpVbHaJ2qujg" name="BuscarArticuloUI"/>
+  </packagedElement>
 </uml:Model>
