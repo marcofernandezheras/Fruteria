@@ -20,6 +20,9 @@
       <ownedAttribute xmi:id="_tvAhQPiaEeS_k4uWeiG0mA" name="cantidad" type="_sQGTQPiaEeS_k4uWeiG0mA">
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wa11YPiaEeS_k4uWeiG0mA" value="1"/>
       </ownedAttribute>
+      <ownedOperation xmi:id="_1NWIAPjPEeSdTIkMRkhNTQ" name="totalLinea">
+        <ownedParameter xmi:id="_3Ob2APjPEeSdTIkMRkhNTQ" name="total" type="_nckIQPiZEeS_k4uWeiG0mA" direction="return"/>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_IGGw0PibEeS_k4uWeiG0mA" name="Pedido">
       <ownedAttribute xmi:id="_gyzrYPisEeSpVbHaJ2qujg" name="numeroPedido" type="_sQGTQPiaEeS_k4uWeiG0mA"/>

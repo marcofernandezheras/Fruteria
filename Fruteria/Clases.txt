@@ -1,0 +1,109 @@
+I: Implementa
+E: Extiende
+
+/************************************
+/*			CLASES					*
+************************************/
+modelo
+	|_ Articulo
+	|_ Cliente: I:Modificable
+	|_ Pedido
+	|_ LineaPedido
+	|_ AccesoFichero: I:IAccesoFicheros
+
+vista
+	|_ AltaArticuloUI  : E:JPanel
+	|_ BuscarArticuloUI: E:JPanel
+	|_ AltaClienteUI   : E:JPanel
+	|_ ModClienteUI    : E:JPanel
+	|_ BuscarClienteUI : E:JPanel
+	|_ AltaPedidoUI    : E:JPanel
+	|_ BuscarPedidoUI  : E:JPanel
+	|_ PrincipalUI     : E:JFrame
+
+controlador
+	|_ ListaArticulos    : I:IListaArticulos
+	|_ ListaCliente      : I:IListaCliente
+	|_ ListaPedidos	     : I:IListaPedidos
+	|_ ParaAltaArticulo  : E:AltaArticuloUI  
+	|_ ParaBuscarArticulo: E:BuscarArticuloUI
+	|_ ParaAltaCliente   : E:AltaCliente     
+	|_ ParaModCliente 	 : E:ModCliente 	   
+	|_ ParaBuscarCliente : E:BuscarCliente   
+	|_ ParaAltaPedido 	 : E:AltaPedido 	   
+	|_ ParaBuscarPedido  : E:BuscarPedido    
+	|_ ParaPrincipalUI   : E:PrincipalUI     
+
+
+
+/************************************
+/*		   IMPLEMENTACIONES	    	*
+************************************/
+modelo
+	|_ Articulo          :  1   hora
+	|_ Cliente           :  1.5 horas
+	|_ Pedido            :  1   hora
+	|_ LineaPedido       :	1   hora
+	|_ AccesoFichero     :	4   horas
+
+vista
+	|_ AltaArticuloUI    :	1   hora	
+	|_ BuscarArticuloUI  :	1   hora
+	|_ AltaClienteUI     :	1   hora
+	|_ ModClienteUI      :	1   hora
+	|_ BuscarClienteUI   :	1   hora
+	|_ AltaPedidoUI      :	4	horas
+	|_ BuscarPedidoUI    :	1   hora
+	|_ PrincipalUI       :	1   hora
+
+controlador
+	|_ ListaArticulos    :	3   horas
+	|_ ListaCliente      :	3   horas
+	|_ ListaPedidos	     :	3   horas
+	|_ ParaAltaArticulo  :	2	horas
+	|_ ParaBuscarArticulo:	1	hora	
+	|_ ParaAltaCliente   :	2	horas
+	|_ ParaModCliente 	 :	1	hora
+	|_ ParaBuscarCliente :	1	hora
+	|_ ParaAltaPedido 	 :	4	horas
+	|_ ParaBuscarPedido  :	2	horas
+	|_ ParaPrincipalUI   :	2	horas
+_________________________________________
+						   43.5 horas	
+
+
+
+/************************************
+/*		        TESTS	    	    *
+************************************/
+modelo
+	|_ Articulo          :  0.5 hora
+	|_ Cliente           :  0   horas
+	|_ Pedido            :  1   hora
+	|_ LineaPedido       :	0.5 hora
+	|_ AccesoFichero     :	4   horas
+
+vista
+	|_ AltaArticuloUI    :	0   horas	
+	|_ BuscarArticuloUI  :	0   horas
+	|_ AltaClienteUI     :	0   horas
+	|_ ModClienteUI      :	0   horas
+	|_ BuscarClienteUI   :	0   horas
+	|_ AltaPedidoUI      :	0	horas
+	|_ BuscarPedidoUI    :	0   horas
+	|_ PrincipalUI       :	0   horas
+
+controlador
+	|_ ListaArticulos    :	3   horas
+	|_ ListaCliente      :	3   horas
+	|_ ListaPedidos	     :	3   horas
+	|_ ParaAltaArticulo  :	?	horas
+	|_ ParaBuscarArticulo:	?	hora	
+	|_ ParaAltaCliente   :	?	horas
+	|_ ParaModCliente 	 :	?	hora
+	|_ ParaBuscarCliente :	?	hora
+	|_ ParaAltaPedido 	 :	?	horas
+	|_ ParaBuscarPedido  :	?	horas
+	|_ ParaPrincipalUI   :	?	horas
+_________________________________________
+						   15 + ? horas							   
