@@ -1,29 +1,143 @@
 package modelo;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.EOFException;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.List;
+import java.util.ArrayList;
+
+
 public class AccesoFichero implements IAccesoFichero {
 
+	private File archivo = null;
+	private ObjectInputStream inStream = null;
+	private ObjectOutputStream outStream = null;
+	private int leidos = 0;
+	
+	public AccesoFichero(File archivo) throws FileNotFoundException {
+		if(!archivo.exists())
+			throw new FileNotFoundException();
+		this.archivo = archivo;		
+	}
+	
+	private ObjectOutputStream getOutStream(boolean append) throws IOException{
+		BufferedOutputStream buffer = new BufferedOutputStream(new FileOutputStream(archivo,append));
+		//FIXME stream para hacer append si existe el archivo
+		return append ? null : new ObjectOutputStream(buffer);
+	}
+	
+	private ObjectInputStream getInStream() throws FileNotFoundException, IOException{
+		return new ObjectInputStream(new BufferedInputStream(new FileInputStream(archivo)));
+	}
+	
 	@Override
 	public Object leerObjeto() {
-		// TODO Auto-generated method stub
-		return null;
+		try 
+		{
+			if(inStream == null)
+			{
+				if(outStream != null)
+				{
+					outStream.close();
+					outStream = null;
+				}
+				inStream = getInStream();
+				for (int i = 0; i < leidos; i++) {
+					inStream.readObject();
+				}
+			}
+			Object object = inStream.readObject();
+			leidos++;
+			return object;
+		} catch (ClassNotFoundException | IOException e) {
+			return null;
+		}		
 	}
 
 	@Override
 	public boolean escribirObjeto(Object objeto) {
-		// TODO Auto-generated method stub
-		return false;
+		try {
+			if(outStream == null)
+			{
+				if(inStream != null)
+				{
+					inStream.close();
+					inStream = null;
+				}				
+				outStream = getOutStream(archivo.exists());
+			}
+			outStream.writeObject(archivo);	
+			outStream.flush();
+			return true;
+		} catch (IOException e) {
+			return false;
+		} 		
 	}
 
 	@Override
 	public boolean modificarObjeto(Modificable objeto) {
-		// TODO Auto-generated method stub
-		return false;
+		boolean modificado = false;
+		try {
+			this.close();
+			List<Object> objectList = new ArrayList<Object>();
+			inStream = getInStream();
+			try {
+				while(true)
+				{
+					Modificable old = (Modificable)inStream.readObject();
+					if (old.identificador().equals(objeto.identificador())) 
+					{
+						objectList.add(objeto);
+						modificado = true;
+					}
+					else
+						objectList.add(old);
+				}
+			} catch (EOFException e) { /*Capturo el final del archivo */}
+			
+			//Cierro el input para poder abrir el output
+			this.close();
+			//Abro el stream para grabar el archivo entero
+			//XXX Grabar en temporal y renombrar??
+			outStream = getOutStream(false);
+			for (Object obj : objectList) {
+				outStream.writeObject(obj);
+			}
+			outStream.flush();
+			return modificado;			
+		} 
+		catch (Exception e) 
+		{
+			try {
+				this.close();
+			} 
+			catch (Exception e1) 
+			{
+				e1.printStackTrace();
+			}
+			return false;
+		}		
 	}
 
 	@Override
 	public void close() throws Exception {
-		// TODO Auto-generated method stub
-		
+		if(inStream != null)
+		{
+			inStream.close();
+			inStream = null;
+		}
+		if(outStream != null)
+		{
+			outStream.close();
+			outStream = null;
+		}
 	}
 
 }
