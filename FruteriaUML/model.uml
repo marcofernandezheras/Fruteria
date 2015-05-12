@@ -33,6 +33,7 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_P1ZiUPicEeS_k4uWeiG0mA" name="IAccesoFicheros">
+      <generalization xmi:id="_Z1HOwPjTEeSdTIkMRkhNTQ" general="_O8sTsPjTEeSdTIkMRkhNTQ"/>
       <ownedOperation xmi:id="_lpikEPicEeS_k4uWeiG0mA" name="leerObjeto">
         <ownedParameter xmi:id="_moVHkPicEeS_k4uWeiG0mA" name="object" type="_df8mwPicEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
@@ -530,4 +531,5 @@
       <ownedEnd xmi:id="_GkqycPjLEeSdTIkMRkhNTQ" type="_AvfkQPjKEeSdTIkMRkhNTQ" association="_GkpkUPjLEeSdTIkMRkhNTQ"/>
     </nestedClassifier>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_O8sTsPjTEeSdTIkMRkhNTQ" name="java.lang.AutoCloseable"/>
 </uml:Model>

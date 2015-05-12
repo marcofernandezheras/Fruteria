@@ -1,6 +1,6 @@
 package modelo;
 
-public interface IAccesoFichero {
+public interface IAccesoFichero extends AutoCloseable{
 	/**
 	 * Leer un nuevo objeto desde su forma
 	 * serializada
