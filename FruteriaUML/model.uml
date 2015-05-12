@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_bruM4PiYEeS_k4uWeiG0mA" name="Fruteria">
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_bruM4PiYEeS_k4uWeiG0mA" name="Fruteria">
   <packagedElement xmi:type="uml:Package" xmi:id="_gh0m4PidEeS_k4uWeiG0mA" name="Modelo">
     <packagedElement xmi:type="uml:Class" xmi:id="_qpRxUPiYEeS_k4uWeiG0mA" name="Cliente">
       <ownedAttribute xmi:id="_iPx6UPiZEeS_k4uWeiG0mA" name="dni" visibility="private" type="_c3HzkPiZEeS_k4uWeiG0mA"/>
@@ -53,8 +53,8 @@
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_c3HzkPiZEeS_k4uWeiG0mA" name="String"/>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_nckIQPiZEeS_k4uWeiG0mA" name="float"/>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_7TXzQPicEeS_k4uWeiG0mA" name="boolean"/>
-    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_O3JU4PidEeS_k4uWeiG0mA" name="File"/>
-    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_8AdDEPiZEeS_k4uWeiG0mA" name="awt.Color"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_O3JU4PidEeS_k4uWeiG0mA" name="java.io.File"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_8AdDEPiZEeS_k4uWeiG0mA" name="java.awt.Color"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_ip4KoPjAEeSdTIkMRkhNTQ" name="Primitives">
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4KofjAEeSdTIkMRkhNTQ" name="Object"/>
       <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4KovjAEeSdTIkMRkhNTQ" name="int"/>
@@ -392,5 +392,139 @@
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mLlpwPizEeSpVbHaJ2qujg" value="1"/>
       </ownedEnd>
     </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_6xulUPjJEeSdTIkMRkhNTQ" name="CasosUso">
+    <packagedElement xmi:type="uml:Actor" xmi:id="_1C6BUPjJEeSdTIkMRkhNTQ" name="Tendero"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_9pvUQPjJEeSdTIkMRkhNTQ" name="Gestor"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_AvfkQPjKEeSdTIkMRkhNTQ" name="Frutero"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_idMYgPjLEeSdTIkMRkhNTQ" name="Tendero"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_idMYgfjLEeSdTIkMRkhNTQ" name="Gestor"/>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_idMYgvjLEeSdTIkMRkhNTQ" name="Frutero"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_idMYg_jLEeSdTIkMRkhNTQ" name="Fruteria" useCase="_idMYhvjLEeSdTIkMRkhNTQ _idMYh_jLEeSdTIkMRkhNTQ _idMYifjLEeSdTIkMRkhNTQ _idMYi_jLEeSdTIkMRkhNTQ _idMYkvjLEeSdTIkMRkhNTQ _idMYlfjLEeSdTIkMRkhNTQ _idMYlvjLEeSdTIkMRkhNTQ">
+      <ownedUseCase xmi:id="_idMYhPjLEeSdTIkMRkhNTQ" name="Dar de alta Articulo">
+        <include xmi:id="_idMYhfjLEeSdTIkMRkhNTQ" addition="_idMYhvjLEeSdTIkMRkhNTQ"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_idMYhvjLEeSdTIkMRkhNTQ" name="Buscar Articulo" subject="_idMYg_jLEeSdTIkMRkhNTQ"/>
+      <ownedUseCase xmi:id="_idMYh_jLEeSdTIkMRkhNTQ" name="Buscar Cliente" subject="_idMYg_jLEeSdTIkMRkhNTQ">
+        <ownedUseCase xmi:id="_idMYiPjLEeSdTIkMRkhNTQ" name="Buscar Cliente"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_idMYifjLEeSdTIkMRkhNTQ" name="Modificar Cliente" subject="_idMYg_jLEeSdTIkMRkhNTQ">
+        <include xmi:id="_idMYivjLEeSdTIkMRkhNTQ" addition="_idMYh_jLEeSdTIkMRkhNTQ"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_idMYi_jLEeSdTIkMRkhNTQ" name="Dar de alta Cliente" subject="_idMYg_jLEeSdTIkMRkhNTQ">
+        <include xmi:id="_idMYjPjLEeSdTIkMRkhNTQ" addition="_idMYh_jLEeSdTIkMRkhNTQ"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_idMYjfjLEeSdTIkMRkhNTQ" name="Buscar Cliente"/>
+      <ownedUseCase xmi:id="_idMYjvjLEeSdTIkMRkhNTQ" name="Dar de alta Cliente">
+        <extend xmi:id="_idMYj_jLEeSdTIkMRkhNTQ" extendedCase="_idMYjfjLEeSdTIkMRkhNTQ"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_idMYkPjLEeSdTIkMRkhNTQ" name="Buscar Articulo">
+        <extend xmi:id="_idMYkfjLEeSdTIkMRkhNTQ" extendedCase="_idMYlvjLEeSdTIkMRkhNTQ"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_idMYkvjLEeSdTIkMRkhNTQ" name="Crear Pedido" subject="_idMYg_jLEeSdTIkMRkhNTQ">
+        <include xmi:id="_idMYk_jLEeSdTIkMRkhNTQ" addition="_idMYjfjLEeSdTIkMRkhNTQ"/>
+        <include xmi:id="_idMYlPjLEeSdTIkMRkhNTQ" addition="_idMYlvjLEeSdTIkMRkhNTQ"/>
+      </ownedUseCase>
+      <ownedUseCase xmi:id="_idMYlfjLEeSdTIkMRkhNTQ" name="Buscar Pedido" subject="_idMYg_jLEeSdTIkMRkhNTQ"/>
+      <ownedUseCase xmi:id="_idMYlvjLEeSdTIkMRkhNTQ" name="Crear linea de pedido" subject="_idMYg_jLEeSdTIkMRkhNTQ"/>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_idMYl_jLEeSdTIkMRkhNTQ" memberEnd="_idMYmPjLEeSdTIkMRkhNTQ _idMYmfjLEeSdTIkMRkhNTQ">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:id="_idMYmPjLEeSdTIkMRkhNTQ" type="_idMYhvjLEeSdTIkMRkhNTQ" association="_idMYl_jLEeSdTIkMRkhNTQ"/>
+        <ownedEnd xmi:id="_idMYmfjLEeSdTIkMRkhNTQ" type="_idMYgPjLEeSdTIkMRkhNTQ" association="_idMYl_jLEeSdTIkMRkhNTQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_idMYmvjLEeSdTIkMRkhNTQ" memberEnd="_idMYm_jLEeSdTIkMRkhNTQ _idMYnPjLEeSdTIkMRkhNTQ">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:id="_idMYm_jLEeSdTIkMRkhNTQ" type="_idMYhPjLEeSdTIkMRkhNTQ" association="_idMYmvjLEeSdTIkMRkhNTQ"/>
+        <ownedEnd xmi:id="_idMYnPjLEeSdTIkMRkhNTQ" type="_idMYgPjLEeSdTIkMRkhNTQ" association="_idMYmvjLEeSdTIkMRkhNTQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_idMYnfjLEeSdTIkMRkhNTQ" memberEnd="_idMYnvjLEeSdTIkMRkhNTQ _idMYn_jLEeSdTIkMRkhNTQ">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:id="_idMYnvjLEeSdTIkMRkhNTQ" type="_idMYh_jLEeSdTIkMRkhNTQ" association="_idMYnfjLEeSdTIkMRkhNTQ"/>
+        <ownedEnd xmi:id="_idMYn_jLEeSdTIkMRkhNTQ" type="_idMYgfjLEeSdTIkMRkhNTQ" association="_idMYnfjLEeSdTIkMRkhNTQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_idMYoPjLEeSdTIkMRkhNTQ" memberEnd="_idMYofjLEeSdTIkMRkhNTQ _idMYovjLEeSdTIkMRkhNTQ">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:id="_idMYofjLEeSdTIkMRkhNTQ" type="_idMYifjLEeSdTIkMRkhNTQ" association="_idMYoPjLEeSdTIkMRkhNTQ"/>
+        <ownedEnd xmi:id="_idMYovjLEeSdTIkMRkhNTQ" type="_idMYgfjLEeSdTIkMRkhNTQ" association="_idMYoPjLEeSdTIkMRkhNTQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_idMYo_jLEeSdTIkMRkhNTQ" memberEnd="_idMYpPjLEeSdTIkMRkhNTQ _idMYpfjLEeSdTIkMRkhNTQ">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:id="_idMYpPjLEeSdTIkMRkhNTQ" type="_idMYi_jLEeSdTIkMRkhNTQ" association="_idMYo_jLEeSdTIkMRkhNTQ"/>
+        <ownedEnd xmi:id="_idMYpfjLEeSdTIkMRkhNTQ" type="_idMYgfjLEeSdTIkMRkhNTQ" association="_idMYo_jLEeSdTIkMRkhNTQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_idMYpvjLEeSdTIkMRkhNTQ" memberEnd="_idMYp_jLEeSdTIkMRkhNTQ _idMYqPjLEeSdTIkMRkhNTQ">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:id="_idMYp_jLEeSdTIkMRkhNTQ" type="_idMYkvjLEeSdTIkMRkhNTQ" association="_idMYpvjLEeSdTIkMRkhNTQ"/>
+        <ownedEnd xmi:id="_idMYqPjLEeSdTIkMRkhNTQ" type="_idMYgvjLEeSdTIkMRkhNTQ" association="_idMYpvjLEeSdTIkMRkhNTQ"/>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:Association" xmi:id="_idMYqfjLEeSdTIkMRkhNTQ" memberEnd="_idMYqvjLEeSdTIkMRkhNTQ _idMYq_jLEeSdTIkMRkhNTQ">
+        <name xsi:nil="true"/>
+        <ownedEnd xmi:id="_idMYqvjLEeSdTIkMRkhNTQ" type="_idMYlfjLEeSdTIkMRkhNTQ" association="_idMYqfjLEeSdTIkMRkhNTQ"/>
+        <ownedEnd xmi:id="_idMYq_jLEeSdTIkMRkhNTQ" type="_idMYgvjLEeSdTIkMRkhNTQ" association="_idMYqfjLEeSdTIkMRkhNTQ"/>
+      </nestedClassifier>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_EdJhwPjKEeSdTIkMRkhNTQ" name="Fruteria" useCase="_OnDxAPjKEeSdTIkMRkhNTQ _Q1U_YPjKEeSdTIkMRkhNTQ _k9tp8PjKEeSdTIkMRkhNTQ _lUd9EPjKEeSdTIkMRkhNTQ _CVeOIPjLEeSdTIkMRkhNTQ _C29xoPjLEeSdTIkMRkhNTQ _WmaXwPjLEeSdTIkMRkhNTQ">
+    <ownedUseCase xmi:id="_TE_78PjKEeSdTIkMRkhNTQ" name="Dar de alta Articulo">
+      <include xmi:id="_jTT9oPjKEeSdTIkMRkhNTQ" addition="_OnDxAPjKEeSdTIkMRkhNTQ"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_OnDxAPjKEeSdTIkMRkhNTQ" name="Buscar Articulo" subject="_EdJhwPjKEeSdTIkMRkhNTQ"/>
+    <ownedUseCase xmi:id="_Q1U_YPjKEeSdTIkMRkhNTQ" name="Buscar Cliente" subject="_EdJhwPjKEeSdTIkMRkhNTQ">
+      <ownedUseCase xmi:id="_MyHzMPjLEeSdTIkMRkhNTQ" name="Buscar Cliente"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_k9tp8PjKEeSdTIkMRkhNTQ" name="Modificar Cliente" subject="_EdJhwPjKEeSdTIkMRkhNTQ">
+      <include xmi:id="_2dIHIPjKEeSdTIkMRkhNTQ" addition="_Q1U_YPjKEeSdTIkMRkhNTQ"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_lUd9EPjKEeSdTIkMRkhNTQ" name="Dar de alta Cliente" subject="_EdJhwPjKEeSdTIkMRkhNTQ">
+      <include xmi:id="_1n4hMPjKEeSdTIkMRkhNTQ" addition="_Q1U_YPjKEeSdTIkMRkhNTQ"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_N1GTIPjLEeSdTIkMRkhNTQ" name="Buscar Cliente"/>
+    <ownedUseCase xmi:id="_PXWJAPjLEeSdTIkMRkhNTQ" name="Dar de alta Cliente">
+      <extend xmi:id="_VCixQPjLEeSdTIkMRkhNTQ" extendedCase="_N1GTIPjLEeSdTIkMRkhNTQ"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_Z8jNIPjLEeSdTIkMRkhNTQ" name="Buscar Articulo">
+      <extend xmi:id="_bdsPwPjLEeSdTIkMRkhNTQ" extendedCase="_WmaXwPjLEeSdTIkMRkhNTQ"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_CVeOIPjLEeSdTIkMRkhNTQ" name="Crear Pedido" subject="_EdJhwPjKEeSdTIkMRkhNTQ">
+      <include xmi:id="_Up614PjLEeSdTIkMRkhNTQ" addition="_N1GTIPjLEeSdTIkMRkhNTQ"/>
+      <include xmi:id="_bBGaYPjLEeSdTIkMRkhNTQ" addition="_WmaXwPjLEeSdTIkMRkhNTQ"/>
+    </ownedUseCase>
+    <ownedUseCase xmi:id="_C29xoPjLEeSdTIkMRkhNTQ" name="Buscar Pedido" subject="_EdJhwPjKEeSdTIkMRkhNTQ"/>
+    <ownedUseCase xmi:id="_WmaXwPjLEeSdTIkMRkhNTQ" name="Crear linea de pedido" subject="_EdJhwPjKEeSdTIkMRkhNTQ"/>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_iKhwoPjKEeSdTIkMRkhNTQ" memberEnd="_iKhwofjKEeSdTIkMRkhNTQ _iKi-wPjKEeSdTIkMRkhNTQ">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_iKhwofjKEeSdTIkMRkhNTQ" type="_OnDxAPjKEeSdTIkMRkhNTQ" association="_iKhwoPjKEeSdTIkMRkhNTQ"/>
+      <ownedEnd xmi:id="_iKi-wPjKEeSdTIkMRkhNTQ" type="_1C6BUPjJEeSdTIkMRkhNTQ" association="_iKhwoPjKEeSdTIkMRkhNTQ"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_ive30PjKEeSdTIkMRkhNTQ" memberEnd="_ive30fjKEeSdTIkMRkhNTQ _ivgF8PjKEeSdTIkMRkhNTQ">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_ive30fjKEeSdTIkMRkhNTQ" type="_TE_78PjKEeSdTIkMRkhNTQ" association="_ive30PjKEeSdTIkMRkhNTQ"/>
+      <ownedEnd xmi:id="_ivgF8PjKEeSdTIkMRkhNTQ" type="_1C6BUPjJEeSdTIkMRkhNTQ" association="_ive30PjKEeSdTIkMRkhNTQ"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_4Of-IPjKEeSdTIkMRkhNTQ" memberEnd="_4Of-IfjKEeSdTIkMRkhNTQ _4OglMPjKEeSdTIkMRkhNTQ">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_4Of-IfjKEeSdTIkMRkhNTQ" type="_Q1U_YPjKEeSdTIkMRkhNTQ" association="_4Of-IPjKEeSdTIkMRkhNTQ"/>
+      <ownedEnd xmi:id="_4OglMPjKEeSdTIkMRkhNTQ" type="_9pvUQPjJEeSdTIkMRkhNTQ" association="_4Of-IPjKEeSdTIkMRkhNTQ"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_5pR6EPjKEeSdTIkMRkhNTQ" memberEnd="_5pR6EfjKEeSdTIkMRkhNTQ _5pShIPjKEeSdTIkMRkhNTQ">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_5pR6EfjKEeSdTIkMRkhNTQ" type="_k9tp8PjKEeSdTIkMRkhNTQ" association="_5pR6EPjKEeSdTIkMRkhNTQ"/>
+      <ownedEnd xmi:id="_5pShIPjKEeSdTIkMRkhNTQ" type="_9pvUQPjJEeSdTIkMRkhNTQ" association="_5pR6EPjKEeSdTIkMRkhNTQ"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_6Iu2MPjKEeSdTIkMRkhNTQ" memberEnd="_6Iu2MfjKEeSdTIkMRkhNTQ _6IvdQPjKEeSdTIkMRkhNTQ">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_6Iu2MfjKEeSdTIkMRkhNTQ" type="_lUd9EPjKEeSdTIkMRkhNTQ" association="_6Iu2MPjKEeSdTIkMRkhNTQ"/>
+      <ownedEnd xmi:id="_6IvdQPjKEeSdTIkMRkhNTQ" type="_9pvUQPjJEeSdTIkMRkhNTQ" association="_6Iu2MPjKEeSdTIkMRkhNTQ"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_GIWC0PjLEeSdTIkMRkhNTQ" memberEnd="_GIWp4PjLEeSdTIkMRkhNTQ _GIXQ8PjLEeSdTIkMRkhNTQ">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_GIWp4PjLEeSdTIkMRkhNTQ" type="_CVeOIPjLEeSdTIkMRkhNTQ" association="_GIWC0PjLEeSdTIkMRkhNTQ"/>
+      <ownedEnd xmi:id="_GIXQ8PjLEeSdTIkMRkhNTQ" type="_AvfkQPjKEeSdTIkMRkhNTQ" association="_GIWC0PjLEeSdTIkMRkhNTQ"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Association" xmi:id="_GkpkUPjLEeSdTIkMRkhNTQ" memberEnd="_GkpkUfjLEeSdTIkMRkhNTQ _GkqycPjLEeSdTIkMRkhNTQ">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_GkpkUfjLEeSdTIkMRkhNTQ" type="_C29xoPjLEeSdTIkMRkhNTQ" association="_GkpkUPjLEeSdTIkMRkhNTQ"/>
+      <ownedEnd xmi:id="_GkqycPjLEeSdTIkMRkhNTQ" type="_AvfkQPjKEeSdTIkMRkhNTQ" association="_GkpkUPjLEeSdTIkMRkhNTQ"/>
+    </nestedClassifier>
   </packagedElement>
 </uml:Model>
