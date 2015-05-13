@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 
-public class AccesoFichero implements IAccesoFichero {
+public class AccesoFichero implements IAccesoDatos {
 
 	private File archivo = null;
 	private ObjectInputStream inStream = null;
