@@ -26,9 +26,9 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 	 * Evento del boton <code>btnBuscar</code>
 	 */
 	private void buscarCliente(){
-		if(!txtBuscar.getText().isEmpty() && !txtBuscar.getText().isEmpty())//FIXME Arreglar cuando se arregle la UI
+		if(!txtBuscarNombre.getText().isEmpty() && !txtBuscarApellido.getText().isEmpty())
 		{
-			Cliente cliente = listaCliente.buscarCliente(txtBuscar.getText(), txtBuscar.getText());//FIXME Arreglar cuando se arregle la UI
+			Cliente cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
 			if(cliente != null){
 				txtDNI.setText(cliente.getDni());
 				txtNombre.setText(cliente.getNombre());
