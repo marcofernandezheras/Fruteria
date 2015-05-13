@@ -96,7 +96,7 @@ vista
 	|_ PrincipalUI       :	0   horas
 
 controlador
-	|_ ListaArticulos    :	3   horas
+	|_ ListaArticulos    :	3   horas <-- Marco		:OK?
 	|_ ListaCliente      :	3   horas
 	|_ ListaPedidos	     :	3   horas
 	|_ ParaAltaArticulo  :	?	horas
