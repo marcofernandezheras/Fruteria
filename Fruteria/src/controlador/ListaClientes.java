@@ -15,6 +15,13 @@ public class ListaClientes implements IListaCliente {
 	AccesoFichero accesoFichero;
 	Object cliente = new Object();
 
+	/**
+	 * constructor
+	 * 
+	 * instancia la clase accesoFichero y rellen el vector clientes el vector
+	 * termina de completarse cuando leerObjeto devuelve null
+	 */
+
 	public ListaClientes() {
 		try {
 
@@ -36,6 +43,17 @@ public class ListaClientes implements IListaCliente {
 
 	}
 
+	/**
+	 * buscarCliente
+	 * 
+	 * Busca en el vector clientes uno que cumpla con el nombre y apellidos de
+	 * entrada.
+	 * 
+	 * @param nombre
+	 * @param apellidos
+	 * @return objeto cliente si lo encuentra o null en el caso contrario.
+	 */
+
 	@Override
 	public Cliente buscarCliente(String nombre, String apellidos) {
 
@@ -50,16 +68,54 @@ public class ListaClientes implements IListaCliente {
 		return null;
 	}
 
+	/**
+	 * 
+	 * @param cliente
+	 * @return true en caso de que el usuario haya sido dado de alta
+	 */
+
 	@Override
 	public boolean altaCliente(Cliente cliente) {
-		// TODO Auto-generated method stub
+
+		if (buscarCliente(cliente.getNombre(), cliente.getApellidos()) == null) {
+
+			clientes.add(cliente);
+			accesoFichero.escribirObjeto(cliente);
+
+			return true;
+		}
+
 		return false;
 	}
 
+	/**
+	 * modificarCliente
+	 * 
+	 * buscar en el vector la posicion del cliente a modificar para pasar el
+	 * identificador de ese objeto.
+	 * 
+	 * @param cliente
+	 * @return true en el caso de que el cliente haya podido ser modificado
+	 */
+
 	@Override
 	public boolean modificarCliente(Cliente cliente) {
-		// TODO Auto-generated method stub
+
+		int indentificador = 0;
+
+		for (int i = 0; i < clientes.size(); i++) {
+			if (cliente.getNombre() == clientes.get(i).getNombre()
+					&& cliente.getApellidos() == clientes.get(i).getApellidos()) {
+
+				if (accesoFichero.modificarObjeto(cliente, clientes.get(i).identificador())) {
+					return true;
+
+				}
+			}
+		}
+
 		return false;
+
 	}
 
 }
