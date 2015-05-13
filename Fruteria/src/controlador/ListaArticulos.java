@@ -33,6 +33,7 @@ public class ListaArticulos implements IListaArticulos {
 				articulos.add((Articulo) articulo);
 				articulo = accesoFichero.leerObjeto();
 
+
 			}
 
 		} catch (FileNotFoundException e) {

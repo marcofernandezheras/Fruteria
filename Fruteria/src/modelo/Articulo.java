@@ -1,6 +1,8 @@
 package modelo;
 
-public class Articulo {
+import java.io.Serializable;
+
+public class Articulo implements Serializable{
 	/************************************
 	 * /* Constantes *
 	 ************************************/
@@ -20,7 +22,7 @@ public class Articulo {
 	 ************************************/
 
 	/**
-	 * @Descripción: Crea un articulo con un nombre, una descripcion y un precio
+	 * @Descripciï¿½n: Crea un articulo con un nombre, una descripcion y un precio
 	 * @param nombre
 	 * @param descripcion
 	 * @param precio
@@ -65,7 +67,7 @@ public class Articulo {
 	 ************************************/
 	
 	/**
-	 * @Descripción: Metodo que te calculo el pvp 
+	 * @Descripciï¿½n: Metodo que te calculo el pvp 
 	 * @return el valor del pvp:float
 	 */
 	

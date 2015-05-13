@@ -1,6 +1,8 @@
 package modelo;
 
-public class LineaPedido {
+import java.io.Serializable;
+
+public class LineaPedido implements Serializable{
 
 	/************************************
 	 * /* Atributos *
@@ -13,7 +15,7 @@ public class LineaPedido {
 	 * /* Constructor/es *
 	 ************************************/
 	/**
-	 * @Descripción: Crea una linea de pedido con un articulo, la cantidad del
+	 * @Descripciï¿½n: Crea una linea de pedido con un articulo, la cantidad del
 	 *               mismo y calculando la cantidad total de la linea
 	 * @param articulo
 	 * @param cantidad
