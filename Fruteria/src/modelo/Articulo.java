@@ -59,6 +59,7 @@ public class Articulo {
 	
 	public float calcularPVP(){
 		
+		
 		return (getPrecio()*IVA );
 	}
 	
