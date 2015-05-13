@@ -32,17 +32,19 @@
         <ownedParameter xmi:id="_EkQVgPitEeSpVbHaJ2qujg" name="identificador" type="_df8mwPicEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_P1ZiUPicEeS_k4uWeiG0mA" name="IAccesoFicheros">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_P1ZiUPicEeS_k4uWeiG0mA" name="IAccesoDatos">
+      <generalization xmi:id="_Z1HOwPjTEeSdTIkMRkhNTQ" general="_O8sTsPjTEeSdTIkMRkhNTQ"/>
       <ownedOperation xmi:id="_lpikEPicEeS_k4uWeiG0mA" name="leerObjeto">
         <ownedParameter xmi:id="_moVHkPicEeS_k4uWeiG0mA" name="object" type="_df8mwPicEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:id="_qVUWsPicEeS_k4uWeiG0mA" name="escribirObjeto">
-        <ownedParameter xmi:id="_srSIgPicEeS_k4uWeiG0mA" name="object" type="_df8mwPicEeS_k4uWeiG0mA"/>
+        <ownedParameter xmi:id="_srSIgPicEeS_k4uWeiG0mA" name="object" type="_2PuaUPk4EeS5RuTX0MfgAw"/>
         <ownedParameter xmi:id="_-KgYcPicEeS_k4uWeiG0mA" name="success" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:id="_zOO4IPicEeS_k4uWeiG0mA" name="modificarObjeto">
         <ownedParameter xmi:id="_0oiS8PicEeS_k4uWeiG0mA" name="objeto" type="_74I58PisEeSpVbHaJ2qujg"/>
         <ownedParameter xmi:id="_BmGVkPidEeS_k4uWeiG0mA" name="success" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
+        <ownedParameter xmi:id="_1guUYPk6EeS5RuTX0MfgAw" name="idetificador" type="_df8mwPicEeS_k4uWeiG0mA"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_GjSBQPidEeS_k4uWeiG0mA" name="AccesoFicheros">
@@ -58,15 +60,7 @@
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_7TXzQPicEeS_k4uWeiG0mA" name="boolean"/>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_O3JU4PidEeS_k4uWeiG0mA" name="java.io.File"/>
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_8AdDEPiZEeS_k4uWeiG0mA" name="java.awt.Color"/>
-    <packagedElement xmi:type="uml:Package" xmi:id="_ip4KoPjAEeSdTIkMRkhNTQ" name="Primitives">
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4KofjAEeSdTIkMRkhNTQ" name="Object"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4KovjAEeSdTIkMRkhNTQ" name="int"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4Ko_jAEeSdTIkMRkhNTQ" name="String"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4KpPjAEeSdTIkMRkhNTQ" name="float"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4KpfjAEeSdTIkMRkhNTQ" name="boolean"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4KpvjAEeSdTIkMRkhNTQ" name="File"/>
-      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ip4Kp_jAEeSdTIkMRkhNTQ" name="awt.Color"/>
-    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_2PuaUPk4EeS5RuTX0MfgAw" name="java.io.Serializable"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_lHFAIPiwEeSpVbHaJ2qujg" name="Controlador">
     <packagedElement xmi:type="uml:Class" xmi:id="_K1_R8PiwEeSpVbHaJ2qujg" name="ListaArticulos">
@@ -530,4 +524,5 @@
       <ownedEnd xmi:id="_GkqycPjLEeSdTIkMRkhNTQ" type="_AvfkQPjKEeSdTIkMRkhNTQ" association="_GkpkUPjLEeSdTIkMRkhNTQ"/>
     </nestedClassifier>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_O8sTsPjTEeSdTIkMRkhNTQ" name="java.lang.AutoCloseable"/>
 </uml:Model>
