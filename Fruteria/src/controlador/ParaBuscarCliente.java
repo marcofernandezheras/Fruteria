@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 
 import modelo.Cliente;
 
+@SuppressWarnings("serial")
 public class ParaBuscarCliente extends BuscarClienteUI {
 	
 	private IListaCliente listaCliente;
@@ -21,6 +22,9 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 		this.listaCliente = listaCliente;
 	}
 	
+	/**
+	 * Evento del boton <code>btnBuscar</code>
+	 */
 	private void buscarCliente(){
 		if(!txtBuscar.getText().isEmpty() && !txtBuscar.getText().isEmpty())//FIXME Arreglar cuando se arregle la UI
 		{
