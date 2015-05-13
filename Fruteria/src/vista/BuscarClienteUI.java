@@ -14,19 +14,19 @@ import java.awt.Font;
 import javax.swing.ImageIcon;
 
 public class BuscarClienteUI extends JPanel {
-	private JTextField txtBuscar;
-	private final JButton btnBuscar = new JButton("");
-	private JLabel lblNombre;
-	private JTextField txtNombre;
-	private JLabel lblApellido;
-	private JTextField txtApellido;
-	private JLabel lblDNI;
-	private JTextField txtDNI;
-	private JLabel lblColorPelo;
-	private JTextField txtColorPelo;
-	private JLabel lblMensaje;
-	private JTextField txtMensaje;
-	private JLabel lblBuscarCliente;
+	protected JTextField txtBuscar;
+	protected final JButton btnBuscar = new JButton("");
+	protected JLabel lblNombre;
+	protected JTextField txtNombre;
+	protected JLabel lblApellido;
+	protected JTextField txtApellido;
+	protected JLabel lblDNI;
+	protected JTextField txtDNI;
+	protected JLabel lblColorPelo;
+	protected JTextField txtColorPelo;
+	protected JLabel lblMensaje;
+	protected JTextField txtMensaje;
+	protected JLabel lblBuscarCliente;
 
 	/**
 	 * Create the panel.
