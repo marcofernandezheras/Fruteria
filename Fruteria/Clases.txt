@@ -41,29 +41,29 @@ controlador
 /*		   IMPLEMENTACIONES	    	*
 ************************************/
 modelo
-	|_ Articulo          :  1   hora   <-- Miguel
-	|_ Cliente           :  1.5 horas  <-- Miguel 
-	|_ Pedido            :  1   hora   <-- Miguel
-	|_ LineaPedido       :	1   hora   <-- Miguel
-	|_ AccesoFichero     :	4   horas  <-- Marco
-	|_ AccesoFicheroArray: 	4   horas  <-- Marco
+	|_ Articulo          :  1   hora   <-- Miguel : OK!
+	|_ Cliente           :  1.5 horas  <-- Miguel : OK!
+	|_ Pedido            :  1   hora   <-- Miguel : OK!
+	|_ LineaPedido       :	1   hora   <-- Miguel : OK!
+	|_ AccesoFichero     :	4   horas  <-- Marco  : OK!
+	|_ AccesoFicheroArray: 	4   horas  <-- Marco  : OK!
 
 vista
-	|_ AltaArticuloUI    :	1   hora  <-- Dani	
-	|_ BuscarArticuloUI  :	1   hora  <-- Dani
+	|_ AltaArticuloUI    :	1   hora  <-- Dani	  
+	|_ BuscarArticuloUI  :	1   hora  <-- Dani    : OK!
 	|_ AltaClienteUI     :	1   hora  <-- Dani
 	|_ ModClienteUI      :	1   hora  <-- Dani   
-	|_ BuscarClienteUI   :	1   hora  <-- Eduardo
+	|_ BuscarClienteUI   :	1   hora  <-- Eduardo : OK!
 	|_ AltaPedidoUI      :	4	horas <-- Eduardo
 	|_ BuscarPedidoUI    :	1   hora  <-- Eduardo
 	|_ PrincipalUI       :	1   hora  <-- Eduardo
 
 controlador
-	|_ ListaArticulos    :	3   horas <-- Maria
-	|_ ListaCliente      :	3   horas <-- Miguel
-	|_ ListaPedidos	     :	3   horas <-- Marco
+	|_ ListaArticulos    :	3   horas <-- Maria   : OK!
+	|_ ListaCliente      :	3   horas <-- Maria   : OK!
+	|_ ListaPedidos	     :	3   horas <-- Miguel
 	|_ ParaAltaArticulo  :	2	horas
-	|_ ParaBuscarArticulo:	1	hora	
+	|_ ParaBuscarArticulo:	1	hora  <-- Marco  
 	|_ ParaAltaCliente   :	2	horas
 	|_ ParaModCliente 	 :	1	hora
 	|_ ParaBuscarCliente :	1	hora
@@ -76,14 +76,14 @@ _________________________________________
 
 
 /************************************
-/*		        TESTS	    	    *
+/*		        TESTS JUNIT    	    *
 ************************************/
 modelo
-	|_ Articulo          :  0.5 hora
-	|_ Cliente           :  0   horas
-	|_ Pedido            :  1   hora
-	|_ LineaPedido       :	0.5 hora
-	|_ AccesoFichero     :	4   horas
+	|_ Articulo          :  0.5 hora   <-- Maria 
+	|_ Cliente           :  0   horas  <-- Maria  
+	|_ Pedido            :  1   hora   <-- Maria 
+	|_ LineaPedido       :	0.5 hora   <-- Maria 
+	|_ AccesoFichero     :	4   horas  <-- Miguel  
 
 vista
 	|_ AltaArticuloUI    :	0   horas	
