@@ -51,6 +51,16 @@
       <ownedAttribute xmi:id="_RCjcgPidEeS_k4uWeiG0mA" name="archivo" type="_O3JU4PidEeS_k4uWeiG0mA"/>
       <interfaceRealization xmi:id="_JyhkcPidEeS_k4uWeiG0mA" client="_GjSBQPidEeS_k4uWeiG0mA" supplier="_P1ZiUPicEeS_k4uWeiG0mA" contract="_P1ZiUPicEeS_k4uWeiG0mA"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_zsZkIPlHEeS5RuTX0MfgAw" name="IAccesoDatoss" memberEnd="_zsZkIflHEeS5RuTX0MfgAw _ztKZIvlHEeS5RuTX0MfgAw" navigableOwnedEnd="_ztKZIvlHEeS5RuTX0MfgAw">
+      <ownedEnd xmi:id="_zsZkIflHEeS5RuTX0MfgAw" name="iAccesoDatoss" type="_P1ZiUPicEeS_k4uWeiG0mA" association="_zsZkIPlHEeS5RuTX0MfgAw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ztKZIPlHEeS5RuTX0MfgAw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ztKZIflHEeS5RuTX0MfgAw" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ztKZIvlHEeS5RuTX0MfgAw" name="appendObjectOutputStreams" type="_tmsKIPlHEeS5RuTX0MfgAw" association="_zsZkIPlHEeS5RuTX0MfgAw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ztvA4PlHEeS5RuTX0MfgAw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ztvA4flHEeS5RuTX0MfgAw" value="*"/>
+      </ownedEnd>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_mcdZUPidEeS_k4uWeiG0mA" name="Primitives">
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_df8mwPicEeS_k4uWeiG0mA" name="Object"/>
@@ -525,4 +535,8 @@
     </nestedClassifier>
   </packagedElement>
   <packagedElement xmi:type="uml:Interface" xmi:id="_O8sTsPjTEeSdTIkMRkhNTQ" name="java.lang.AutoCloseable"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tmsKIPlHEeS5RuTX0MfgAw" name="AppendObjectOutputStream">
+    <generalization xmi:id="_xamgoPlHEeS5RuTX0MfgAw" general="_wIfYgPlHEeS5RuTX0MfgAw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wIfYgPlHEeS5RuTX0MfgAw" name="ObjectOutputStream"/>
 </uml:Model>

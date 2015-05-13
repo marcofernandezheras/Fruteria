@@ -19,6 +19,13 @@ public class Articulo {
 	 * /* Constructor/es *
 	 ************************************/
 
+	/**
+	 * @Descripción: Crea un articulo con un nombre, una descripcion y un precio
+	 * @param nombre
+	 * @param descripcion
+	 * @param precio
+	 */
+	
 	public Articulo(String nombre, String descripcion, float precio) {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
@@ -57,10 +64,14 @@ public class Articulo {
 	 * /* Metodos *
 	 ************************************/
 	
-	public float calcularPVP(){
-		
-		
+	/**
+	 * @Descripción: Metodo que te calculo el pvp 
+	 * @return el valor del pvp:float
+	 */
+	
+	public float getPVP(){
 		return (getPrecio()*IVA );
 	}
-	
+
+	// Tiempo en realizarlo 15 min con javadoc incluido
 }

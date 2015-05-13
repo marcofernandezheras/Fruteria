@@ -29,8 +29,7 @@ public class AccesoFichero implements IAccesoDatos {
 	
 	private ObjectOutputStream getOutStream(boolean append) throws IOException{
 		BufferedOutputStream buffer = new BufferedOutputStream(new FileOutputStream(archivo,append));
-		//FIXME stream para hacer append si existe el archivo
-		return append ? null : new ObjectOutputStream(buffer);
+		return append ? new AppendObjectOutputStream(buffer) : new ObjectOutputStream(buffer);
 	}
 	
 	private ObjectInputStream getInStream() throws FileNotFoundException, IOException{
