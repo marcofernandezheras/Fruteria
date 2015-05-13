@@ -66,7 +66,7 @@ controlador
 	|_ ParaBuscarArticulo:	1	hora  <-- Marco  
 	|_ ParaAltaCliente   :	2	horas
 	|_ ParaModCliente 	 :	1	hora
-	|_ ParaBuscarCliente :	1	hora
+	|_ ParaBuscarCliente :	1	hora  <-- Marco
 	|_ ParaAltaPedido 	 :	4	horas
 	|_ ParaBuscarPedido  :	2	horas
 	|_ ParaPrincipalUI   :	2	horas
