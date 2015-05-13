@@ -19,6 +19,12 @@ public class AccesoFicheroArray implements IAccesoDatos {
 	private File archivo = null;
 	private int index = 0;
 	
+	/**
+	 * Crea un acesso a Fichero.
+	 * @param archivo Archivo a leer.
+	 * @throws IOException
+	 * @throws ClassNotFoundException
+	 */
 	public AccesoFicheroArray(File archivo) throws IOException, ClassNotFoundException {
 		if(!archivo.exists())
 			throw new FileNotFoundException();
