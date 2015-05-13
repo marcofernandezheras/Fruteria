@@ -10,6 +10,7 @@ modelo
 	|_ Pedido
 	|_ LineaPedido
 	|_ AccesoFichero: I:IAccesoFicheros
+	|_ AccesoFicheroArray: I:IAccesoFicheros
 
 vista
 	|_ AltaArticuloUI  : E:JPanel
@@ -45,6 +46,7 @@ modelo
 	|_ Pedido            :  1   hora
 	|_ LineaPedido       :	1   hora
 	|_ AccesoFichero     :	4   horas
+	|_ AccesoFicheroArray: 	4   horas
 
 vista
 	|_ AltaArticuloUI    :	1   hora	
@@ -69,7 +71,7 @@ controlador
 	|_ ParaBuscarPedido  :	2	horas
 	|_ ParaPrincipalUI   :	2	horas
 _________________________________________
-						   43.5 horas	
+						   47.5 horas	
 
 
 
