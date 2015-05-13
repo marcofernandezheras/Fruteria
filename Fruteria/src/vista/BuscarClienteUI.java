@@ -10,10 +10,12 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class BuscarClienteUI extends JPanel {
 	private JTextField txtBuscar;
-	private final JButton btnBuscar = new JButton("Buscar");
+	private final JButton btnBuscar = new JButton("");
 	private JLabel lblNombre;
 	private JTextField txtNombre;
 	private JLabel lblApellido;
@@ -24,6 +26,7 @@ public class BuscarClienteUI extends JPanel {
 	private JTextField txtColorPelo;
 	private JLabel lblMensaje;
 	private JTextField txtMensaje;
+	private JLabel lblBuscarCliente;
 
 	/**
 	 * Create the panel.
@@ -31,12 +34,22 @@ public class BuscarClienteUI extends JPanel {
 	public BuscarClienteUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 28, 58, 0, 195, 1, 0};
-		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0};
+		gridBagLayout.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		gridBagLayout.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 1.0, 1.0, Double.MIN_VALUE};
-		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		setLayout(gridBagLayout);
 		
+		lblBuscarCliente = new JLabel("BUSCAR CLIENTE");
+		lblBuscarCliente.setIcon(null);
+		lblBuscarCliente.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
+		GridBagConstraints gbc_lblBuscarCliente = new GridBagConstraints();
+		gbc_lblBuscarCliente.insets = new Insets(0, 0, 5, 5);
+		gbc_lblBuscarCliente.gridx = 4;
+		gbc_lblBuscarCliente.gridy = 0;
+		add(lblBuscarCliente, gbc_lblBuscarCliente);
+		
 		JLabel lblBuscar = new JLabel("Buscar");
+		lblBuscar.setFont(new Font("Tahoma", Font.BOLD, 15));
 		GridBagConstraints gbc_lblBuscar = new GridBagConstraints();
 		gbc_lblBuscar.insets = new Insets(0, 0, 5, 5);
 		gbc_lblBuscar.gridx = 2;
@@ -55,6 +68,8 @@ public class BuscarClienteUI extends JPanel {
 		gbc_btnBuscar.insets = new Insets(0, 0, 5, 0);
 		gbc_btnBuscar.gridx = 5;
 		gbc_btnBuscar.gridy = 1;
+		btnBuscar.setIcon(new ImageIcon("C:\\Users\\Eddi\\Desktop\\lupa.ico"));
+		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
@@ -62,6 +77,7 @@ public class BuscarClienteUI extends JPanel {
 		add(btnBuscar, gbc_btnBuscar);
 		
 		lblNombre = new JLabel(" Nombre");
+		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GridBagConstraints gbc_lblNombre = new GridBagConstraints();
 		gbc_lblNombre.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNombre.gridx = 2;
@@ -78,6 +94,7 @@ public class BuscarClienteUI extends JPanel {
 		txtNombre.setColumns(10);
 		
 		lblApellido = new JLabel("Apellido");
+		lblApellido.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GridBagConstraints gbc_lblApellido = new GridBagConstraints();
 		gbc_lblApellido.insets = new Insets(0, 0, 5, 5);
 		gbc_lblApellido.gridx = 2;
@@ -94,6 +111,7 @@ public class BuscarClienteUI extends JPanel {
 		txtApellido.setColumns(10);
 		
 		lblDNI = new JLabel("DNI");
+		lblDNI.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GridBagConstraints gbc_lblDNI = new GridBagConstraints();
 		gbc_lblDNI.insets = new Insets(0, 0, 5, 5);
 		gbc_lblDNI.gridx = 2;
@@ -110,6 +128,7 @@ public class BuscarClienteUI extends JPanel {
 		txtDNI.setColumns(10);
 		
 		lblColorPelo = new JLabel("Color Pelo");
+		lblColorPelo.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GridBagConstraints gbc_lblColorPelo = new GridBagConstraints();
 		gbc_lblColorPelo.insets = new Insets(0, 0, 5, 5);
 		gbc_lblColorPelo.gridx = 2;
@@ -126,15 +145,16 @@ public class BuscarClienteUI extends JPanel {
 		txtColorPelo.setColumns(10);
 		
 		lblMensaje = new JLabel("Mensaje");
+		lblMensaje.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		GridBagConstraints gbc_lblMensaje = new GridBagConstraints();
-		gbc_lblMensaje.insets = new Insets(0, 0, 0, 5);
+		gbc_lblMensaje.insets = new Insets(0, 0, 5, 5);
 		gbc_lblMensaje.gridx = 2;
 		gbc_lblMensaje.gridy = 6;
 		add(lblMensaje, gbc_lblMensaje);
 		
 		txtMensaje = new JTextField();
 		GridBagConstraints gbc_txtMensaje = new GridBagConstraints();
-		gbc_txtMensaje.insets = new Insets(0, 0, 0, 5);
+		gbc_txtMensaje.insets = new Insets(0, 0, 5, 5);
 		gbc_txtMensaje.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtMensaje.gridx = 4;
 		gbc_txtMensaje.gridy = 6;
