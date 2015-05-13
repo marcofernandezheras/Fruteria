@@ -82,7 +82,7 @@ public class AccesoFichero implements IAccesoDatos {
 	}
 
 	@Override
-	public boolean modificarObjeto(Modificable objeto) {
+	public boolean modificarObjeto(Modificable objeto, Object identificador) {
 		boolean modificado = false;
 		try {
 			this.close();
@@ -92,7 +92,7 @@ public class AccesoFichero implements IAccesoDatos {
 				while(true)
 				{
 					Modificable old = (Modificable)inStream.readObject();
-					if (old.identificador().equals(objeto.identificador())) 
+					if (old.identificador().equals(identificador)) 
 					{
 						objectList.add(objeto);
 						modificado = true;

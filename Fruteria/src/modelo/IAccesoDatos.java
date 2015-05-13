@@ -18,7 +18,8 @@ public interface IAccesoDatos extends AutoCloseable{
 	/**
 	 * Modifica un objeto anteriormente serializado.
 	 * @param objeto Objeto a modificar.
+	 * @param identificador identificador del objeto.
 	 * @return <code>true</code> en caso de éxito, <code>false</code> en caso contrario.
 	 */
-	boolean modificarObjeto(Modificable objeto);
+	boolean modificarObjeto(Modificable objeto, Object identificador);
 }
