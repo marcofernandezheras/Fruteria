@@ -97,7 +97,7 @@ vista
 
 controlador
 	|_ ListaArticulos    :	3   horas <-- Marco		:OK?
-	|_ ListaCliente      :	3   horas
+	|_ ListaCliente      :	3   horas <-- Marco		:OK?
 	|_ ListaPedidos	     :	3   horas
 	|_ ParaAltaArticulo  :	?	horas
 	|_ ParaBuscarArticulo:	?	hora	
