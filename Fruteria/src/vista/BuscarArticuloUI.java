@@ -8,6 +8,7 @@ import java.awt.Insets;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
+import java.awt.Font;
 
 public class BuscarArticuloUI extends JPanel {
 	private JTextField txtBusquedaNombre;
@@ -29,11 +30,12 @@ public class BuscarArticuloUI extends JPanel {
 		setLayout(gridBagLayout);
 		
 		JLabel lblBsquedaDeArticulos = new JLabel("B\u00FAsqueda de articulos");
+		lblBsquedaDeArticulos.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
 		GridBagConstraints gbc_lblBsquedaDeArticulos = new GridBagConstraints();
 		gbc_lblBsquedaDeArticulos.fill = GridBagConstraints.VERTICAL;
-		gbc_lblBsquedaDeArticulos.gridwidth = 2;
+		gbc_lblBsquedaDeArticulos.gridwidth = 5;
 		gbc_lblBsquedaDeArticulos.insets = new Insets(0, 0, 5, 5);
-		gbc_lblBsquedaDeArticulos.gridx = 2;
+		gbc_lblBsquedaDeArticulos.gridx = 1;
 		gbc_lblBsquedaDeArticulos.gridy = 0;
 		add(lblBsquedaDeArticulos, gbc_lblBsquedaDeArticulos);
 		
