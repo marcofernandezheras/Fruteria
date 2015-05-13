@@ -78,7 +78,7 @@ public class BuscarClienteUI extends JPanel {
 		gbc_btnBuscar.insets = new Insets(0, 0, 5, 0);
 		gbc_btnBuscar.gridx = 6;
 		gbc_btnBuscar.gridy = 1;
-		btnBuscar.setIcon(new ImageIcon("C:\\Users\\Eddi\\Desktop\\lupa.ico"));
+		btnBuscar.setIcon(new ImageIcon(BuscarClienteUI.class.getResource("/iconos/magnifier-left.png")));
 		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
