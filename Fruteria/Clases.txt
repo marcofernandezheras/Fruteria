@@ -41,27 +41,27 @@ controlador
 /*		   IMPLEMENTACIONES	    	*
 ************************************/
 modelo
-	|_ Articulo          :  1   hora
-	|_ Cliente           :  1.5 horas
-	|_ Pedido            :  1   hora
-	|_ LineaPedido       :	1   hora
-	|_ AccesoFichero     :	4   horas
-	|_ AccesoFicheroArray: 	4   horas
+	|_ Articulo          :  1   hora   <-- Miguel
+	|_ Cliente           :  1.5 horas  <-- Miguel 
+	|_ Pedido            :  1   hora   <-- Miguel
+	|_ LineaPedido       :	1   hora   <-- Miguel
+	|_ AccesoFichero     :	4   horas  <-- Marco
+	|_ AccesoFicheroArray: 	4   horas  <-- Marco
 
 vista
-	|_ AltaArticuloUI    :	1   hora	
-	|_ BuscarArticuloUI  :	1   hora
-	|_ AltaClienteUI     :	1   hora
-	|_ ModClienteUI      :	1   hora
-	|_ BuscarClienteUI   :	1   hora
-	|_ AltaPedidoUI      :	4	horas
-	|_ BuscarPedidoUI    :	1   hora
-	|_ PrincipalUI       :	1   hora
+	|_ AltaArticuloUI    :	1   hora  <-- Dani	
+	|_ BuscarArticuloUI  :	1   hora  <-- Dani
+	|_ AltaClienteUI     :	1   hora  <-- Dani
+	|_ ModClienteUI      :	1   hora  <-- Dani   
+	|_ BuscarClienteUI   :	1   hora  <-- Eduardo
+	|_ AltaPedidoUI      :	4	horas <-- Eduardo
+	|_ BuscarPedidoUI    :	1   hora  <-- Eduardo
+	|_ PrincipalUI       :	1   hora  <-- Eduardo
 
 controlador
-	|_ ListaArticulos    :	3   horas
-	|_ ListaCliente      :	3   horas
-	|_ ListaPedidos	     :	3   horas
+	|_ ListaArticulos    :	3   horas <-- Maria
+	|_ ListaCliente      :	3   horas <-- Miguel
+	|_ ListaPedidos	     :	3   horas <-- Marco
 	|_ ParaAltaArticulo  :	2	horas
 	|_ ParaBuscarArticulo:	1	hora	
 	|_ ParaAltaCliente   :	2	horas
