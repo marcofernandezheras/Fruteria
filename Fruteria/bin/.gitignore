@@ -1,3 +1,6 @@
-/controlador/
+*.class
+/tests/
 /modelo/
 /vista/
+/controlador/
+/iconos/

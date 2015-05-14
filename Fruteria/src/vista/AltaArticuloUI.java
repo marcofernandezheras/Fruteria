@@ -11,6 +11,7 @@ import javax.swing.SwingConstants;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class AltaArticuloUI extends JPanel {
 
@@ -31,7 +32,7 @@ public class AltaArticuloUI extends JPanel {
 	 */
 	public AltaArticuloUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 78, 0, 59, 0, 0, 0, 0, 0 };
+		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 78, 0, 59, 0, 0, 0, 26, 0 };
 		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
@@ -98,13 +99,13 @@ public class AltaArticuloUI extends JPanel {
 		gbc_txtPVP.gridy = 3;
 		add(txtPVP, gbc_txtPVP);
 		txtPVP.setColumns(10);
-
-		GridBagConstraints gbc_lblEuros = new GridBagConstraints();
-		gbc_lblEuros.anchor = GridBagConstraints.WEST;
-		gbc_lblEuros.insets = new Insets(0, 0, 5, 5);
-		gbc_lblEuros.gridx = 8;
-		gbc_lblEuros.gridy = 3;
-		add(lblEuros, gbc_lblEuros);
+		
+				GridBagConstraints gbc_lblEuros = new GridBagConstraints();
+				gbc_lblEuros.anchor = GridBagConstraints.WEST;
+				gbc_lblEuros.insets = new Insets(0, 0, 5, 5);
+				gbc_lblEuros.gridx = 8;
+				gbc_lblEuros.gridy = 3;
+				add(lblEuros, gbc_lblEuros);
 
 		GridBagConstraints gbc_lblDescripcion = new GridBagConstraints();
 		gbc_lblDescripcion.insets = new Insets(0, 0, 5, 5);
@@ -116,7 +117,7 @@ public class AltaArticuloUI extends JPanel {
 		GridBagConstraints gbc_txtDescripcion = new GridBagConstraints();
 		gbc_txtDescripcion.gridwidth = 6;
 		gbc_txtDescripcion.gridheight = 4;
-		gbc_txtDescripcion.insets = new Insets(0, 0, 5, 5);
+		gbc_txtDescripcion.insets = new Insets(0, 0, 5, 0);
 		gbc_txtDescripcion.fill = GridBagConstraints.BOTH;
 		gbc_txtDescripcion.gridx = 3;
 		gbc_txtDescripcion.gridy = 5;
@@ -124,14 +125,14 @@ public class AltaArticuloUI extends JPanel {
 		txtDescripcion.setColumns(10);
 
 		JButton btnCrear = new JButton("Crear");
+		btnCrear.setIcon(new ImageIcon(AltaArticuloUI.class.getResource("/iconos/plus.png")));
 		btnCrear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
 		GridBagConstraints gbc_btnCrear = new GridBagConstraints();
-		gbc_btnCrear.gridwidth = 2;
+		gbc_btnCrear.gridwidth = 3;
 		gbc_btnCrear.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnCrear.insets = new Insets(0, 0, 0, 5);
 		gbc_btnCrear.gridx = 7;
 		gbc_btnCrear.gridy = 9;
 		add(btnCrear, gbc_btnCrear);

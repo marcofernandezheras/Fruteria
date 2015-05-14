@@ -22,15 +22,12 @@ public class AccesoFichero implements IAccesoDatos {
 	private int leidos = 0;
 	
 	public AccesoFichero(File archivo) throws FileNotFoundException {
-		if(!archivo.exists())
-			throw new FileNotFoundException();
 		this.archivo = archivo;		
 	}
 	
 	private ObjectOutputStream getOutStream(boolean append) throws IOException{
 		BufferedOutputStream buffer = new BufferedOutputStream(new FileOutputStream(archivo,append));
-		//FIXME stream para hacer append si existe el archivo
-		return append ? null : new ObjectOutputStream(buffer);
+		return append ? new AppendObjectOutputStream(buffer) : new ObjectOutputStream(buffer);
 	}
 	
 	private ObjectInputStream getInStream() throws FileNotFoundException, IOException{
@@ -73,7 +70,7 @@ public class AccesoFichero implements IAccesoDatos {
 				}				
 				outStream = getOutStream(archivo.exists());
 			}
-			outStream.writeObject(archivo);	
+			outStream.writeObject(objeto);	
 			outStream.flush();
 			return true;
 		} catch (IOException e) {
