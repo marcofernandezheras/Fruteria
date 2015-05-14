@@ -3046,7 +3046,7 @@
               <styles xmi:type="notation:FilteringStyle" xmi:id="_KVwU4vi_EeSdTIkMRkhNTQ"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_KVufsfi_EeSdTIkMRkhNTQ" fontName="Droid Sans" bold="true"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KVufsvi_EeSdTIkMRkhNTQ" x="230" y="440"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KVufsvi_EeSdTIkMRkhNTQ" x="190" y="440"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Z1FwsPi_EeSdTIkMRkhNTQ" type="2003" element="_ZwUlcPi_EeSdTIkMRkhNTQ">
             <children xmi:type="notation:Node" xmi:id="_Z1G-0Pi_EeSdTIkMRkhNTQ" type="5007"/>

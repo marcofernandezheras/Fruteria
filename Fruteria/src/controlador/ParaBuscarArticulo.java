@@ -4,7 +4,6 @@ import vista.BuscarArticuloUI;
 import java.awt.event.ActionListener;
 
 import modelo.Articulo;
-import modelo.Cliente;
 
 import java.awt.event.ActionEvent;
 
