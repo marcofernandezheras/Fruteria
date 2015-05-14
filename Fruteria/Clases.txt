@@ -63,10 +63,10 @@ controlador
 	|_ ListaCliente      :	3   horas <-- Maria   : OK!
 	|_ ListaPedidos	     :	3   horas <-- Miguel
 	|_ ParaAltaArticulo  :	2	horas
-	|_ ParaBuscarArticulo:	1	hora  <-- Marco  
+	|_ ParaBuscarArticulo:	1	hora  <-- Marco   : OK!
 	|_ ParaAltaCliente   :	2	horas
 	|_ ParaModCliente 	 :	1	hora
-	|_ ParaBuscarCliente :	1	hora
+	|_ ParaBuscarCliente :	1	hora  <-- Marco
 	|_ ParaAltaPedido 	 :	4	horas
 	|_ ParaBuscarPedido  :	2	horas
 	|_ ParaPrincipalUI   :	2	horas
@@ -96,8 +96,8 @@ vista
 	|_ PrincipalUI       :	0   horas
 
 controlador
-	|_ ListaArticulos    :	3   horas
-	|_ ListaCliente      :	3   horas
+	|_ ListaArticulos    :	3   horas <-- Marco		:OK?
+	|_ ListaCliente      :	3   horas <-- Marco		:OK?
 	|_ ListaPedidos	     :	3   horas
 	|_ ParaAltaArticulo  :	?	horas
 	|_ ParaBuscarArticulo:	?	hora	

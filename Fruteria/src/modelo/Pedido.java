@@ -1,8 +1,9 @@
 package modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Pedido {
+public class Pedido implements Serializable{
 
 	/************************************
 	 * /* Atributos *
@@ -16,7 +17,7 @@ public class Pedido {
 	 ************************************/
 
 	/**
-	 * @Descripción: Constructo de linea pedido
+	 * @Descripciï¿½n: Constructo de linea pedido
 	 * @param numeroPedido
 	 */
 	public Pedido(int numeroPedido) {

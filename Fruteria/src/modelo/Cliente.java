@@ -1,8 +1,9 @@
 package modelo;
 
 import java.awt.Color;
+import java.io.Serializable;
 
-public class Cliente implements Modificable {
+public class Cliente implements Modificable, Serializable {
 
 	/************************************
 	 * /* Atributos *
@@ -18,7 +19,7 @@ public class Cliente implements Modificable {
 	 ************************************/
 
 	/**
-	 * @Descripción: Crea un cliente por su dni, nombre, apellidos y color de
+	 * @Descripciï¿½n: Crea un cliente por su dni, nombre, apellidos y color de
 	 *               pelo
 	 * @param dni
 	 * @param nombre
@@ -75,7 +76,7 @@ public class Cliente implements Modificable {
 	 ************************************/
 
 	/**
-	 * @Descripción: Sirva para fijar una variable para luego modificar un
+	 * @Descripciï¿½n: Sirva para fijar una variable para luego modificar un
 	 *               cliente
 	 */
 
