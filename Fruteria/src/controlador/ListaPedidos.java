@@ -9,7 +9,7 @@ public class ListaPedidos implements IListaPedidos {
 	File archivo = new File("ListaPedidos.txt");
 	AccesoFichero accesoFichero;
 	Pedido pedido;
-
+ 
 	@Override
 	public Pedido buscarPedido(int numero) {
 		try {
