@@ -8,10 +8,13 @@ import java.io.File;
 import modelo.Cliente;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import controlador.ListaClientes;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ListaClientesTest {
 
 	void limpiarArchivos(){
@@ -32,7 +35,6 @@ public class ListaClientesTest {
 	}
 
 	@Test
-	@Before
 	public void testAltaCliente() {
 		limpiarArchivos();
 		ListaClientes instancia = new ListaClientes();
@@ -50,7 +52,7 @@ public class ListaClientesTest {
 	public void testModificarCliente() {
 		ListaClientes instancia = new ListaClientes();
 		Cliente clienteSI = new Cliente("1", "nombre1", "apellidos1", Color.black);
-		Cliente clienteNO = new Cliente("1", "nombre1", "apellidos1", Color.black);
+		Cliente clienteNO = new Cliente("3", "nombre1", "apellidos1", Color.black);
 		assertTrue(instancia.modificarCliente(clienteSI));
 		assertFalse(instancia.modificarCliente(clienteNO));
 		assertFalse(instancia.modificarCliente(null));

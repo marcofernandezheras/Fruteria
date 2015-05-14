@@ -33,6 +33,7 @@ public class ListaArticulos implements IListaArticulos {
 				articulos.add((Articulo) articulo);
 				articulo = accesoFichero.leerObjeto();
 
+
 			}
 
 		} catch (FileNotFoundException e) {
@@ -46,8 +47,7 @@ public class ListaArticulos implements IListaArticulos {
 	public Articulo buscarArticulo(String nombre) {
 
 		for (int i = 0; i < articulos.size(); i++) {
-
-			if (nombre.equals(articulos.get(i).getNombre())) {
+			if (nombre == articulos.get(i).getNombre()) {
 				return articulos.get(i);
 			}
 		}
@@ -57,16 +57,13 @@ public class ListaArticulos implements IListaArticulos {
 
 	@Override
 	public boolean insertarArticulo(Articulo articulo) {
-		
-		if (articulo != null) {
 
-			if (buscarArticulo(articulo.getNombre()) == null) {
+		if (buscarArticulo(articulo.getNombre()) == null) {
 
-				articulos.add(articulo);
-				accesoFichero.escribirObjeto(articulo);
+			articulos.add(articulo);
+			accesoFichero.escribirObjeto(articulo);
 
-				return true;
-			}
+			return true;
 		}
 
 		return false;

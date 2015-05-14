@@ -9,24 +9,33 @@ import java.util.Arrays;
 import modelo.Articulo;
 
 import org.junit.Before;
-import org.junit.Ignore;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import controlador.ListaArticulos;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ListaArticulosTest {
 
-	boolean limpiarArchivos(){
+	void limpiarArchivos(){
 		File file = new File("articulo.txt");
 		if(file.exists() ){
-			return file.delete();
+			file.delete();
 		}
-		return true;
 	}
 	
 	@Test
-	public void testInsertarArticulo() {
-		boolean limpiarArchivos = limpiarArchivos();
+	public void testBuscarArticulo() {
+		ListaArticulos instancia = new ListaArticulos();
+		assertNotNull(instancia.buscarArticulo("uno"));
+		assertNotNull(instancia.buscarArticulo("dos"));
+		assertNull(instancia.buscarArticulo("tres"));
+	}
+
+	@Test
+	public void testAInsertarArticulo() {
+		limpiarArchivos();
 		ListaArticulos instancia = new ListaArticulos();		
 		assertTrue(instancia.insertarArticulo(new Articulo("uno", "desc", 1f)));
 		assertFalse(instancia.insertarArticulo(new Articulo("uno", "desc", 1f)));
@@ -36,14 +45,6 @@ public class ListaArticulosTest {
 		assertTrue (instanciaDos.insertarArticulo(new Articulo("dos", "desc", 1f)));
 		
 		assertFalse(instancia.insertarArticulo(null));		
-	}
-	
-	@Test
-	public void testBuscarArticulo() {
-		ListaArticulos instancia = new ListaArticulos();
-		assertNotNull(instancia.buscarArticulo("uno"));
-		assertNotNull(instancia.buscarArticulo("dos"));
-		assertNull(instancia.buscarArticulo("tres"));
 	}
 
 }
