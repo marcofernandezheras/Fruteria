@@ -49,10 +49,10 @@ modelo
 	|_ AccesoFicheroArray: 	4   horas  <-- Marco  : OK!
 
 vista
-	|_ AltaArticuloUI    :	1   hora  <-- Dani	  
+	|_ AltaArticuloUI    :	1   hora  <-- Dani	  : OK!
 	|_ BuscarArticuloUI  :	1   hora  <-- Dani    : OK!
-	|_ AltaClienteUI     :	1   hora  <-- Dani
-	|_ ModClienteUI      :	1   hora  <-- Dani   
+	|_ AltaClienteUI     :	1   hora  <-- Dani    : OK!
+	|_ ModClienteUI      :	1   hora  <-- Dani    : OK!
 	|_ BuscarClienteUI   :	1   hora  <-- Eduardo : OK!
 	|_ AltaPedidoUI      :	4	horas <-- Eduardo
 	|_ BuscarPedidoUI    :	1   hora  <-- Eduardo

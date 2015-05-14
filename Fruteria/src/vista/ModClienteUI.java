@@ -25,7 +25,7 @@ public class ModClienteUI extends JPanel {
 	protected JLabel lblColorDePelo = new JLabel("Color de Pelo");
 	protected JLabel lblMensaje = new JLabel("Mensaje");
 	protected JButton btnModificar = new JButton("Modificar");
-	private final JButton btnNewButton = new JButton("");
+	protected final JButton btnNewButton = new JButton("");
 
 	/**
 	 * Create the panel.
