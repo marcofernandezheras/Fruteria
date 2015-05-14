@@ -1,4 +1,3 @@
-
 package vista;
 
 import javax.swing.JPanel;
@@ -184,4 +183,3 @@ public class BuscarArticuloUI extends JPanel {
 	}
 
 }
-
