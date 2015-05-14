@@ -9,10 +9,13 @@ import java.util.Arrays;
 import modelo.Articulo;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import controlador.ListaArticulos;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ListaArticulosTest {
 
 	void limpiarArchivos(){
@@ -31,8 +34,7 @@ public class ListaArticulosTest {
 	}
 
 	@Test
-	@Before
-	public void testInsertarArticulo() {
+	public void testAInsertarArticulo() {
 		limpiarArchivos();
 		ListaArticulos instancia = new ListaArticulos();		
 		assertTrue(instancia.insertarArticulo(new Articulo("uno", "desc", 1f)));

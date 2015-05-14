@@ -8,10 +8,13 @@ import java.io.File;
 import modelo.Cliente;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import controlador.ListaClientes;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ListaClientesTest {
 
 	void limpiarArchivos(){
@@ -32,7 +35,6 @@ public class ListaClientesTest {
 	}
 
 	@Test
-	@Before
 	public void testAltaCliente() {
 		limpiarArchivos();
 		ListaClientes instancia = new ListaClientes();
