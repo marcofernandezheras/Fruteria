@@ -1,6 +1,6 @@
-*.class
 /tests/
 /modelo/
 /vista/
 /controlador/
 /iconos/
+*.class

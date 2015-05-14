@@ -59,7 +59,7 @@ public class ListaClientes implements IListaCliente {
 
 		for (int i = 0; i < clientes.size(); i++) {
 
-			if (nombre == clientes.get(i).getNombre() && apellidos == clientes.get(i).getApellidos()) {
+			if (nombre.equals(clientes.get(i).getNombre()) && apellidos.equals(clientes.get(i).getApellidos())) {
 				return clientes.get(i);
 			}
 
@@ -76,15 +76,15 @@ public class ListaClientes implements IListaCliente {
 
 	@Override
 	public boolean altaCliente(Cliente cliente) {
+		if (cliente != null) {
+			if (buscarCliente(cliente.getNombre(), cliente.getApellidos()) == null) {
 
-		if (buscarCliente(cliente.getNombre(), cliente.getApellidos()) == null) {
-
-			clientes.add(cliente);
-			accesoFichero.escribirObjeto(cliente);
-
-			return true;
+				if (accesoFichero.escribirObjeto(cliente)) {
+					clientes.add(cliente);
+					return true;
+				}
+			}
 		}
-
 		return false;
 	}
 
@@ -99,15 +99,15 @@ public class ListaClientes implements IListaCliente {
 	 */
 
 	@Override
-	public boolean modificarCliente(Cliente cliente) {
+	public boolean modificarCliente(Cliente cliente, Object identificador) {
 
 		int indentificador = 0;
 
 		for (int i = 0; i < clientes.size(); i++) {
-			if (cliente.getNombre() == clientes.get(i).getNombre()
-					&& cliente.getApellidos() == clientes.get(i).getApellidos()) {
+			if (clientes.get(i).identificador().equals(identificador)) {
 
-				if (accesoFichero.modificarObjeto(cliente, clientes.get(i).identificador())) {
+				if (accesoFichero.modificarObjeto(cliente, identificador)) {
+					clientes.setElementAt(cliente, i);
 					return true;
 
 				}
