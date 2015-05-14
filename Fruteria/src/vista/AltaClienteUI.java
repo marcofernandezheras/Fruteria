@@ -19,7 +19,7 @@ public class AltaClienteUI extends JPanel {
 	protected JLabel lblColorDePelo = new JLabel("Color de Pelo");
 	protected JLabel lblDni = new JLabel("DNI");
 	protected JButton btnCrear = new JButton("Crear");
-	private final JLabel lblAltaClientes = new JLabel("Alta Clientes");
+	protected JLabel lblAltaClientes = new JLabel("Alta Clientes");
 
 	/**
 	 * Create the panel.
