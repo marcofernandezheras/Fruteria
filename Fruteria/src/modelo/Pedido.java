@@ -53,6 +53,7 @@ public class Pedido implements Serializable{
 		lineaPedido.add(linea);
 	}
 
+
 	public float getTotalPedido() {
 		float suma = 0;
 		for (int i = 0; i < lineaPedido.size(); i++) {

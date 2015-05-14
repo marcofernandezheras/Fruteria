@@ -1,3 +1,4 @@
+
 package vista;
 
 import javax.swing.JPanel;
@@ -9,6 +10,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Font;
+import javax.swing.ImageIcon;
 
 public class BuscarArticuloUI extends JPanel {
 
@@ -18,7 +20,7 @@ public class BuscarArticuloUI extends JPanel {
 	protected JTextField txtMensaje;
 	protected JLabel lblBsquedaDeArticulos = new JLabel("B\u00FAsqueda de articulos");
 	protected JLabel lblBusquedaNombre = new JLabel("Busqueda Nombre");
-	protected JButton btnBuscar = new JButton("Buscar");
+	protected JButton btnBuscar = new JButton("");
 	protected JLabel lblNombre = new JLabel("Nombre");
 	protected JLabel lblPrecio = new JLabel("Precio");
 	protected JLabel lblMensaje = new JLabel("Mensaje");
@@ -69,10 +71,11 @@ public class BuscarArticuloUI extends JPanel {
 		add(txtBusquedaNombre, gbc_txtBusquedaNombre);
 
 		GridBagConstraints gbc_btnBuscar = new GridBagConstraints();
-		gbc_btnBuscar.anchor = GridBagConstraints.WEST;
+		gbc_btnBuscar.fill = GridBagConstraints.HORIZONTAL;
 		gbc_btnBuscar.insets = new Insets(0, 0, 5, 0);
 		gbc_btnBuscar.gridx = 6;
 		gbc_btnBuscar.gridy = 1;
+		btnBuscar.setIcon(new ImageIcon(BuscarArticuloUI.class.getResource("/iconos/magnifier-left.png")));
 		add(btnBuscar, gbc_btnBuscar);
 
 		GridBagConstraints gbc_lblNombre = new GridBagConstraints();

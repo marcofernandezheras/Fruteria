@@ -8,6 +8,7 @@ import java.awt.Insets;
 import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JButton;
+import javax.swing.ImageIcon;
 
 public class ModClienteUI extends JPanel {
 
@@ -24,21 +25,23 @@ public class ModClienteUI extends JPanel {
 	protected JLabel lblColorDePelo = new JLabel("Color de Pelo");
 	protected JLabel lblMensaje = new JLabel("Mensaje");
 	protected JButton btnModificar = new JButton("Modificar");
+	private final JButton btnNewButton = new JButton("");
 
 	/**
 	 * Create the panel.
 	 */
 	public ModClienteUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0 };
+		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0 };
 		gridBagLayout.rowHeights = new int[] { 44, 0, 23, 0, 0, 0, 0, 0, 20, 0, 0, 10, 0 };
-		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
+		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 				Double.MIN_VALUE };
 		setLayout(gridBagLayout);
 
 		lblModificarClientes.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
 		GridBagConstraints gbc_lblModificarClientes = new GridBagConstraints();
+		gbc_lblModificarClientes.gridwidth = 3;
 		gbc_lblModificarClientes.fill = GridBagConstraints.VERTICAL;
 		gbc_lblModificarClientes.gridheight = 2;
 		gbc_lblModificarClientes.insets = new Insets(0, 0, 5, 5);
@@ -55,13 +58,20 @@ public class ModClienteUI extends JPanel {
 
 		txtBuscar = new JTextField();
 		GridBagConstraints gbc_txtBuscar = new GridBagConstraints();
-		gbc_txtBuscar.gridwidth = 2;
+		gbc_txtBuscar.gridwidth = 3;
 		gbc_txtBuscar.insets = new Insets(0, 0, 5, 5);
 		gbc_txtBuscar.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtBuscar.gridx = 2;
 		gbc_txtBuscar.gridy = 2;
 		add(txtBuscar, gbc_txtBuscar);
 		txtBuscar.setColumns(10);
+		
+		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+		gbc_btnNewButton.insets = new Insets(0, 0, 5, 0);
+		gbc_btnNewButton.gridx = 5;
+		gbc_btnNewButton.gridy = 2;
+		btnNewButton.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/magnifier-left.png")));
+		add(btnNewButton, gbc_btnNewButton);
 
 		GridBagConstraints gbc_lblNombre = new GridBagConstraints();
 		gbc_lblNombre.anchor = GridBagConstraints.EAST;
@@ -72,7 +82,7 @@ public class ModClienteUI extends JPanel {
 
 		txtNombre = new JTextField();
 		GridBagConstraints gbc_txtNombre = new GridBagConstraints();
-		gbc_txtNombre.gridwidth = 2;
+		gbc_txtNombre.gridwidth = 3;
 		gbc_txtNombre.insets = new Insets(0, 0, 5, 5);
 		gbc_txtNombre.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtNombre.gridx = 2;
@@ -89,7 +99,7 @@ public class ModClienteUI extends JPanel {
 
 		txtApellidos = new JTextField();
 		GridBagConstraints gbc_txtApellidos = new GridBagConstraints();
-		gbc_txtApellidos.gridwidth = 2;
+		gbc_txtApellidos.gridwidth = 3;
 		gbc_txtApellidos.insets = new Insets(0, 0, 5, 5);
 		gbc_txtApellidos.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtApellidos.gridx = 2;
@@ -107,7 +117,7 @@ public class ModClienteUI extends JPanel {
 
 		txtDNI = new JTextField();
 		GridBagConstraints gbc_txtDNI = new GridBagConstraints();
-		gbc_txtDNI.gridwidth = 2;
+		gbc_txtDNI.gridwidth = 3;
 		gbc_txtDNI.insets = new Insets(0, 0, 5, 5);
 		gbc_txtDNI.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtDNI.gridx = 2;
@@ -124,7 +134,7 @@ public class ModClienteUI extends JPanel {
 
 		txtColorDePelo = new JTextField();
 		GridBagConstraints gbc_txtColorDePelo = new GridBagConstraints();
-		gbc_txtColorDePelo.gridwidth = 2;
+		gbc_txtColorDePelo.gridwidth = 3;
 		gbc_txtColorDePelo.insets = new Insets(0, 0, 5, 5);
 		gbc_txtColorDePelo.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtColorDePelo.gridx = 2;
@@ -141,7 +151,7 @@ public class ModClienteUI extends JPanel {
 
 		txtMensaje = new JTextField();
 		GridBagConstraints gbc_txtMensaje = new GridBagConstraints();
-		gbc_txtMensaje.gridwidth = 2;
+		gbc_txtMensaje.gridwidth = 3;
 		gbc_txtMensaje.gridheight = 3;
 		gbc_txtMensaje.insets = new Insets(0, 0, 5, 5);
 		gbc_txtMensaje.fill = GridBagConstraints.BOTH;
@@ -152,11 +162,13 @@ public class ModClienteUI extends JPanel {
 
 		GridBagConstraints gbc_btnModificar = new GridBagConstraints();
 		gbc_btnModificar.gridwidth = 2;
-		gbc_btnModificar.insets = new Insets(0, 0, 5, 5);
-		gbc_btnModificar.gridx = 3;
+		gbc_btnModificar.insets = new Insets(0, 0, 5, 0);
+		gbc_btnModificar.gridx = 4;
 		gbc_btnModificar.gridy = 10;
+		btnModificar.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/pencil.png")));
 		add(btnModificar, gbc_btnModificar);
 
 	}
 
 }
+
