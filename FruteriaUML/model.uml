@@ -29,6 +29,10 @@
       <ownedOperation xmi:id="_W-kuIPmREeSgCqLRRD762Q" name="getTotalPedido">
         <ownedParameter xmi:id="_Xhem4PmREeSgCqLRRD762Q" name="total" type="_nckIQPiZEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
+      <ownedOperation xmi:id="_zGH-QP0sEeSFtJ60IS-mDA" name="anadirLinea">
+        <ownedParameter xmi:id="_3N5r8P0sEeSFtJ60IS-mDA" name="articulo" type="_JemDMPiaEeS_k4uWeiG0mA"/>
+        <ownedParameter xmi:id="_5NKN8P0sEeSFtJ60IS-mDA" name="cantidad" type="_sQGTQPiaEeS_k4uWeiG0mA"/>
+      </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_74I58PisEeSpVbHaJ2qujg" name="Modificable">
       <ownedOperation xmi:id="_CTXQ8PitEeSpVbHaJ2qujg" name="identificador">
@@ -117,14 +121,25 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_c2yysPi1EeSpVbHaJ2qujg" name="ParaModCliente">
       <generalization xmi:id="_Q2ZtgPi2EeSpVbHaJ2qujg" general="_5FT24Pi1EeSpVbHaJ2qujg"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Interface" xmi:id="_B8q_gPi-EeSdTIkMRkhNTQ" name="IListaPedidos">
+    <packagedElement xmi:type="uml:Interface" xmi:id="_B8q_gPi-EeSdTIkMRkhNTQ" name="IGestorPedidos">
       <ownedOperation xmi:id="_GH_JYPi-EeSdTIkMRkhNTQ" name="buscarPedido">
         <ownedParameter xmi:id="_GtPykPi-EeSdTIkMRkhNTQ" name="numero" type="_sQGTQPiaEeS_k4uWeiG0mA"/>
         <ownedParameter xmi:id="_JAtC8Pi-EeSdTIkMRkhNTQ" name="pedido" type="_IGGw0PibEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
       <ownedOperation xmi:id="_PQQVcPi-EeSdTIkMRkhNTQ" name="altaPedido">
-        <ownedParameter xmi:id="_SzfysPi-EeSdTIkMRkhNTQ" name="pedido" type="_IGGw0PibEeS_k4uWeiG0mA"/>
         <ownedParameter xmi:id="_VHOI0Pi-EeSdTIkMRkhNTQ" name="success" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_TT1RUP0sEeSFtJ60IS-mDA" name="addLineaPedido">
+        <ownedParameter xmi:id="_WgzjoP0sEeSFtJ60IS-mDA" name="articulo" type="_JemDMPiaEeS_k4uWeiG0mA"/>
+        <ownedParameter xmi:id="_YlqXUP0sEeSFtJ60IS-mDA" name="cantidad" type="_sQGTQPiaEeS_k4uWeiG0mA"/>
+        <ownedParameter xmi:id="_asVv8P0sEeSFtJ60IS-mDA" name="success" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_hDGdsP0sEeSFtJ60IS-mDA" name="insertarCliente">
+        <ownedParameter xmi:id="_jq7bkP0sEeSFtJ60IS-mDA" name="cliente" type="_qpRxUPiYEeS_k4uWeiG0mA"/>
+        <ownedParameter xmi:id="_lddJIP0sEeSFtJ60IS-mDA" name="success" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_pp4GQP0sEeSFtJ60IS-mDA" name="guardarPedido">
+        <ownedParameter xmi:id="_q3E5MP0sEeSFtJ60IS-mDA" name="success" type="_7TXzQPicEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_9uAxQPi-EeSdTIkMRkhNTQ" name="ListaPedidos">
