@@ -11,6 +11,7 @@ public class Pedido implements Serializable{
 
 	private int numeroPedido;
 	private ArrayList<LineaPedido> lineaPedido;
+	private Cliente cliente;
 
 	/************************************
 	 * /* Constructor/es *
@@ -23,7 +24,15 @@ public class Pedido implements Serializable{
 	public Pedido(int numeroPedido) {
 		super();
 		this.numeroPedido = numeroPedido;
-		lineaPedido=null;
+		lineaPedido= new ArrayList<LineaPedido>();
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 	/************************************
@@ -37,20 +46,16 @@ public class Pedido implements Serializable{
 		this.numeroPedido = numeroPedido;
 	}
 
-	public ArrayList<LineaPedido> getLineaPedido() {
+	public ArrayList<LineaPedido> getLineasPedido() {
 		return lineaPedido;
-	}
-
-	public void setLineaPedido(ArrayList<LineaPedido> lineaPedido) {
-		this.lineaPedido = lineaPedido;
 	}
 
 	/************************************
 	 * /* Metodos *
 	 ************************************/
 
-	public void anadirLinea(LineaPedido linea) {
-		lineaPedido.add(linea);
+	public void anadirLinea(Articulo articulo, int cantidad) {
+		lineaPedido.add(new LineaPedido(articulo, cantidad));
 	}
 
 
