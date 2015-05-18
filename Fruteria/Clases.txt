@@ -49,10 +49,10 @@ modelo
 	|_ AccesoFicheroArray: 	4   horas  <-- Marco  : OK!
 
 vista
-	|_ AltaArticuloUI    :	1   hora  <-- Dani	  
+	|_ AltaArticuloUI    :	1   hora  <-- Dani	  : OK!
 	|_ BuscarArticuloUI  :	1   hora  <-- Dani    : OK!
-	|_ AltaClienteUI     :	1   hora  <-- Dani
-	|_ ModClienteUI      :	1   hora  <-- Dani   
+	|_ AltaClienteUI     :	1   hora  <-- Dani    : OK!
+	|_ ModClienteUI      :	1   hora  <-- Dani    : OK!
 	|_ BuscarClienteUI   :	1   hora  <-- Eduardo : OK!
 	|_ AltaPedidoUI      :	4	horas <-- Eduardo
 	|_ BuscarPedidoUI    :	1   hora  <-- Eduardo
@@ -61,12 +61,12 @@ vista
 controlador
 	|_ ListaArticulos    :	3   horas <-- Maria   : OK!
 	|_ ListaCliente      :	3   horas <-- Maria   : OK!
-	|_ ListaPedidos	     :	3   horas <-- Miguel
-	|_ ParaAltaArticulo  :	2	horas
+	|_ ListaPedidos	     :	3   horas <-- Miguel  : OK!
+	|_ ParaAltaArticulo  :	2	horas <-- Marco   : OK!
 	|_ ParaBuscarArticulo:	1	hora  <-- Marco   : OK!
 	|_ ParaAltaCliente   :	2	horas
 	|_ ParaModCliente 	 :	1	hora
-	|_ ParaBuscarCliente :	1	hora  <-- Marco
+	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
 	|_ ParaAltaPedido 	 :	4	horas
 	|_ ParaBuscarPedido  :	2	horas
 	|_ ParaPrincipalUI   :	2	horas
@@ -96,8 +96,8 @@ vista
 	|_ PrincipalUI       :	0   horas
 
 controlador
-	|_ ListaArticulos    :	3   horas <-- Marco		:OK?
-	|_ ListaCliente      :	3   horas <-- Marco		:OK?
+	|_ ListaArticulos    :	3   horas <-- Marco		:OK!
+	|_ ListaCliente      :	3   horas <-- Marco		:OK!
 	|_ ListaPedidos	     :	3   horas
 	|_ ParaAltaArticulo  :	?	horas
 	|_ ParaBuscarArticulo:	?	hora	
