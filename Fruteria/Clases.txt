@@ -62,7 +62,7 @@ controlador
 	|_ ListaArticulos    :	3   horas <-- Maria   : OK!
 	|_ ListaCliente      :	3   horas <-- Maria   : OK!
 	|_ ListaPedidos	     :	3   horas <-- Miguel  : OK!
-	|_ ParaAltaArticulo  :	2	horas <-- Marco
+	|_ ParaAltaArticulo  :	2	horas <-- Marco   : OK!
 	|_ ParaBuscarArticulo:	1	hora  <-- Marco   : OK!
 	|_ ParaAltaCliente   :	2	horas
 	|_ ParaModCliente 	 :	1	hora
