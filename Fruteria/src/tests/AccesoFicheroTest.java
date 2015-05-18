@@ -2,11 +2,12 @@ package tests;
 
 import static org.junit.Assert.*;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class AccesoFicheroTest {
 
-	@Test
+	@Ignore
 	public void testAccesoFichero() {
 		fail("Not yet implemented");
 	}
@@ -16,17 +17,17 @@ public class AccesoFicheroTest {
 		fail("Not yet implemented");
 	}
 
-	@Test
+	@Ignore
 	public void testEscribirObjeto() {
 		fail("Not yet implemented");
 	}
 
-	@Test
+	@Ignore
 	public void testModificarObjeto() {
 		fail("Not yet implemented");
 	}
 
-	@Test
+	@Ignore
 	public void testClose() {
 		fail("Not yet implemented");
 	}
