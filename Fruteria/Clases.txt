@@ -56,7 +56,7 @@ vista
 	|_ BuscarClienteUI   :	1   hora  <-- Eduardo : OK!
 	|_ AltaPedidoUI      :	4	horas <-- Eduardo
 	|_ BuscarPedidoUI    :	1   hora  <-- Eduardo
-	|_ PrincipalUI       :	1   hora  <-- Eduardo
+	|_ PrincipalUI       :	1   hora  <-- Dani
 
 controlador
 	|_ ListaArticulos    :	3   horas <-- Maria   : OK!
@@ -69,7 +69,7 @@ controlador
 	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
 	|_ ParaAltaPedido 	 :	4	horas
 	|_ ParaBuscarPedido  :	2	horas
-	|_ ParaPrincipalUI   :	2	horas
+	|_ ParaPrincipalUI   :	2	horas 
 _________________________________________
 						   47.5 horas	
 
@@ -79,10 +79,10 @@ _________________________________________
 /*		        TESTS JUNIT    	    *
 ************************************/
 modelo
-	|_ Articulo          :  0.5 hora   <-- Maria 
-	|_ Cliente           :  0   horas  <-- Maria  
-	|_ Pedido            :  1   hora   <-- Maria 
-	|_ LineaPedido       :	0.5 hora   <-- Maria 
+	|_ Articulo          :  0.5 hora   <-- Maria  :OK!
+	|_ Cliente           :  0   horas  <-- Maria  :OK!
+	|_ Pedido            :  1   hora   <-- Maria  :OK!
+	|_ LineaPedido       :	0.5 hora   <-- Maria  :OK!
 	|_ AccesoFichero     :	4   horas  <-- Miguel  
 
 vista
