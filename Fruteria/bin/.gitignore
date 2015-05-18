@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-/tests/
-/controlador/
-=======
-*.class
 /tests/
 /modelo/
 /vista/
 /controlador/
 /iconos/
->>>>>>> upstream/master
+*.class

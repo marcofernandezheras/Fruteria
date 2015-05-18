@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 I: Implementa
 E: Extiende
 
@@ -50,10 +49,10 @@ modelo
 	|_ AccesoFicheroArray: 	4   horas  <-- Marco  : OK!
 
 vista
-	|_ AltaArticuloUI    :	1   hora  <-- Dani	  
+	|_ AltaArticuloUI    :	1   hora  <-- Dani	  : OK!
 	|_ BuscarArticuloUI  :	1   hora  <-- Dani    : OK!
-	|_ AltaClienteUI     :	1   hora  <-- Dani
-	|_ ModClienteUI      :	1   hora  <-- Dani   
+	|_ AltaClienteUI     :	1   hora  <-- Dani    : OK!
+	|_ ModClienteUI      :	1   hora  <-- Dani    : OK!
 	|_ BuscarClienteUI   :	1   hora  <-- Eduardo : OK!
 	|_ AltaPedidoUI      :	4	horas <-- Eduardo
 	|_ BuscarPedidoUI    :	1   hora  <-- Eduardo
@@ -62,12 +61,12 @@ vista
 controlador
 	|_ ListaArticulos    :	3   horas <-- Maria   : OK!
 	|_ ListaCliente      :	3   horas <-- Maria   : OK!
-	|_ ListaPedidos	     :	3   horas <-- Miguel
-	|_ ParaAltaArticulo  :	2	horas
+	|_ ListaPedidos	     :	3   horas <-- Miguel  : OK!
+	|_ ParaAltaArticulo  :	2	horas <-- Marco   : OK!
 	|_ ParaBuscarArticulo:	1	hora  <-- Marco   : OK!
 	|_ ParaAltaCliente   :	2	horas
 	|_ ParaModCliente 	 :	1	hora
-	|_ ParaBuscarCliente :	1	hora  <-- Marco
+	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
 	|_ ParaAltaPedido 	 :	4	horas
 	|_ ParaBuscarPedido  :	2	horas
 	|_ ParaPrincipalUI   :	2	horas
@@ -97,8 +96,8 @@ vista
 	|_ PrincipalUI       :	0   horas
 
 controlador
-	|_ ListaArticulos    :	3   horas <-- Marco		:OK?
-	|_ ListaCliente      :	3   horas <-- Marco		:OK?
+	|_ ListaArticulos    :	3   horas <-- Marco		:OK!
+	|_ ListaCliente      :	3   horas <-- Marco		:OK!
 	|_ ListaPedidos	     :	3   horas
 	|_ ParaAltaArticulo  :	?	horas
 	|_ ParaBuscarArticulo:	?	hora	
@@ -109,116 +108,4 @@ controlador
 	|_ ParaBuscarPedido  :	?	horas
 	|_ ParaPrincipalUI   :	?	horas
 _________________________________________
-=======
-I: Implementa
-E: Extiende
-
-/************************************
-/*			CLASES					*
-************************************/
-modelo
-	|_ Articulo
-	|_ Cliente: I:Modificable
-	|_ Pedido
-	|_ LineaPedido
-	|_ AccesoFichero: I:IAccesoFicheros
-	|_ AccesoFicheroArray: I:IAccesoFicheros
-
-vista
-	|_ AltaArticuloUI  : E:JPanel
-	|_ BuscarArticuloUI: E:JPanel
-	|_ AltaClienteUI   : E:JPanel
-	|_ ModClienteUI    : E:JPanel
-	|_ BuscarClienteUI : E:JPanel
-	|_ AltaPedidoUI    : E:JPanel
-	|_ BuscarPedidoUI  : E:JPanel
-	|_ PrincipalUI     : E:JFrame
-
-controlador
-	|_ ListaArticulos    : I:IListaArticulos
-	|_ ListaCliente      : I:IListaCliente
-	|_ ListaPedidos	     : I:IListaPedidos
-	|_ ParaAltaArticulo  : E:AltaArticuloUI  
-	|_ ParaBuscarArticulo: E:BuscarArticuloUI
-	|_ ParaAltaCliente   : E:AltaCliente     
-	|_ ParaModCliente 	 : E:ModCliente 	   
-	|_ ParaBuscarCliente : E:BuscarCliente   
-	|_ ParaAltaPedido 	 : E:AltaPedido 	   
-	|_ ParaBuscarPedido  : E:BuscarPedido    
-	|_ ParaPrincipalUI   : E:PrincipalUI     
-
-
-
-/************************************
-/*		   IMPLEMENTACIONES	    	*
-************************************/
-modelo
-	|_ Articulo          :  1   hora   <-- Miguel : OK!
-	|_ Cliente           :  1.5 horas  <-- Miguel : OK!
-	|_ Pedido            :  1   hora   <-- Miguel : OK!
-	|_ LineaPedido       :	1   hora   <-- Miguel : OK!
-	|_ AccesoFichero     :	4   horas  <-- Marco  : OK!
-	|_ AccesoFicheroArray: 	4   horas  <-- Marco  : OK!
-
-vista
-	|_ AltaArticuloUI    :	1   hora  <-- Dani	  
-	|_ BuscarArticuloUI  :	1   hora  <-- Dani    : OK!
-	|_ AltaClienteUI     :	1   hora  <-- Dani
-	|_ ModClienteUI      :	1   hora  <-- Dani   
-	|_ BuscarClienteUI   :	1   hora  <-- Eduardo : OK!
-	|_ AltaPedidoUI      :	4	horas <-- Eduardo
-	|_ BuscarPedidoUI    :	1   hora  <-- Eduardo
-	|_ PrincipalUI       :	1   hora  <-- Eduardo
-
-controlador
-	|_ ListaArticulos    :	3   horas <-- Maria   : OK!
-	|_ ListaCliente      :	3   horas <-- Maria   : OK!
-	|_ ListaPedidos	     :	3   horas <-- Miguel
-	|_ ParaAltaArticulo  :	2	horas
-	|_ ParaBuscarArticulo:	1	hora  <-- Marco   : OK!
-	|_ ParaAltaCliente   :	2	horas
-	|_ ParaModCliente 	 :	1	hora
-	|_ ParaBuscarCliente :	1	hora  <-- Marco
-	|_ ParaAltaPedido 	 :	4	horas
-	|_ ParaBuscarPedido  :	2	horas
-	|_ ParaPrincipalUI   :	2	horas
-_________________________________________
-						   47.5 horas	
-
-
-
-/************************************
-/*		        TESTS JUNIT    	    *
-************************************/
-modelo
-	|_ Articulo          :  0.5 hora   <-- Maria 
-	|_ Cliente           :  0   horas  <-- Maria  
-	|_ Pedido            :  1   hora   <-- Maria 
-	|_ LineaPedido       :	0.5 hora   <-- Maria 
-	|_ AccesoFichero     :	4   horas  <-- Miguel  
-
-vista
-	|_ AltaArticuloUI    :	0   horas	
-	|_ BuscarArticuloUI  :	0   horas
-	|_ AltaClienteUI     :	0   horas
-	|_ ModClienteUI      :	0   horas
-	|_ BuscarClienteUI   :	0   horas
-	|_ AltaPedidoUI      :	0	horas
-	|_ BuscarPedidoUI    :	0   horas
-	|_ PrincipalUI       :	0   horas
-
-controlador
-	|_ ListaArticulos    :	3   horas <-- Marco		:OK?
-	|_ ListaCliente      :	3   horas <-- Marco		:OK?
-	|_ ListaPedidos	     :	3   horas
-	|_ ParaAltaArticulo  :	?	horas
-	|_ ParaBuscarArticulo:	?	hora	
-	|_ ParaAltaCliente   :	?	horas
-	|_ ParaModCliente 	 :	?	hora
-	|_ ParaBuscarCliente :	?	hora
-	|_ ParaAltaPedido 	 :	?	horas
-	|_ ParaBuscarPedido  :	?	horas
-	|_ ParaPrincipalUI   :	?	horas
-_________________________________________
->>>>>>> upstream/master
 						   15 + ? horas							   
