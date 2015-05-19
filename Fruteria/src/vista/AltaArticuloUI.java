@@ -26,7 +26,7 @@ public class AltaArticuloUI extends JPanel {
 	protected JLabel lblPvp = new JLabel("PVP");
 	protected JLabel lblEuros = new JLabel("\u20AC");
 	protected JLabel lblDescripcion = new JLabel("Descripcion");
-
+	protected JButton btnCrear;
 	/**
 	 * Create the panel.
 	 */
@@ -124,12 +124,9 @@ public class AltaArticuloUI extends JPanel {
 		add(txtDescripcion, gbc_txtDescripcion);
 		txtDescripcion.setColumns(10);
 
-		JButton btnCrear = new JButton("Crear");
+		btnCrear = new JButton("Crear");
 		btnCrear.setIcon(new ImageIcon(AltaArticuloUI.class.getResource("/iconos/plus.png")));
-		btnCrear.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-			}
-		});
+
 		GridBagConstraints gbc_btnCrear = new GridBagConstraints();
 		gbc_btnCrear.gridwidth = 3;
 		gbc_btnCrear.fill = GridBagConstraints.HORIZONTAL;

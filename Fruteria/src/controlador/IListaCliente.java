@@ -24,6 +24,6 @@ public interface IListaCliente {
 	 * @param cliente {@link Cliente} a modificar.
 	 * @return <code>true</code> en caso de éxito, <code>false</code> en caso contrario.
 	 */
-	public boolean modificarCliente(Cliente cliente);
+	public boolean modificarCliente(Cliente cliente, Object identificador);
 
 }
