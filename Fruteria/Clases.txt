@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 I: Implementa
 E: Extiende
 
