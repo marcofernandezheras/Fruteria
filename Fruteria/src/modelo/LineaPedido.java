@@ -27,8 +27,8 @@ public class LineaPedido implements Serializable {
 			this.cantidad = cantidad;
 		}
 		else{
-			Articulo articuloDos=new Articulo("No valido", "No valido", 0f);
-			this.articulo=articuloDos;
+			Articulo articuloNuevo=new Articulo("No valido", "No valido", 0f);
+			this.articulo=articuloNuevo;
 			this.cantidad=0;
 		}
 	}
