@@ -49,5 +49,5 @@ public class LineaPedido implements Serializable {
 		return articulo;
 	}
 
-	// Tiempo en realizarlo 15 min
+	// Tiempo en realizarlo 15 min + 5 min para arreglar constructor
 }
