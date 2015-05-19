@@ -64,8 +64,8 @@ controlador
 	|_ ListaPedidos	     :	3   horas <-- Miguel  : OK!
 	|_ ParaAltaArticulo  :	2	horas <-- Marco   : OK!
 	|_ ParaBuscarArticulo:	1	hora  <-- Marco   : OK!
-	|_ ParaAltaCliente   :	2	horas
-	|_ ParaModCliente 	 :	1	hora
+	|_ ParaAltaCliente   :	2	horas <-- Maria
+	|_ ParaModCliente 	 :	1	hora  <-- Marco
 	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
 	|_ ParaAltaPedido 	 :	4	horas
 	|_ ParaBuscarPedido  :	2	horas
