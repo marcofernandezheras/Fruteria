@@ -2,34 +2,29 @@ package tests;
 
 import static org.junit.Assert.*;
 
+import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AccesoFicheroTest {
+	
+	
 
-	@Ignore
-	public void testAccesoFichero() {
-		fail("Not yet implemented");
+	@Test
+	public void testBLeerObjeto() {
+		
 	}
 
 	@Test
-	public void testLeerObjeto() {
-		fail("Not yet implemented");
+	public void testAEscribirObjeto() {
+		
 	}
 
-	@Ignore
-	public void testEscribirObjeto() {
-		fail("Not yet implemented");
-	}
-
-	@Ignore
-	public void testModificarObjeto() {
-		fail("Not yet implemented");
-	}
-
-	@Ignore
-	public void testClose() {
-		fail("Not yet implemented");
+	@Test
+	public void testCModificarObjeto() {
+		
 	}
 
 }
