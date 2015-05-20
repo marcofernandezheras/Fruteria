@@ -12,43 +12,44 @@ public class ListaPedidos implements IGestorPedidos {
 	File archivo = new File("ListaPedidos.txt");
 	AccesoFichero accesoFichero;
 	Pedido pedido;
- 
-	@Override
-	public Pedido buscarPedido(int numero) {
+
+	public ListaPedidos() {
 		try {
 			accesoFichero = new AccesoFichero(archivo);
-			Pedido aux = (Pedido) accesoFichero.leerObjeto();
-			while (aux != null) {
-				if (aux.getNumeroPedido() == numero)
-					return aux;
-				else{
-					aux=(Pedido) accesoFichero.leerObjeto();
-				}
-			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
+		}
+	}
+	@Override
+	public Pedido buscarPedido(int numero) {
+		Pedido aux = (Pedido) accesoFichero.leerObjeto();
+		while (aux != null) {
+			if (aux.getNumeroPedido() == numero)
+				return aux;
+			else {
+				aux = (Pedido) accesoFichero.leerObjeto();
+			}
 		}
 		return null;
 	}
 
-	private int siguienteNumeroPedido(){
-		
+	private int siguienteNumeroPedido() {
+
 		Pedido aux = (Pedido) accesoFichero.leerObjeto();
 		boolean salir = aux == null;
-		while(!salir)
-		{
+		while (!salir) {
 			Pedido p = (Pedido) accesoFichero.leerObjeto();
-			if(p == null)
+			if (p == null)
 				salir = true;
 			else
-				aux = p;				
-		}	
-		if(aux == null)
+				aux = p;
+		}
+		if (aux == null)
 			return 1;
 		else
 			return aux.getNumeroPedido() + 1;
 	}
-	
+
 	@Override
 	public boolean altaPedido() {
 		pedido = new Pedido(siguienteNumeroPedido());
@@ -57,8 +58,11 @@ public class ListaPedidos implements IGestorPedidos {
 
 	@Override
 	public boolean addLineaPedido(Articulo articulo, int cantidad) {
-		pedido.anadirLinea(articulo, cantidad);
-		return true;
+		if (articulo != null && cantidad != 0) {
+			pedido.anadirLinea(articulo, cantidad);
+			return true;
+		} else
+			return false;
 	}
 
 	@Override
