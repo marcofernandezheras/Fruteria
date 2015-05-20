@@ -44,32 +44,74 @@ public class ParaPrincipalUI extends PrincipalUI {
 	private void eventos() {
 		mntmAltaPedido.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				altaPedido();
 			}
 		});
 		mntmBuscarPedido.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				buscarPedido();
 			}
 		});
 		mntmModificarCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				modificarCliente();
 			}
 		});
 		mntmAltaCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				altaCliente();
 			}
 		});
 		mntmBuscarCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				buscarCliente();
 			}
 		});
 		mntmAltaArticulo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				altaArticulo();
 			}
 		});
 		mntmBuscarArticulo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				buscarArticulo();
 			}
 		});
+	}
+
+	protected void buscarArticulo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void altaArticulo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void buscarCliente() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void altaCliente() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void modificarCliente() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void buscarPedido() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	protected void altaPedido() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
