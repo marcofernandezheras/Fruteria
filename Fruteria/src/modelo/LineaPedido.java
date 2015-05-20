@@ -22,15 +22,12 @@ public class LineaPedido implements Serializable {
 	 */
 	public LineaPedido(Articulo articulo, int cantidad) {
 
-		if (articulo != null && cantidad > 0) {
+		if (articulo != null) {
 			this.articulo = articulo;
 			this.cantidad = cantidad;
 		}
-		else{
-			Articulo articuloNuevo=new Articulo("No valido", "No valido", 0f);
-			this.articulo=articuloNuevo;
-			this.cantidad=0;
-		}
+		else
+			throw new NullPointerException("Articulo nulo");
 	}
 
 	/************************************
