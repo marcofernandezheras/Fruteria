@@ -11,12 +11,13 @@ import javax.swing.JButton;
 import java.awt.Font;
 
 public class BuscarArticuloUI extends JPanel {
-	private JTextField txtBusquedaNombre;
-	private JTextField txtPrecio;
-	private JTextField txtPVP;
-	private JTextField txtDescripcion;
-	private JTextField txtMensaje;
-	private JTextField textField;
+	protected JTextField txtBusquedaNombre;
+	protected JTextField txtPrecio;
+	protected JTextField txtPVP;
+	protected JTextField txtDescripcion;
+	protected JTextField txtMensaje;
+	protected JTextField txtNombre;
+	protected JButton btnBuscar;
 
 	/**
 	 * Create the panel.
@@ -58,7 +59,7 @@ public class BuscarArticuloUI extends JPanel {
 		add(txtBusquedaNombre, gbc_txtBusquedaNombre);
 		txtBusquedaNombre.setColumns(10);
 		
-		JButton btnBuscar = new JButton("Buscar");
+		btnBuscar = new JButton("Buscar");
 		GridBagConstraints gbc_btnBuscar = new GridBagConstraints();
 		gbc_btnBuscar.anchor = GridBagConstraints.WEST;
 		gbc_btnBuscar.insets = new Insets(0, 0, 5, 5);
@@ -74,16 +75,16 @@ public class BuscarArticuloUI extends JPanel {
 		gbc_lblNombre.gridy = 2;
 		add(lblNombre, gbc_lblNombre);
 		
-		textField = new JTextField();
-		textField.setEditable(false);
-		GridBagConstraints gbc_textField = new GridBagConstraints();
-		gbc_textField.gridwidth = 5;
-		gbc_textField.insets = new Insets(0, 0, 5, 5);
-		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField.gridx = 1;
-		gbc_textField.gridy = 2;
-		add(textField, gbc_textField);
-		textField.setColumns(10);
+		txtNombre = new JTextField();
+		txtNombre.setEditable(false);
+		GridBagConstraints gbc_txtNombre = new GridBagConstraints();
+		gbc_txtNombre.gridwidth = 5;
+		gbc_txtNombre.insets = new Insets(0, 0, 5, 5);
+		gbc_txtNombre.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtNombre.gridx = 1;
+		gbc_txtNombre.gridy = 2;
+		add(txtNombre, gbc_txtNombre);
+		txtNombre.setColumns(10);
 		
 		JLabel lblPrecio = new JLabel("Precio");
 		lblPrecio.setHorizontalAlignment(SwingConstants.LEFT);
