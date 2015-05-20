@@ -39,7 +39,7 @@ public class BuscarArticuloUI extends JPanel {
 		txtBusquedaNombre.setColumns(10);
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] {99, 110, 30, 80, 30, 79, 79};
-		gridBagLayout.rowHeights = new int[] {77, 10, 53, 23, 30, 30, 30, 38, 30, 10};
+		gridBagLayout.rowHeights = new int[] {59, 10, 53, 23, 30, 30, 30, 38, 30, 10};
 		gridBagLayout.columnWeights = new double[] { 0.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0 };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
 		setLayout(gridBagLayout);
