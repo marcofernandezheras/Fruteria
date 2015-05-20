@@ -32,10 +32,15 @@ public class ParaPrincipalUI extends PrincipalUI {
 		});
 	}
 
+	private IListaArticulos listaArticulos;
+	private IListaCliente listaCliente;
+
 	/**
 	 * Create the frame.
 	 */
 	public ParaPrincipalUI() {
+		listaArticulos = new ListaArticulos();
+		listaCliente = new ListaClientes();
 		eventos();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);		
@@ -80,38 +85,39 @@ public class ParaPrincipalUI extends PrincipalUI {
 	}
 
 	protected void buscarArticulo() {
-		// TODO Auto-generated method stub
-		
+		cambiarPanel(new ParaBuscarArticulo(listaArticulos));
 	}
 
 	protected void altaArticulo() {
-		// TODO Auto-generated method stub
-		
+		cambiarPanel(new ParaAltaArticulo(listaArticulos));			
 	}
 
 	protected void buscarCliente() {
-		// TODO Auto-generated method stub
-		
+		cambiarPanel(new ParaBuscarCliente(listaCliente));	
 	}
 
 	protected void altaCliente() {
-		// TODO Auto-generated method stub
-		
+		cambiarPanel(new ParaAltaCliente(listaCliente));			
 	}
 
 	protected void modificarCliente() {
-		// TODO Auto-generated method stub
-		
+		cambiarPanel(new ParaModCliente(listaCliente));	
 	}
 
 	protected void buscarPedido() {
-		// TODO Auto-generated method stub
-		
+		// TODO ParaPrincipalUI::buscarPedido()		
 	}
 
 	protected void altaPedido() {
-		// TODO Auto-generated method stub
+		// TODO ParaPrincipalUI::altaPedido()
 		
 	}
-
+	
+	private void cambiarPanel(JPanel nuevoPanel)
+	{
+		contentPane = null;
+		contentPane = nuevoPanel;	
+		this.setContentPane(contentPane);
+		this.validate();
+	}
 }
