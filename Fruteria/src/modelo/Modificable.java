@@ -1,6 +1,8 @@
 package modelo;
 
-public interface Modificable {
+import java.io.Serializable;
+
+public interface Modificable extends Serializable{
 	/**
 	 * Identificador que no debe ser único para cada instancia
 	 * y no debe cambiar nunca en la instancia 

@@ -85,5 +85,20 @@ public class Cliente implements Modificable, Serializable {
 		return dni;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if(obj == null)
+			return false;
+		if(obj instanceof Cliente)
+		{
+			Cliente other = (Cliente)obj;
+			boolean e = dni.equalsIgnoreCase(other.dni);
+			e &= nombre.equalsIgnoreCase(other.nombre);
+			e &= apellidos.equalsIgnoreCase(other.apellidos);
+			e &= colorPelo.equals(other.colorPelo);
+			return e;
+		}
+		return super.equals(obj);
+	}
 	// Tiempo en realizarlo 15 min
 }
