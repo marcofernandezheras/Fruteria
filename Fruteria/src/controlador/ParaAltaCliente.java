@@ -34,6 +34,10 @@ public class ParaAltaCliente extends AltaClienteUI{
 	private void crearCliente() {
 		if(validarDatos()){
 			if(listaClientes.altaCliente(generarCliente())){
+				txtNombre.setText("");
+				txtApellidos.setText("");
+				txtColorDePelo.setText("");
+				txtDNI.setText("");
 				JOptionPane.showMessageDialog(this, "Cliente creado con éxito");
 			}else{
 				JOptionPane.showMessageDialog(this, "El cliente ya existe");
