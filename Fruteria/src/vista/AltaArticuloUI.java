@@ -91,6 +91,7 @@ public class AltaArticuloUI extends JPanel {
 		add(lblPvp, gbc_lblPvp);
 
 		txtPVP = new JTextField();
+		txtPVP.setEditable(false);
 		GridBagConstraints gbc_txtPVP = new GridBagConstraints();
 		gbc_txtPVP.gridwidth = 2;
 		gbc_txtPVP.insets = new Insets(0, 0, 5, 5);
