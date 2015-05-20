@@ -3,6 +3,7 @@ package controlador;
 import vista.BuscarClienteUI;
 
 import java.awt.event.ActionListener;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 
 import modelo.Cliente;
@@ -33,7 +34,10 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 				txtDNI.setText(cliente.getDni());
 				txtNombre.setText(cliente.getNombre());
 				txtApellido.setText(cliente.getApellidos());
-				txtColorPelo.setText(cliente.getColorPelo().toString());
+				if(cliente.getColorPelo() != null){
+					txtColorPelo.setText(colorToText(cliente.getColorPelo()));
+					txtColorPelo.setForeground(cliente.getColorPelo());
+				}
 			}
 			else
 			{
@@ -44,5 +48,9 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 		{
 			txtMensaje.setText("Debe introducir datos para poder buscar");
 		}
+	}
+	
+	private String colorToText(Color c){
+		return String.format("#%02x%02x%02x", c.getRed(), c.getGreen(), c.getBlue());
 	}
 }
