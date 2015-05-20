@@ -22,11 +22,10 @@ public class LineaPedido implements Serializable {
 	 */
 	public LineaPedido(Articulo articulo, int cantidad) {
 
-		if (articulo != null) {
+		if (articulo != null && cantidad !=0) {
 			this.articulo = articulo;
 			this.cantidad = cantidad;
-		}
-		else
+		} else
 			throw new NullPointerException("Articulo nulo");
 	}
 
@@ -47,4 +46,5 @@ public class LineaPedido implements Serializable {
 	}
 
 	// Tiempo en realizarlo 15 min + 5 min para arreglar constructor
+
 }
