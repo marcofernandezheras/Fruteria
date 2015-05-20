@@ -51,11 +51,14 @@ public class ListaClientesTest {
 	@Test
 	public void testModificarCliente() {
 		ListaClientes instancia = new ListaClientes();
-		Cliente clienteSI = new Cliente("1", "nombre1", "apellidos1", Color.black);
+		Cliente clienteSI = new Cliente("1", "nombreCambiado", "apellidosCambiado", Color.black);
 		Cliente clienteNO = new Cliente("3", "nombre1", "apellidos1", Color.black);
 		assertTrue(instancia.modificarCliente(clienteSI, clienteSI.identificador()));
 		assertFalse(instancia.modificarCliente(clienteNO, ""));
 		assertFalse(instancia.modificarCliente(null,""));
+		
+		assertNotNull(instancia.buscarCliente("nombreCambiado", "apellidosCambiado"));
+		ListaClientes instancia2 = new ListaClientes();
+		assertNotNull(instancia2.buscarCliente("nombreCambiado", "apellidosCambiado"));
 	}
-
 }
