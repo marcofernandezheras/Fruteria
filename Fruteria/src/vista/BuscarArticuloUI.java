@@ -183,3 +183,4 @@ public class BuscarArticuloUI extends JPanel {
 	}
 
 }
+
