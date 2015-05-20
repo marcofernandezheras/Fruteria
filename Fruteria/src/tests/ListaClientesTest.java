@@ -61,5 +61,4 @@ public class ListaClientesTest {
 		ListaClientes instancia2 = new ListaClientes();
 		assertNotNull(instancia2.buscarCliente("nombreCambiado", "apellidosCambiado"));
 	}
-
 }
