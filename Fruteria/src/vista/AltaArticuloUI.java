@@ -27,7 +27,7 @@ public class AltaArticuloUI extends JPanel {
 	protected JLabel lblEuros = new JLabel("\u20AC");
 	protected JLabel lblDescripcion = new JLabel("Descripcion");
 	protected JButton btnCrear;
-	private final JEditorPane txtDescripcion = new JEditorPane();
+	protected final JEditorPane txtDescripcion = new JEditorPane();
 	/**
 	 * Create the panel.
 	 */
