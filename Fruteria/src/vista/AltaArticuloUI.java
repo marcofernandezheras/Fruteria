@@ -12,13 +12,13 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.ImageIcon;
+import javax.swing.JEditorPane;
 
 public class AltaArticuloUI extends JPanel {
 
 	protected JTextField txtNombre;
 	protected JTextField txtPrecio;
 	protected JTextField txtPVP;
-	protected JTextField txtDescripcion;
 	protected JLabel lblAltaArticulos = new JLabel("Alta Articulos");
 	protected JLabel lblNombre = new JLabel("Nombre");
 	protected JLabel lblPrecio = new JLabel("Precio");
@@ -27,6 +27,7 @@ public class AltaArticuloUI extends JPanel {
 	protected JLabel lblEuros = new JLabel("\u20AC");
 	protected JLabel lblDescripcion = new JLabel("Descripcion");
 	protected JButton btnCrear;
+	private final JEditorPane txtDescripcion = new JEditorPane();
 	/**
 	 * Create the panel.
 	 */
@@ -34,8 +35,8 @@ public class AltaArticuloUI extends JPanel {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[] {30, 40, 30, 78, 30, 59, 30, 30, 30, 30};
 		gridBagLayout.rowHeights = new int[] {30, 30, 30, 30, 30, 30, 30, 30, 30, 30};
-		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0 };
-		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0 };
+		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0 };
 		setLayout(gridBagLayout);
 
 		lblAltaArticulos.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
@@ -113,17 +114,15 @@ public class AltaArticuloUI extends JPanel {
 		gbc_lblDescripcion.gridx = 1;
 		gbc_lblDescripcion.gridy = 5;
 		add(lblDescripcion, gbc_lblDescripcion);
-
-		txtDescripcion = new JTextField();
+		
 		GridBagConstraints gbc_txtDescripcion = new GridBagConstraints();
 		gbc_txtDescripcion.gridwidth = 6;
 		gbc_txtDescripcion.gridheight = 4;
-		gbc_txtDescripcion.insets = new Insets(0, 0, 5, 0);
+		gbc_txtDescripcion.insets = new Insets(0, 0, 5, 5);
 		gbc_txtDescripcion.fill = GridBagConstraints.BOTH;
-		gbc_txtDescripcion.gridx = 3;
+		gbc_txtDescripcion.gridx = 2;
 		gbc_txtDescripcion.gridy = 5;
 		add(txtDescripcion, gbc_txtDescripcion);
-		txtDescripcion.setColumns(10);
 
 		btnCrear = new JButton("Crear");
 		btnCrear.setIcon(new ImageIcon(AltaArticuloUI.class.getResource("/iconos/plus.png")));
