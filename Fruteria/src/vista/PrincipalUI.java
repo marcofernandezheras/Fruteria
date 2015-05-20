@@ -35,6 +35,14 @@ public class PrincipalUI extends JFrame {
 	protected JMenuItem mntmBuscar_2;
 	protected JSeparator separator_5;
 	protected JMenuItem mntmAlta_2;
+	
+	protected JMenuItem mntmBuscarArticulo;
+	protected JMenuItem mntmAltaArticulo;
+	protected JMenuItem mntmBuscarCliente;
+	protected JMenuItem mntmAltaCliente;
+	protected JMenuItem mntmModificarCliente;
+	protected JMenuItem mntmBuscarPedido;
+	protected JMenuItem mntmAltaPedido;
 
 	/**
 	 * Launch the application.
@@ -66,14 +74,14 @@ public class PrincipalUI extends JFrame {
 		JMenu mnArticulo = new JMenu("Articulo");
 		menuBar.add(mnArticulo);
 
-		JMenuItem mntmBuscar = new JMenuItem("Buscar");
-		mnArticulo.add(mntmBuscar);
+		mntmBuscarArticulo = new JMenuItem("Buscar");
+		mnArticulo.add(mntmBuscarArticulo);
 
 		JSeparator separator = new JSeparator();
 		mnArticulo.add(separator);
 
-		JMenuItem mntmAlta = new JMenuItem("Alta");
-		mnArticulo.add(mntmAlta);
+		mntmAltaArticulo = new JMenuItem("Alta");
+		mnArticulo.add(mntmAltaArticulo);
 
 		JSeparator separator_4 = new JSeparator();
 		separator_4.setForeground(SystemColor.info);
@@ -84,20 +92,20 @@ public class PrincipalUI extends JFrame {
 		mnCliente.setHorizontalAlignment(SwingConstants.CENTER);
 		menuBar.add(mnCliente);
 
-		JMenuItem mntmBuscar_1 = new JMenuItem("Buscar");
-		mnCliente.add(mntmBuscar_1);
+		mntmBuscarCliente = new JMenuItem("Buscar");
+		mnCliente.add(mntmBuscarCliente);
 
 		JSeparator separator_1 = new JSeparator();
 		mnCliente.add(separator_1);
 
-		JMenuItem mntmAlta_1 = new JMenuItem("Alta");
-		mnCliente.add(mntmAlta_1);
+		mntmAltaCliente = new JMenuItem("Alta");
+		mnCliente.add(mntmAltaCliente);
 
 		JSeparator separator_2 = new JSeparator();
 		mnCliente.add(separator_2);
 
-		JMenuItem mntmNewMenuItem = new JMenuItem("Modificar");
-		mnCliente.add(mntmNewMenuItem);
+		mntmModificarCliente = new JMenuItem("Modificar");
+		mnCliente.add(mntmModificarCliente);
 
 		JSeparator separator_3 = new JSeparator();
 		separator_3.setForeground(SystemColor.info);
@@ -107,14 +115,14 @@ public class PrincipalUI extends JFrame {
 		JMenu mnPedido = new JMenu("Pedido");
 		menuBar.add(mnPedido);
 
-		JMenuItem mntmBuscar_2 = new JMenuItem("Buscar");
-		mnPedido.add(mntmBuscar_2);
+		mntmBuscarPedido = new JMenuItem("Buscar");
+		mnPedido.add(mntmBuscarPedido);
 
 		JSeparator separator_5 = new JSeparator();
 		mnPedido.add(separator_5);
 
-		JMenuItem mntmAlta_2 = new JMenuItem("Alta");
-		mnPedido.add(mntmAlta_2);
+		mntmAltaPedido = new JMenuItem("Alta");
+		mnPedido.add(mntmAltaPedido);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
