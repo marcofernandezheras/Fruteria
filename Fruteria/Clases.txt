@@ -67,8 +67,8 @@ controlador
 	|_ ParaAltaCliente   :	2	horas <-- Maria   : OK!
 	|_ ParaModCliente 	 :	1	hora  <-- Marco   : OK!
 	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
-	|_ ParaAltaPedido 	 :	5	horas <-- Maria   : OK
-	|_ ParaBuscarPedido  :	2	horas
+	|_ ParaAltaPedido 	 :	5	horas <-- Maria   
+	|_ ParaBuscarPedido  :	2	horas <-- Miguel
 	|_ ParaPrincipalUI   :	2	horas 
 _________________________________________
 						   48.5 horas	
@@ -101,8 +101,8 @@ controlador
 	|_ ParaAltaCliente   :	2	horas <-- Maria    :OK!
 	|_ ParaModCliente 	 :	2	hora  <-- Maria    :OK!
 	|_ ParaBuscarCliente :	2	hora  <-- Maria    :OK!
-	|_ ParaAltaPedido 	 :	3	horas
-	|_ ParaBuscarPedido  :	2	horas
+	|_ ParaAltaPedido 	 :	3	horas 
+	|_ ParaBuscarPedido  :	2	horas 
 	|_ ParaPrincipalUI   :	4	horas		
 	
 	

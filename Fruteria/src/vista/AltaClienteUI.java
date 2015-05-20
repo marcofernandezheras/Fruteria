@@ -21,6 +21,7 @@ public class AltaClienteUI extends JPanel {
 	protected JLabel lblDni = new JLabel("DNI");
 	protected JButton btnCrear = new JButton("Crear");
 	protected JLabel lblAltaClientes = new JLabel("Alta Clientes");
+	protected final JButton btnEscogerColor = new JButton("Escoger color");
 
 	/**
 	 * Create the panel.
@@ -50,7 +51,7 @@ public class AltaClienteUI extends JPanel {
 								
 										txtNombre = new JTextField();
 										GridBagConstraints gbc_txtNombre = new GridBagConstraints();
-										gbc_txtNombre.gridwidth = 2;
+										gbc_txtNombre.gridwidth = 3;
 										gbc_txtNombre.insets = new Insets(0, 0, 5, 5);
 										gbc_txtNombre.fill = GridBagConstraints.HORIZONTAL;
 										gbc_txtNombre.gridx = 2;
@@ -67,7 +68,7 @@ public class AltaClienteUI extends JPanel {
 				
 						txtApellidos = new JTextField();
 						GridBagConstraints gbc_txtApellidos = new GridBagConstraints();
-						gbc_txtApellidos.gridwidth = 2;
+						gbc_txtApellidos.gridwidth = 3;
 						gbc_txtApellidos.insets = new Insets(0, 0, 5, 5);
 						gbc_txtApellidos.fill = GridBagConstraints.HORIZONTAL;
 						gbc_txtApellidos.gridx = 2;
@@ -84,7 +85,7 @@ public class AltaClienteUI extends JPanel {
 				
 						txtDNI = new JTextField();
 						GridBagConstraints gbc_txtDNI = new GridBagConstraints();
-						gbc_txtDNI.gridwidth = 2;
+						gbc_txtDNI.gridwidth = 3;
 						gbc_txtDNI.insets = new Insets(0, 0, 5, 5);
 						gbc_txtDNI.fill = GridBagConstraints.HORIZONTAL;
 						gbc_txtDNI.gridx = 2;
@@ -100,6 +101,7 @@ public class AltaClienteUI extends JPanel {
 				add(lblColorDePelo, gbc_lblColorDePelo);
 		
 				txtColorDePelo = new JTextField();
+				txtColorDePelo.setEditable(false);
 				GridBagConstraints gbc_txtColorDePelo = new GridBagConstraints();
 				gbc_txtColorDePelo.gridwidth = 2;
 				gbc_txtColorDePelo.insets = new Insets(0, 0, 5, 5);
@@ -108,12 +110,17 @@ public class AltaClienteUI extends JPanel {
 				gbc_txtColorDePelo.gridy = 8;
 				add(txtColorDePelo, gbc_txtColorDePelo);
 				txtColorDePelo.setColumns(10);
+		
+		GridBagConstraints gbc_btnEscogerColor = new GridBagConstraints();
+		gbc_btnEscogerColor.insets = new Insets(0, 0, 5, 5);
+		gbc_btnEscogerColor.gridx = 4;
+		gbc_btnEscogerColor.gridy = 8;
+		add(btnEscogerColor, gbc_btnEscogerColor);
 
 		GridBagConstraints gbc_btnCrear = new GridBagConstraints();
 		gbc_btnCrear.gridheight = 2;
-		gbc_btnCrear.gridwidth = 2;
 		gbc_btnCrear.insets = new Insets(0, 0, 0, 5);
-		gbc_btnCrear.gridx = 3;
+		gbc_btnCrear.gridx = 4;
 		gbc_btnCrear.gridy = 9;
 		btnCrear.setIcon(new ImageIcon(AltaClienteUI.class.getResource("/iconos/plus.png")));
 		add(btnCrear, gbc_btnCrear);
