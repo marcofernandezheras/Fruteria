@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 I: Implementa
 E: Extiende
 
@@ -64,8 +65,8 @@ controlador
 	|_ ListaPedidos	     :	3   horas <-- Miguel  : OK!
 	|_ ParaAltaArticulo  :	2	horas <-- Marco   : OK!
 	|_ ParaBuscarArticulo:	1	hora  <-- Marco   : OK!
-	|_ ParaAltaCliente   :	2	horas <-- Maria
-	|_ ParaModCliente 	 :	1	hora  <-- Marco
+	|_ ParaAltaCliente   :	2	horas <-- Maria   : OK!
+	|_ ParaModCliente 	 :	1	hora  <-- Marco   : OK!
 	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
 	|_ ParaAltaPedido 	 :	4	horas
 	|_ ParaBuscarPedido  :	2	horas
@@ -98,14 +99,19 @@ vista
 controlador
 	|_ ListaArticulos    :	3   horas <-- Marco		:OK!
 	|_ ListaCliente      :	3   horas <-- Marco		:OK!
-	|_ ListaPedidos	     :	3   horas
-	|_ ParaAltaArticulo  :	?	horas
-	|_ ParaBuscarArticulo:	?	hora	
-	|_ ParaAltaCliente   :	?	horas
-	|_ ParaModCliente 	 :	?	hora
-	|_ ParaBuscarCliente :	?	hora
-	|_ ParaAltaPedido 	 :	?	horas
-	|_ ParaBuscarPedido  :	?	horas
-	|_ ParaPrincipalUI   :	?	horas
+	|_ ListaPedidos	     :	3   horas <-- Marco    	
 _________________________________________
-						   15 + ? horas							   
+						   15   horas		
+						   
+/*****************************************
+/*         TEST INTEGRACION              *
+*****************************************/
+controlador
+	|_ ParaAltaArticulo  :	2	horas <-- Dani
+	|_ ParaBuscarArticulo:	2	hora  <-- Dani
+	|_ ParaAltaCliente   :	2	horas <-- Maria
+	|_ ParaModCliente 	 :	2	hora  <-- Maria
+	|_ ParaBuscarCliente :	2	hora
+	|_ ParaAltaPedido 	 :	3	horas
+	|_ ParaBuscarPedido  :	2	horas
+	|_ ParaPrincipalUI   :	4	horas					   

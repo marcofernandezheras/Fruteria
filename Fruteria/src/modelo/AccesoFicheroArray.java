@@ -29,13 +29,10 @@ public class AccesoFicheroArray implements IAccesoDatos {
 		if(!archivo.exists())
 			throw new FileNotFoundException();
 		this.archivo = archivo;	
-		ObjectInputStream stream = getInStream();
-		try{
-			while (true) {
-				listaObjectos.add(stream.readObject());			
-			}
+		if(archivo.exists()){
+			ObjectInputStream stream = getInStream();
+			listaObjectos = (List<Object>)stream.readObject();
 		}
-		catch (EOFException e){/* Capturo el final del archivo como fin del bucle*/}
 	}
 	
 	private ObjectOutputStream getOutStream() throws IOException{
@@ -49,6 +46,7 @@ public class AccesoFicheroArray implements IAccesoDatos {
 	
 	@Override
 	public void close() throws Exception {
+		escribirLista();
 	}
 
 	@Override
@@ -63,19 +61,31 @@ public class AccesoFicheroArray implements IAccesoDatos {
 	@Override
 	public boolean escribirObjeto(Object objeto) {
 		listaObjectos.add(objeto);		
-		try(ObjectOutputStream outStream = getOutStream();)
-		{
-			outStream.writeObject(objeto);
-			return true;
-		} catch (IOException e) {
-			return false;
-		}		
+		return escribirLista();		
 	}
 
 	@Override
 	public boolean modificarObjeto(Modificable objeto, Object identificador) {
-		// TODO Auto-generated method stub
+		for (int i = 0; i < listaObjectos.size(); i++) 
+		{
+			Modificable m = (Modificable)listaObjectos.get(i);
+			if(m.identificador().equals(identificador))
+			{
+				listaObjectos.set(i, objeto);
+				return escribirLista();	
+			}
+		}
 		return false;
+	}
+
+	private boolean escribirLista() {
+		try(ObjectOutputStream outStream = getOutStream();)
+		{
+			outStream.writeObject(listaObjectos);
+			return true;
+		} catch (IOException e) {
+			return false;
+		}
 	}
 
 }
