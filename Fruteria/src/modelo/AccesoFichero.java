@@ -10,6 +10,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -59,7 +60,7 @@ public class AccesoFichero implements IAccesoDatos {
 	}
 
 	@Override
-	public boolean escribirObjeto(Object objeto) {
+	public boolean escribirObjeto(Serializable objeto) {
 		try {
 			if(outStream == null)
 			{

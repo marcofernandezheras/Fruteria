@@ -23,10 +23,15 @@ public class AccesoFicheroTest {
 	Cliente clienteUno = new Cliente("1", "nombre1", "apellidos1", Color.black);
 	Cliente clienteDos = new Cliente("2", "nombre2", "apellidos2", Color.white);
 
+	void limpiarArchivos(){		
+		if(archivo.exists() ){
+			archivo.delete();
+		}
+	}
+	
 	@Test
 	public void testBLeerObjeto() {
-
-		archivo = new File("src/tests/testAcceso.txt");
+		archivo = new File("src/tests/testAcceso.txt");		
 		AccesoFichero instancia;
 		try {
 			instancia = new AccesoFichero(archivo);
@@ -36,7 +41,7 @@ public class AccesoFicheroTest {
 			clienteAux = instancia.leerObjeto();
 			assertTrue(clienteDos.equals(clienteAux));
 			clienteAux = instancia.leerObjeto();
-			assertTrue(clienteAux.equals(null));
+			assertTrue(clienteAux == null);
 
 		} catch (FileNotFoundException e) {
 			fail();
@@ -48,7 +53,7 @@ public class AccesoFicheroTest {
 	public void testAEscribirObjeto() {
 
 		archivo = new File("src/tests/testAcceso.txt");
-
+		limpiarArchivos();
 		AccesoFichero instancia;
 		try {
 			instancia = new AccesoFichero(archivo);

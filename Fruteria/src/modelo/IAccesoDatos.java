@@ -1,5 +1,7 @@
 package modelo;
 
+import java.io.Serializable;
+
 public interface IAccesoDatos extends AutoCloseable{
 	/**
 	 * Leer un nuevo objeto desde su forma
@@ -11,15 +13,15 @@ public interface IAccesoDatos extends AutoCloseable{
 	/**
 	 * Serializar un objeto.
 	 * @param objeto a serializar.
-	 * @return <code>true</code> en caso de éxito, <code>false</code> en caso contrario.
+	 * @return <code>true</code> en caso de ï¿½xito, <code>false</code> en caso contrario.
 	 */
-	boolean escribirObjeto(Object objeto);
+	boolean escribirObjeto(Serializable objeto);
 	
 	/**
 	 * Modifica un objeto anteriormente serializado.
 	 * @param objeto Objeto a modificar.
 	 * @param identificador identificador del objeto.
-	 * @return <code>true</code> en caso de éxito, <code>false</code> en caso contrario.
+	 * @return <code>true</code> en caso de ï¿½xito, <code>false</code> en caso contrario.
 	 */
 	boolean modificarObjeto(Modificable objeto, Object identificador);
 }
