@@ -99,14 +99,19 @@ vista
 controlador
 	|_ ListaArticulos    :	3   horas <-- Marco		:OK!
 	|_ ListaCliente      :	3   horas <-- Marco		:OK!
-	|_ ListaPedidos	     :	3   horas <-- Marco    
-	|_ ParaAltaArticulo  :	?	horas
-	|_ ParaBuscarArticulo:	?	hora	
-	|_ ParaAltaCliente   :	?	horas
-	|_ ParaModCliente 	 :	?	hora
-	|_ ParaBuscarCliente :	?	hora
-	|_ ParaAltaPedido 	 :	?	horas
-	|_ ParaBuscarPedido  :	?	horas
-	|_ ParaPrincipalUI   :	?	horas
+	|_ ListaPedidos	     :	3   horas <-- Marco    	
 _________________________________________
-						   15 + ? horas							   
+						   15   horas		
+						   
+/*****************************************
+/*         TEST INTEGRACION              *
+*****************************************/
+controlador
+	|_ ParaAltaArticulo  :	2	horas <-- Dani
+	|_ ParaBuscarArticulo:	2	hora  <-- Dani
+	|_ ParaAltaCliente   :	2	horas
+	|_ ParaModCliente 	 :	2	hora
+	|_ ParaBuscarCliente :	2	hora
+	|_ ParaAltaPedido 	 :	3	horas
+	|_ ParaBuscarPedido  :	2	horas
+	|_ ParaPrincipalUI   :	4	horas					   
