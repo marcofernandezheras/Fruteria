@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 I: Implementa
 E: Extiende
 
@@ -98,7 +99,7 @@ vista
 controlador
 	|_ ListaArticulos    :	3   horas <-- Marco		:OK!
 	|_ ListaCliente      :	3   horas <-- Marco		:OK!
-	|_ ListaPedidos	     :	3   horas
+	|_ ListaPedidos	     :	3   horas <-- Marco    
 	|_ ParaAltaArticulo  :	?	horas
 	|_ ParaBuscarArticulo:	?	hora	
 	|_ ParaAltaCliente   :	?	horas
