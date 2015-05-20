@@ -1,7 +1,6 @@
 package tests;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -9,13 +8,12 @@ import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
-import modelo.Cliente;
 import controlador.ListaClientes;
-import controlador.ParaModCliente;
+import controlador.ParaBuscarCliente;
 
-public class ParaModificarClienteTest extends JFrame {
+public class ParaBuscarClienteTest extends JFrame {
 
-	private ParaModCliente paraModCliente;
+	private ParaBuscarCliente paraBuscarCliente;
 
 	/**
 	 * Launch the application.
@@ -30,7 +28,7 @@ public class ParaModificarClienteTest extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ParaModificarClienteTest frame = new ParaModificarClienteTest();
+					ParaBuscarClienteTest frame = new ParaBuscarClienteTest();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -42,12 +40,13 @@ public class ParaModificarClienteTest extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ParaModificarClienteTest() {
+	public ParaBuscarClienteTest() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
-		ListaClientes listaClientes=new ListaClientes();
-		paraModCliente=new ParaModCliente(listaClientes);
-		setContentPane(paraModCliente);
+		ListaClientes listaCliente=new ListaClientes();
+		paraBuscarCliente=new ParaBuscarCliente(listaCliente);
+		paraBuscarCliente.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(paraBuscarCliente);
 	}
 
 }
