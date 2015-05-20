@@ -2,6 +2,7 @@ package tests;
 
 import static org.junit.Assert.*;
 
+import java.awt.Color;
 import java.io.File;
 
 import org.junit.FixMethodOrder;
@@ -10,6 +11,8 @@ import org.junit.runners.MethodSorters;
 
 import controlador.ListaPedidos;
 import modelo.Articulo;
+import modelo.Cliente;
+import modelo.Pedido;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ListaPedidosTest {
@@ -23,10 +26,17 @@ public class ListaPedidosTest {
 	
 	ListaPedidos instancia = new ListaPedidos();
 	Articulo articulo = new Articulo("nombre", "descripcion", 1.0f);
-	
+	Cliente cliente = new Cliente("dni", "nombre", "apellidos", Color.black);
 	@Test
 	public void testBuscarPedido() {
-		fail("Not yet implemented");
+		assertNull(instancia.buscarPedido(0));		
+		Pedido pedido = instancia.buscarPedido(1);
+		assertNotNull(pedido);
+		assertTrue(pedido.getCliente().equals(cliente));
+		assertEquals(2, pedido.getLineasPedido().size());
+		
+		assertEquals(articulo,pedido.getLineasPedido().get(0).getArticulo());
+		assertEquals(1,pedido.getLineasPedido().get(0).getCantidad());
 	}
 
 	@Test
@@ -36,19 +46,34 @@ public class ListaPedidosTest {
 
 	@Test
 	public void testAddLineaPedido() {
+		assertFalse(instancia.addLineaPedido(null, 1));
 		assertTrue(instancia.addLineaPedido(articulo, 1));
 		assertTrue(instancia.addLineaPedido(articulo, -1));
 		assertFalse(instancia.addLineaPedido(articulo, 0));
 	}
 
 	@Test
-	public void testInsertarCliente() {
-		instancia.insertarCliente(cliente)
+	public void testCInsertarCliente() {
+		assertFalse(instancia.insertarCliente(null));
+		assertTrue(instancia.insertarCliente(cliente));
 	}
 
 	@Test
-	public void testGuardarPedido() {
-		fail("Not yet implemented");
+	public void testDGuardarPedido() {
+		assertTrue(instancia.guardarPedido());
+		
+		assertTrue(instancia.altaPedido());
+		assertFalse(instancia.guardarPedido());//Pedido vacio
+		
+		assertTrue(instancia.addLineaPedido(articulo, 1));
+		assertFalse(instancia.guardarPedido());//Pedido sin cliente
+		
+		assertTrue(instancia.insertarCliente(cliente));
+		assertTrue(instancia.guardarPedido());
+		
+		assertTrue(instancia.altaPedido());
+		assertTrue(instancia.insertarCliente(cliente));
+		assertFalse(instancia.guardarPedido());//Pedido sin lineas
 	}
 
 }
