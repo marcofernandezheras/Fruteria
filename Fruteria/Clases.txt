@@ -67,11 +67,11 @@ controlador
 	|_ ParaAltaCliente   :	2	horas <-- Maria   : OK!
 	|_ ParaModCliente 	 :	1	hora  <-- Marco   : OK!
 	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
-	|_ ParaAltaPedido 	 :	4	horas
+	|_ ParaAltaPedido 	 :	5	horas <-- Maria   : OK
 	|_ ParaBuscarPedido  :	2	horas
 	|_ ParaPrincipalUI   :	2	horas 
 _________________________________________
-						   47.5 horas	
+						   48.5 horas	
 
 
 
@@ -85,16 +85,6 @@ modelo
 	|_ LineaPedido       :	0.5 hora   <-- Maria  :OK!
 	|_ AccesoFichero     :	4   horas  <-- Miguel  
 
-vista
-	|_ AltaArticuloUI    :	0   horas	
-	|_ BuscarArticuloUI  :	0   horas
-	|_ AltaClienteUI     :	0   horas
-	|_ ModClienteUI      :	0   horas
-	|_ BuscarClienteUI   :	0   horas
-	|_ AltaPedidoUI      :	0	horas
-	|_ BuscarPedidoUI    :	0   horas
-	|_ PrincipalUI       :	0   horas
-
 controlador
 	|_ ListaArticulos    :	3   horas <-- Marco		:OK!
 	|_ ListaCliente      :	3   horas <-- Marco		:OK!
@@ -106,11 +96,21 @@ _________________________________________
 /*         TEST INTEGRACION              *
 *****************************************/
 controlador
-	|_ ParaAltaArticulo  :	2	horas <-- Dani
-	|_ ParaBuscarArticulo:	2	hora  <-- Dani
+	|_ ParaAltaArticulo  :	2	horas <-- Dani     :OK!
+	|_ ParaBuscarArticulo:	2	hora  <-- Dani     :OK!
 	|_ ParaAltaCliente   :	2	horas <-- Maria    :OK!
 	|_ ParaModCliente 	 :	2	hora  <-- Maria    :OK!
 	|_ ParaBuscarCliente :	2	hora  <-- Maria    :OK!
 	|_ ParaAltaPedido 	 :	3	horas
 	|_ ParaBuscarPedido  :	2	horas
-	|_ ParaPrincipalUI   :	4	horas					   
+	|_ ParaPrincipalUI   :	4	horas		
+	
+	
+/******************************************
+/*			OTRAS TAREAS                  *
+******************************************/
+
+Color choooser para color del pelo cliente 
+(http://www.java2s.com/Tutorial/Java/0240__Swing/UseaColorChooser.htm) <-- Marco
+
+		   
