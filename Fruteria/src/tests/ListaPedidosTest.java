@@ -40,7 +40,7 @@ public class ListaPedidosTest {
 	}
 
 	@Test
-	public void testAltaPedido() {
+	public void testAAltaPedido() {
 		assertTrue(instancia.altaPedido());
 	}
 

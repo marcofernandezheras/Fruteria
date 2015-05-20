@@ -110,3 +110,4 @@ public class ParaAltaCliente extends AltaClienteUI {
 		return String.format("#%02x%02x%02x", c.getRed(), c.getGreen(), c.getBlue());
 	}
 }
+

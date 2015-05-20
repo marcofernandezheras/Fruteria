@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+/articulo.txt
+/cliente.txt
+/bin/
+=======
 /articulo.txt
 /cliente.txt
 /bin/
 /tests/*.txt
+>>>>>>> upstream/master

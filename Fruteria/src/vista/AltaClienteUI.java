@@ -127,4 +127,3 @@ public class AltaClienteUI extends JPanel {
 
 	}
 }
-
