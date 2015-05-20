@@ -110,7 +110,6 @@ controlador
 /*			OTRAS TAREAS                  *
 ******************************************/
 
-Color choooser para color del pelo cliente 
-(http://www.java2s.com/Tutorial/Java/0240__Swing/UseaColorChooser.htm) <-- Marco
+Color choooser para color del pelo cliente <-- Marco : OK!
 
 		   

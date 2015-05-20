@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 /articulo.txt
 /cliente.txt
-/bin/
-=======
-/articulo.txt
-/cliente.txt
+/ListaPedidos.txt
 /bin/
 /tests/*.txt
->>>>>>> upstream/master
+*.class

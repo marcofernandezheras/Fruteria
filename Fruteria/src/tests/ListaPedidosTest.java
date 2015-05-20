@@ -24,9 +24,10 @@ public class ListaPedidosTest {
 		}
 	}
 	
-	ListaPedidos instancia = new ListaPedidos();
-	Articulo articulo = new Articulo("nombre", "descripcion", 1.0f);
-	Cliente cliente = new Cliente("dni", "nombre", "apellidos", Color.black);
+	static ListaPedidos instancia = new ListaPedidos();
+	static Articulo articulo = new Articulo("nombre", "descripcion", 1.0f);
+	static Cliente cliente = new Cliente("dni", "nombre", "apellidos", Color.black);
+	
 	@Test
 	public void testBuscarPedido() {
 		assertNull(instancia.buscarPedido(0));		
@@ -40,12 +41,13 @@ public class ListaPedidosTest {
 	}
 
 	@Test
-	public void testAAltaPedido() {
+	public void testAAAltaPedido() {
+		limpiarArchivos();
 		assertTrue(instancia.altaPedido());
 	}
 
 	@Test
-	public void testAddLineaPedido() {
+	public void testABAddLineaPedido() {
 		assertFalse(instancia.addLineaPedido(null, 1));
 		assertTrue(instancia.addLineaPedido(articulo, 1));
 		assertTrue(instancia.addLineaPedido(articulo, -1));
@@ -53,13 +55,13 @@ public class ListaPedidosTest {
 	}
 
 	@Test
-	public void testCInsertarCliente() {
+	public void testACCInsertarCliente() {
 		assertFalse(instancia.insertarCliente(null));
 		assertTrue(instancia.insertarCliente(cliente));
 	}
 
 	@Test
-	public void testDGuardarPedido() {
+	public void testADGuardarPedido() {
 		assertTrue(instancia.guardarPedido());
 		
 		assertTrue(instancia.altaPedido());
