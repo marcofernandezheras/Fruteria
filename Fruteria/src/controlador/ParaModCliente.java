@@ -19,13 +19,13 @@ public class ParaModCliente extends ModClienteUI {
 		this.listaCliente = listaCliente;
 		btnModificar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buscarCliente();
+				modificarCliente();
 			}
 		});
 		btnNewButton.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				modificarCliente();
+				buscarCliente();
 			}
 			
 		});

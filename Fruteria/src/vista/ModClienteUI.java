@@ -34,8 +34,8 @@ public class ModClienteUI extends JPanel {
 	public ModClienteUI() {
 		txtBuscarApellido.setColumns(10);
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 0, 0, 0, 0 };
-		gridBagLayout.rowHeights = new int[] { 44, 0, 23, 0, 0, 0, 0, 0, 20, 0, 0, 10, 0 };
+		gridBagLayout.columnWidths = new int[] {30, 10, 10, 10, 30, 10, 10};
+		gridBagLayout.rowHeights = new int[] {44, 30, 23, 10, 10, 10, 10, 10, 30, 30, 10, 30, 10};
 		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 1.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 				Double.MIN_VALUE };
@@ -180,4 +180,3 @@ public class ModClienteUI extends JPanel {
 	}
 
 }
-

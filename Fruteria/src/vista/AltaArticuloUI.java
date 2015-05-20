@@ -32,9 +32,9 @@ public class AltaArticuloUI extends JPanel {
 	 */
 	public AltaArticuloUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[] { 0, 0, 0, 78, 0, 59, 0, 0, 0, 26, 0 };
-		gridBagLayout.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
-		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
+		gridBagLayout.columnWidths = new int[] {30, 40, 30, 78, 30, 59, 30, 30, 30, 30};
+		gridBagLayout.rowHeights = new int[] {30, 30, 30, 30, 30, 30, 30, 30, 30, 30};
+		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0 };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE };
 		setLayout(gridBagLayout);
 
@@ -91,6 +91,7 @@ public class AltaArticuloUI extends JPanel {
 		add(lblPvp, gbc_lblPvp);
 
 		txtPVP = new JTextField();
+		txtPVP.setEditable(false);
 		GridBagConstraints gbc_txtPVP = new GridBagConstraints();
 		gbc_txtPVP.gridwidth = 2;
 		gbc_txtPVP.insets = new Insets(0, 0, 5, 5);
