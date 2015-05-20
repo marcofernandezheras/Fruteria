@@ -1,0 +1,7 @@
+//Esto justo al principio del main
+try
+{
+	UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+}
+catch (Exception e1)
+{}

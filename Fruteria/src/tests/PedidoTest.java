@@ -26,7 +26,7 @@ public class PedidoTest {
 //		Probando cantidades negativas
 		
 		Pedido pedidoUno=new Pedido(3);
-		pedido.anadirLinea(articuloUno, -1);
+		pedidoUno.anadirLinea(articuloUno, -1);
 		
 		assertEquals(0, pedidoUno.getTotalPedido(), 0);
 		
@@ -42,3 +42,4 @@ public class PedidoTest {
 	}
 
 }
+
