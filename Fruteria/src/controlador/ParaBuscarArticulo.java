@@ -34,7 +34,7 @@ public class ParaBuscarArticulo extends BuscarArticuloUI {
 			}
 			else
 			{
-				txtMensaje.setText("No existe un cliente con ese nombre y apellidos");
+				txtMensaje.setText("No existe un artículo con ese nombre");
 				txtPrecio.setText("");
 				txtDescripcion.setText("");
 				txtNombre.setText("");
