@@ -75,5 +75,17 @@ public class ListaPedidos implements IGestorPedidos {
 	public boolean guardarPedido() {
 		return accesoFichero.escribirObjeto(pedido);
 	}
+	@Override
+	public int numeroPedidoActual() {
+		if(pedido != null)
+			return pedido.getNumeroPedido();
+		throw new IllegalStateException();
+	}
+	@Override
+	public float totalPedidoActual() {
+		if(pedido != null)
+			return pedido.getTotalPedido();
+		throw new IllegalStateException();
+	}
 
 }

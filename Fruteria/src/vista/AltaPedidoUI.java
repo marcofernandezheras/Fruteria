@@ -17,6 +17,7 @@ import javax.swing.border.BevelBorder;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.EtchedBorder;
+import java.awt.Dimension;
 
 public class AltaPedidoUI extends JPanel {
 	protected JTextField txtNumeroPedido;
@@ -25,31 +26,32 @@ public class AltaPedidoUI extends JPanel {
 	protected JPanel panelTotal;
 	protected JLabel lblTotal;
 	protected JTextField txtTotal;
-	private JLabel lblAltaDePedidos;
-	private JPanel panelBuscarCliente;
-	private JLabel lblBuscarCliente;
-	private JTextField txtNombre;
-	private JTextField txtApellidos;
-	private JLabel lblDatos;
-	private JTextField txtDatoUno;
-	private JTextField txtDatoDos;
-	private JTextField txtDatoTres;
-	private JPanel panelBuscarArticulo;
-	private JLabel lblBuscarArticulo;
-	private JButton btnBuscar;
-	private JTextField txtBuscarArticulo;
-	private JLabel lblDescripcion;
-	private JTextField txtDescripcion;
-	private JTextField txtPrecio;
-	private JLabel lblPrecio;
-	private JLabel lblPvp;
-	private JTextField txtPvp;
-	private JLabel lblCantidad;
-	private JTextField txtCantidad;
-	private JButton btnCantidad;
-	private JButton button;
-	private JScrollPane scrollPane;
-	private JTable JTabla;
+	protected JLabel lblAltaDePedidos;
+	protected JPanel panelBuscarCliente;
+	protected JLabel lblBuscarCliente;
+	protected JTextField txtNombre;
+	protected JTextField txtApellidos;
+	protected JLabel lblDatos;
+	protected JTextField txtDatoUno;
+	protected JTextField txtDatoDos;
+	protected JTextField txtDatoTres;
+	protected JPanel panelBuscarArticulo;
+	protected JLabel lblBuscarArticulo;
+	protected JButton btnBuscar;
+	protected JTextField txtBuscarArticulo;
+	protected JLabel lblDescripcion;
+	protected JTextField txtDescripcion;
+	protected JTextField txtPrecio;
+	protected JLabel lblPrecio;
+	protected JLabel lblPvp;
+	protected JTextField txtPvp;
+	protected JLabel lblCantidad;
+	protected JTextField txtCantidad;
+	protected JButton btnCantidad;
+	protected JButton button;
+	protected JScrollPane scrollPane;
+	protected JTable JTabla;
+	protected JButton btnGuardarPedido;
 
 	/**
 	 * Create the panel.
@@ -79,27 +81,41 @@ public class AltaPedidoUI extends JPanel {
 		gbc_panelNumeroPedido.gridy = 2;
 		add(panelNumeroPedido, gbc_panelNumeroPedido);
 		GridBagLayout gbl_panelNumeroPedido = new GridBagLayout();
-		gbl_panelNumeroPedido.columnWidths = new int[]{28, 107, 122, 160, 0};
+		gbl_panelNumeroPedido.columnWidths = new int[]{28, 107, 122, 160, 0, 0, 0};
 		gbl_panelNumeroPedido.rowHeights = new int[]{0, 0};
-		gbl_panelNumeroPedido.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panelNumeroPedido.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
 		gbl_panelNumeroPedido.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panelNumeroPedido.setLayout(gbl_panelNumeroPedido);
 		
 		JLabel lblNumeroPedido = new JLabel("N\u00BA Pedido");
 		GridBagConstraints gbc_lblNumeroPedido = new GridBagConstraints();
+		gbc_lblNumeroPedido.anchor = GridBagConstraints.WEST;
 		gbc_lblNumeroPedido.insets = new Insets(0, 0, 0, 5);
-		gbc_lblNumeroPedido.gridx = 1;
+		gbc_lblNumeroPedido.gridx = 0;
 		gbc_lblNumeroPedido.gridy = 0;
 		panelNumeroPedido.add(lblNumeroPedido, gbc_lblNumeroPedido);
 		
 		txtNumeroPedido = new JTextField();
+		txtNumeroPedido.setEditable(false);
 		GridBagConstraints gbc_txtNumeroPedido = new GridBagConstraints();
 		gbc_txtNumeroPedido.gridwidth = 2;
+		gbc_txtNumeroPedido.insets = new Insets(0, 0, 0, 5);
 		gbc_txtNumeroPedido.fill = GridBagConstraints.HORIZONTAL;
-		gbc_txtNumeroPedido.gridx = 2;
+		gbc_txtNumeroPedido.gridx = 1;
 		gbc_txtNumeroPedido.gridy = 0;
 		panelNumeroPedido.add(txtNumeroPedido, gbc_txtNumeroPedido);
 		txtNumeroPedido.setColumns(10);
+		
+		btnGuardarPedido = new JButton("Guardar y nuevo");
+		btnGuardarPedido.setPreferredSize(new Dimension(63, 23));
+		btnGuardarPedido.setMinimumSize(new Dimension(63, 23));
+		btnGuardarPedido.setMaximumSize(new Dimension(63, 23));
+		GridBagConstraints gbc_btnGuardarPedido = new GridBagConstraints();
+		gbc_btnGuardarPedido.gridwidth = 2;
+		gbc_btnGuardarPedido.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnGuardarPedido.gridx = 4;
+		gbc_btnGuardarPedido.gridy = 0;
+		panelNumeroPedido.add(btnGuardarPedido, gbc_btnGuardarPedido);
 		
 		panelBuscarCliente = new JPanel();
 		panelBuscarCliente.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
@@ -254,6 +270,7 @@ public class AltaPedidoUI extends JPanel {
 		panelBuscarArticulo.add(lblPrecio, gbc_lblPrecio);
 		
 		txtPrecio = new JTextField();
+		txtPrecio.setEditable(false);
 		GridBagConstraints gbc_txtPrecio = new GridBagConstraints();
 		gbc_txtPrecio.insets = new Insets(0, 0, 5, 5);
 		gbc_txtPrecio.fill = GridBagConstraints.HORIZONTAL;
@@ -316,16 +333,6 @@ public class AltaPedidoUI extends JPanel {
 		JTabla = new JTable();
 		JTabla.setModel(new DefaultTableModel(
 			new Object[][] {
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
 			},
 			new String[] {
 				"Articulo", "Descripci\u00F3n", "Precio", "Cantidad", "Subtotal"
