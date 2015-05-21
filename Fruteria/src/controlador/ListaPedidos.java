@@ -40,28 +40,28 @@ public class ListaPedidos implements IGestorPedidos {
 		return null;
 	}
 
-	private int siguienteNumeroPedido() {
+private int siguienteNumeroPedido() {
 
-		try {
-			accesoFichero = new AccesoFichero(archivo);
-		} catch (FileNotFoundException e) {
-			return 1;
-		}
-		
-		Pedido aux = (Pedido) accesoFichero.leerObjeto();
-		boolean salir = aux == null;
-		while (!salir) {
-			Pedido p = (Pedido) accesoFichero.leerObjeto();
-			if (p == null)
-				salir = true;
-			else
-				aux = p;
-		}
-		if (aux == null)
-			return 1;
-		else
-			return aux.getNumeroPedido() + 1;
+	try {
+		accesoFichero = new AccesoFichero(archivo);
+	} catch (FileNotFoundException e) {
+		return 1;
 	}
+	
+	Pedido aux = (Pedido) accesoFichero.leerObjeto();
+	boolean salir = aux == null;
+	while (!salir) {
+		Pedido p = (Pedido) accesoFichero.leerObjeto();
+		if (p == null)
+			salir = true;
+		else
+			aux = p;
+	}
+	if (aux == null)
+		return 1;
+	else
+		return aux.getNumeroPedido() + 1;
+}
 
 	@Override
 	public boolean altaPedido() {
@@ -89,10 +89,19 @@ public class ListaPedidos implements IGestorPedidos {
 
 	@Override
 	public boolean guardarPedido() {
-		if (pedido != null && pedido.getLineasPedido().size() > 0 && pedido.getCliente() != null)
-			return accesoFichero.escribirObjeto(pedido);
-		else
-			return false;
+		return accesoFichero.escribirObjeto(pedido);
+	}
+	@Override
+	public int numeroPedidoActual() {
+		if(pedido != null)
+			return pedido.getNumeroPedido();
+		throw new IllegalStateException();
+	}
+	@Override
+	public float totalPedidoActual() {
+		if(pedido != null)
+			return pedido.getTotalPedido();
+		throw new IllegalStateException();
 	}
 
 }

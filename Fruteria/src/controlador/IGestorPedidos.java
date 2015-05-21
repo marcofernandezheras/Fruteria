@@ -40,4 +40,8 @@ public interface IGestorPedidos {
 	 * @return <code>true</code> en caso de éxito, <code>false</code> en caso contrario.
 	 */
 	public boolean guardarPedido();
+	
+	public int numeroPedidoActual();
+	
+	public float totalPedidoActual();
 }
