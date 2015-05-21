@@ -32,6 +32,7 @@ public class ParaModCliente extends ModClienteUI {
 	}
 
 	private void buscarCliente() {
+		txtMensaje.setText("");
 		if(!txtBuscarNombre.getText().isEmpty() && !txtBuscarApellido.getText().isEmpty())
 		{
 			cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
@@ -44,7 +45,7 @@ public class ParaModCliente extends ModClienteUI {
 			}
 			else
 			{
-				txtMensaje.setText("No existe un cliente con ese nmbre y apellidos");
+				txtMensaje.setText("No existe un cliente con ese nombre y apellidos");
 			}
 		}
 		else
