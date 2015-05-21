@@ -67,7 +67,7 @@ controlador
 	|_ ParaAltaCliente   :	2	horas <-- Maria   : OK!
 	|_ ParaModCliente 	 :	1	hora  <-- Marco   : OK!
 	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
-	|_ ParaAltaPedido 	 :	5	horas <-- Maria   
+	|_ ParaAltaPedido 	 :	5	horas <-- Maria   : OK!
 	|_ ParaBuscarPedido  :	2	horas <-- Marco   : OK!
 	|_ ParaPrincipalUI   :	2	horas <-- Marco
 _________________________________________
@@ -86,9 +86,9 @@ modelo
 	|_ AccesoFichero     :	4   horas  <-- Miguel :Ok!
 
 controlador
-	|_ ListaArticulos    :	3   horas <-- Marco		:OK!
-	|_ ListaCliente      :	3   horas <-- Marco		:OK!
-	|_ ListaPedidos	     :	3   horas <-- Marco    	:OK!
+	|_ ListaArticulos    :	3   horas <-- Marco	  :OK!
+	|_ ListaCliente      :	3   horas <-- Marco	  :OK!
+	|_ ListaPedidos	     :	3   horas <-- Marco   :OK!
 _________________________________________
 						   15   horas		
 						   
@@ -101,7 +101,7 @@ controlador
 	|_ ParaAltaCliente   :	2	horas <-- Maria    :OK!
 	|_ ParaModCliente 	 :	2	hora  <-- Maria    :OK!
 	|_ ParaBuscarCliente :	2	hora  <-- Maria    :OK!
-	|_ ParaAltaPedido 	 :	3	horas 
+	|_ ParaAltaPedido 	 :	3	horas <-- Miguel
 	|_ ParaBuscarPedido  :	2	horas 
 	|_ ParaPrincipalUI   :	4	horas 		
 	
