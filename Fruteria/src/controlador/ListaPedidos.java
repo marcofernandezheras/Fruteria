@@ -89,7 +89,10 @@ private int siguienteNumeroPedido() {
 
 	@Override
 	public boolean guardarPedido() {
-		return accesoFichero.escribirObjeto(pedido);
+		if (pedido != null && pedido.getLineasPedido().size() > 0 && pedido.getCliente() != null)
+			return accesoFichero.escribirObjeto(pedido);
+		else
+			return false;
 	}
 	@Override
 	public int numeroPedidoActual() {
