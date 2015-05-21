@@ -22,7 +22,7 @@ public class ParaModCliente extends ModClienteUI {
 				buscarCliente();
 			}
 		});
-		btnNewButton.addActionListener(new ActionListener() {
+		btnBuscar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
 				modificarCliente();
