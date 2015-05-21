@@ -63,7 +63,7 @@ public class ParaBuscarPedido extends BuscarPedidoUI {
 				}
 				
 				/* Total de pedido : 2 decimales*/
-				txtTotal.setText(String.format("%.02d", pedido.getTotalPedido()));
+				txtTotal.setText(String.format("%.02f", pedido.getTotalPedido()));
 			}
 			else
 			{
