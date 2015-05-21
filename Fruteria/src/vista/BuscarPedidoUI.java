@@ -15,12 +15,13 @@ import javax.swing.JScrollPane;
 import javax.swing.border.EtchedBorder;
 
 public class BuscarPedidoUI extends JPanel {
-	protected JTextField textField;
-	protected JTextField textField_3;
-	protected JTextField textField_4;
-	protected JTextField textField_5;
-	protected JTextField textField_1;
-	private JTable table;
+	protected JTextField txtBuscar;
+	protected JTextField txtDni;
+	protected JTextField txtNombre;
+	protected JTextField txtApellidos;
+	protected JTextField txtTotal;
+	protected JTable tablaLineas;
+	protected JButton btnBuscar;
 
 	/**
 	 * Create the panel.
@@ -55,21 +56,21 @@ public class BuscarPedidoUI extends JPanel {
 		gbc_label.gridy = 0;
 		panelNumeroPedido.add(label, gbc_label);
 		
-		textField = new JTextField();
-		GridBagConstraints gbc_textField = new GridBagConstraints();
-		gbc_textField.insets = new Insets(0, 0, 0, 5);
-		gbc_textField.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField.gridx = 2;
-		gbc_textField.gridy = 0;
-		panelNumeroPedido.add(textField, gbc_textField);
-		textField.setColumns(10);
+		txtBuscar = new JTextField();
+		GridBagConstraints gbc_txtBuscar = new GridBagConstraints();
+		gbc_txtBuscar.insets = new Insets(0, 0, 0, 5);
+		gbc_txtBuscar.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtBuscar.gridx = 2;
+		gbc_txtBuscar.gridy = 0;
+		panelNumeroPedido.add(txtBuscar, gbc_txtBuscar);
+		txtBuscar.setColumns(10);
 		
-		JButton button = new JButton("");
-		button.setIcon(new ImageIcon(BuscarPedidoUI.class.getResource("/iconos/magnifier-left.png")));
-		GridBagConstraints gbc_button = new GridBagConstraints();
-		gbc_button.gridx = 3;
-		gbc_button.gridy = 0;
-		panelNumeroPedido.add(button, gbc_button);
+		btnBuscar = new JButton("");
+		btnBuscar.setIcon(new ImageIcon(BuscarPedidoUI.class.getResource("/iconos/magnifier-left.png")));
+		GridBagConstraints gbc_btnBuscar = new GridBagConstraints();
+		gbc_btnBuscar.gridx = 3;
+		gbc_btnBuscar.gridy = 0;
+		panelNumeroPedido.add(btnBuscar, gbc_btnBuscar);
 		
 		JPanel panelDatosCliente = new JPanel();
 		panelDatosCliente.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
@@ -101,15 +102,15 @@ public class BuscarPedidoUI extends JPanel {
 		gbc_label_5.gridy = 1;
 		panelDatosCliente.add(label_5, gbc_label_5);
 		
-		textField_3 = new JTextField();
-		textField_3.setEditable(false);
-		textField_3.setColumns(10);
-		GridBagConstraints gbc_textField_3 = new GridBagConstraints();
-		gbc_textField_3.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_3.insets = new Insets(0, 0, 0, 5);
-		gbc_textField_3.gridx = 2;
-		gbc_textField_3.gridy = 1;
-		panelDatosCliente.add(textField_3, gbc_textField_3);
+		txtDni = new JTextField();
+		txtDni.setEditable(false);
+		txtDni.setColumns(10);
+		GridBagConstraints gbc_txtDni = new GridBagConstraints();
+		gbc_txtDni.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtDni.insets = new Insets(0, 0, 0, 5);
+		gbc_txtDni.gridx = 2;
+		gbc_txtDni.gridy = 1;
+		panelDatosCliente.add(txtDni, gbc_txtDni);
 		
 		JLabel label_6 = new JLabel("Nombre");
 		GridBagConstraints gbc_label_6 = new GridBagConstraints();
@@ -119,15 +120,15 @@ public class BuscarPedidoUI extends JPanel {
 		gbc_label_6.gridy = 1;
 		panelDatosCliente.add(label_6, gbc_label_6);
 		
-		textField_4 = new JTextField();
-		textField_4.setEditable(false);
-		textField_4.setColumns(10);
-		GridBagConstraints gbc_textField_4 = new GridBagConstraints();
-		gbc_textField_4.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_4.insets = new Insets(0, 0, 0, 5);
-		gbc_textField_4.gridx = 4;
-		gbc_textField_4.gridy = 1;
-		panelDatosCliente.add(textField_4, gbc_textField_4);
+		txtNombre = new JTextField();
+		txtNombre.setEditable(false);
+		txtNombre.setColumns(10);
+		GridBagConstraints gbc_txtNombre = new GridBagConstraints();
+		gbc_txtNombre.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtNombre.insets = new Insets(0, 0, 0, 5);
+		gbc_txtNombre.gridx = 4;
+		gbc_txtNombre.gridy = 1;
+		panelDatosCliente.add(txtNombre, gbc_txtNombre);
 		
 		JLabel label_7 = new JLabel("Apellidos");
 		GridBagConstraints gbc_label_7 = new GridBagConstraints();
@@ -137,15 +138,15 @@ public class BuscarPedidoUI extends JPanel {
 		gbc_label_7.gridy = 1;
 		panelDatosCliente.add(label_7, gbc_label_7);
 		
-		textField_5 = new JTextField();
-		textField_5.setEditable(false);
-		textField_5.setColumns(10);
-		GridBagConstraints gbc_textField_5 = new GridBagConstraints();
-		gbc_textField_5.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_5.insets = new Insets(0, 0, 0, 5);
-		gbc_textField_5.gridx = 6;
-		gbc_textField_5.gridy = 1;
-		panelDatosCliente.add(textField_5, gbc_textField_5);
+		txtApellidos = new JTextField();
+		txtApellidos.setEditable(false);
+		txtApellidos.setColumns(10);
+		GridBagConstraints gbc_txtApellidos = new GridBagConstraints();
+		gbc_txtApellidos.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtApellidos.insets = new Insets(0, 0, 0, 5);
+		gbc_txtApellidos.gridx = 6;
+		gbc_txtApellidos.gridy = 1;
+		panelDatosCliente.add(txtApellidos, gbc_txtApellidos);
 		
 		JScrollPane scrollPane = new JScrollPane();
 		GridBagConstraints gbc_scrollPane = new GridBagConstraints();
@@ -155,15 +156,15 @@ public class BuscarPedidoUI extends JPanel {
 		gbc_scrollPane.gridy = 3;
 		add(scrollPane, gbc_scrollPane);
 		
-		table = new JTable();
-		table.setModel(new DefaultTableModel(
+		tablaLineas = new JTable();
+		tablaLineas.setModel(new DefaultTableModel(
 			new Object[][] {
 			},
 			new String[] {
 				"Articulo", "Descripci\u00F3n", "Precio", "Cantidad", "Subtotal"
 			}
 		));
-		scrollPane.setViewportView(table);
+		scrollPane.setViewportView(tablaLineas);
 		
 		JPanel panelTotal = new JPanel();
 		GridBagConstraints gbc_panelTotal = new GridBagConstraints();
@@ -188,16 +189,16 @@ public class BuscarPedidoUI extends JPanel {
 		gbc_label_1.gridy = 0;
 		panelTotal.add(label_1, gbc_label_1);
 		
-		textField_1 = new JTextField();
-		GridBagConstraints gbc_textField_1 = new GridBagConstraints();
-		gbc_textField_1.gridwidth = 4;
-		gbc_textField_1.fill = GridBagConstraints.HORIZONTAL;
-		gbc_textField_1.insets = new Insets(0, 0, 0, 5);
-		gbc_textField_1.gridx = 9;
-		gbc_textField_1.gridy = 0;
-		panelTotal.add(textField_1, gbc_textField_1);
-		textField_1.setEditable(false);
-		textField_1.setColumns(10);
+		txtTotal = new JTextField();
+		GridBagConstraints gbc_txtTotal = new GridBagConstraints();
+		gbc_txtTotal.gridwidth = 4;
+		gbc_txtTotal.fill = GridBagConstraints.HORIZONTAL;
+		gbc_txtTotal.insets = new Insets(0, 0, 0, 5);
+		gbc_txtTotal.gridx = 9;
+		gbc_txtTotal.gridy = 0;
+		panelTotal.add(txtTotal, gbc_txtTotal);
+		txtTotal.setEditable(false);
+		txtTotal.setColumns(10);
 
 	}
 

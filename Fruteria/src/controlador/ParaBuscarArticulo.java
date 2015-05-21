@@ -27,8 +27,8 @@ public class ParaBuscarArticulo extends BuscarArticuloUI {
 			if(articulo != null){
 				txtDescripcion.setText(articulo.getDescripcion());
 				txtNombre.setText(articulo.getNombre());
-				txtPrecio.setText(String.format("%.2d", articulo.getPrecio()));
-				txtPVP.setText(String.format("%.2d", articulo.getPVP()));
+				txtPrecio.setText(String.format("%.2f", articulo.getPrecio()));
+				txtPVP.setText(String.format("%.2f", articulo.getPVP()));
 			}
 			else
 			{
