@@ -28,7 +28,7 @@ public class PedidoTest {
 		Pedido pedidoUno=new Pedido(3);
 		pedidoUno.anadirLinea(articuloUno, -1);
 		
-		assertEquals(0, pedidoUno.getTotalPedido(), 0);
+		assertEquals(-1.21f, pedidoUno.getTotalPedido(), 0.0001);
 		
 //		Probando articulos nulos
 		

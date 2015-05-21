@@ -75,5 +75,18 @@ public class Articulo implements Serializable{
 		return (getPrecio()*IVA );
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (obj == null)
+			return false;
+		if(obj instanceof Articulo){
+			Articulo other = (Articulo)obj;
+			boolean valid = other.descripcion.equalsIgnoreCase(descripcion);
+			valid &= other.nombre.equalsIgnoreCase(nombre);
+			valid &= other.precio == precio;
+			return valid;
+		}
+		return super.equals(obj);
+	}
 	// Tiempo en realizarlo 15 min con javadoc incluido
 }
