@@ -19,13 +19,13 @@ public class ParaModCliente extends ModClienteUI {
 		this.listaCliente = listaCliente;
 		btnModificar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				modificarCliente();
+				buscarCliente();
 			}
 		});
-		btnNewButton.addActionListener(new ActionListener() {
+		btnBuscar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				buscarCliente();
+				modificarCliente();
 			}
 			
 		});
@@ -59,7 +59,7 @@ public class ParaModCliente extends ModClienteUI {
 			if(!txtNombre.getText().isEmpty() 
 					&& !txtApellidos.getText().isEmpty()
 					&& !txtDNI.getText().isEmpty()
-					&& !txtColorDePelo.getText().isEmpty() ) /* No hay ningún valor vacio */
+					&& !txtColorDePelo.getText().isEmpty() ) /* No hay ningï¿½n valor vacio */
 			{
 				Validador validador = new Validador();
 		        int e = validador.checkNif(txtDNI.getText());
@@ -95,3 +95,4 @@ public class ParaModCliente extends ModClienteUI {
 		}
 	}	
 }
+
