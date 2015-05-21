@@ -20,8 +20,15 @@ public class ListaPedidos implements IGestorPedidos {
 			e.printStackTrace();
 		}
 	}
+
 	@Override
 	public Pedido buscarPedido(int numero) {
+		try {
+			accesoFichero = new AccesoFichero(archivo);
+		} catch (FileNotFoundException e) {
+			return null;
+		}
+		
 		Pedido aux = (Pedido) accesoFichero.leerObjeto();
 		while (aux != null) {
 			if (aux.getNumeroPedido() == numero)
@@ -35,6 +42,12 @@ public class ListaPedidos implements IGestorPedidos {
 
 	private int siguienteNumeroPedido() {
 
+		try {
+			accesoFichero = new AccesoFichero(archivo);
+		} catch (FileNotFoundException e) {
+			return 1;
+		}
+		
 		Pedido aux = (Pedido) accesoFichero.leerObjeto();
 		boolean salir = aux == null;
 		while (!salir) {
@@ -67,13 +80,19 @@ public class ListaPedidos implements IGestorPedidos {
 
 	@Override
 	public boolean insertarCliente(Cliente cliente) {
-		pedido.setCliente(cliente);
-		return true;
+		if (cliente != null) {
+			pedido.setCliente(cliente);
+			return true;
+		} else
+			return false;
 	}
 
 	@Override
 	public boolean guardarPedido() {
-		return accesoFichero.escribirObjeto(pedido);
+		if (pedido != null && pedido.getLineasPedido().size() > 0 && pedido.getCliente() != null)
+			return accesoFichero.escribirObjeto(pedido);
+		else
+			return false;
 	}
 
 }

@@ -22,16 +22,17 @@ public class AccesoFicheroTest {
 	File archivo = null;
 	Cliente clienteUno = new Cliente("1", "nombre1", "apellidos1", Color.black);
 	Cliente clienteDos = new Cliente("2", "nombre2", "apellidos2", Color.white);
+	Cliente clienteTres = null;
 
-	void limpiarArchivos(){		
-		if(archivo.exists() ){
+	void limpiarArchivos() {
+		if (archivo.exists()) {
 			archivo.delete();
 		}
 	}
-	
+
 	@Test
 	public void testBLeerObjeto() {
-		archivo = new File("src/tests/testAcceso.txt");		
+		archivo = new File("src/tests/testAcceso.txt");
 		AccesoFichero instancia;
 		try {
 			instancia = new AccesoFichero(archivo);
@@ -59,8 +60,8 @@ public class AccesoFicheroTest {
 			instancia = new AccesoFichero(archivo);
 			assertTrue(instancia.escribirObjeto(clienteUno));
 			assertTrue(instancia.escribirObjeto(clienteDos));
-			/* Fallo */
-			// assertFalse(instancia.escribirObjeto(null));
+			// fallito
+			assertFalse(instancia.escribirObjeto(clienteTres));
 		} catch (FileNotFoundException e) {
 			fail();
 		}
@@ -69,6 +70,36 @@ public class AccesoFicheroTest {
 
 	@Test
 	public void testCModificarObjeto() {
+		archivo = new File("src/tests/testAcceso.txt");
+		AccesoFichero instancia;
+		try {
+			instancia = new AccesoFichero(archivo);
+			Cliente obj = (Cliente) instancia.leerObjeto();
+			Object identificador = obj.identificador();
+			obj.setNombre("cambiado");
+			obj.setApellidos("acambiado");
+			obj.setDni("dnicambiado");
+			obj.setColorPelo(Color.BLUE);
+			assertTrue(instancia.modificarObjeto(obj, identificador));
+
+			instancia.close();
+		} catch (FileNotFoundException e) {
+			fail();
+		} catch (Exception e) {
+			fail();
+		}
+
+		try {
+			instancia = new AccesoFichero(archivo);
+			Cliente obj = (Cliente) instancia.leerObjeto();
+			assertEquals("cambiado", obj.getNombre());
+			assertEquals("acambiado", obj.getApellidos());
+			assertEquals("dnicambiado", obj.getDni());
+			assertEquals(Color.BLUE, obj.getColorPelo());
+
+		} catch (FileNotFoundException e) {
+			fail();
+		}
 
 	}
 
