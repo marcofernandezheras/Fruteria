@@ -4,9 +4,14 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
 
+import modelo.Articulo;
+import modelo.Cliente;
+import modelo.Pedido;
 import vista.PrincipalUI;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -19,6 +24,12 @@ public class ParaPrincipalUI extends PrincipalUI {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		try
+		{
+			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+		}
+		catch (Exception e1)
+		{}
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -34,6 +45,7 @@ public class ParaPrincipalUI extends PrincipalUI {
 
 	private IListaArticulos listaArticulos;
 	private IListaCliente listaCliente;
+	private IGestorPedidos gestorPedidos;
 
 	/**
 	 * Create the frame.
@@ -41,6 +53,7 @@ public class ParaPrincipalUI extends PrincipalUI {
 	public ParaPrincipalUI() {
 		listaArticulos = new ListaArticulos();
 		listaCliente = new ListaClientes();
+		gestorPedidos=new ListaPedidos();
 		eventos();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);		
@@ -105,11 +118,11 @@ public class ParaPrincipalUI extends PrincipalUI {
 	}
 
 	protected void buscarPedido() {
-		// TODO ParaPrincipalUI::buscarPedido()		
+		cambiarPanel(new ParaBuscarPedido(gestorPedidos));	
 	}
 
 	protected void altaPedido() {
-		// TODO ParaPrincipalUI::altaPedido()
+		cambiarPanel(new ParaAltaPedido(gestorPedidos,listaArticulos,listaCliente));	
 		
 	}
 	
