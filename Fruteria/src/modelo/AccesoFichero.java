@@ -61,6 +61,8 @@ public class AccesoFichero implements IAccesoDatos {
 
 	@Override
 	public boolean escribirObjeto(Serializable objeto) {
+		if(objeto == null)
+			return false;
 		try {
 			if(outStream == null)
 			{
