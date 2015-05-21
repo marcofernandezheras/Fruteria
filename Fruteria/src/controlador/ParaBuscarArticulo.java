@@ -29,15 +29,21 @@ public class ParaBuscarArticulo extends BuscarArticuloUI {
 				txtNombre.setText(articulo.getNombre());
 				txtPrecio.setText(String.format("%.2f", articulo.getPrecio()));
 				txtPVP.setText(String.format("%.2f", articulo.getPVP()));
+				txtMensaje.setText("");
 			}
 			else
 			{
-				txtMensaje.setText("No existe un cliente con ese nmbre y apellidos");
+				txtMensaje.setText("No existe un cliente con ese nombre y apellidos");
+				txtPrecio.setText("");
+				txtDescripcion.setText("");
+				txtNombre.setText("");
+				txtPVP.setText("");
 			}
 		}
 		else
 		{
 			txtMensaje.setText("Debe introducir datos para poder buscar");
 		}
+		txtBusquedaNombre.setText("");
 	}
 }
