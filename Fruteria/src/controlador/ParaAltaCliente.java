@@ -101,7 +101,7 @@ public class ParaAltaCliente extends AltaClienteUI {
 	}
 
 	private Cliente generarCliente() {
-		Cliente cliente = new Cliente(txtDNI.getText(), txtNombre.getText(), txtApellidos.getText(),
+		Cliente cliente = new Cliente(txtDNI.getText(), txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase(),
 				colorActual);
 		return cliente;
 	}
