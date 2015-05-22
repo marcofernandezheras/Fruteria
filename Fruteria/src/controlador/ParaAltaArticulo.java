@@ -74,7 +74,7 @@ public class ParaAltaArticulo extends AltaArticuloUI {
 	 * @return Nuevo {@link Articulo}.
 	 */
 	private Articulo generarArticulo() {
-		Articulo art = new Articulo(txtNombre.getText(), txtDescripcion.getText(),
+		Articulo art = new Articulo(txtNombre.getText().toLowerCase(), txtDescripcion.getText(),
 				Float.parseFloat(txtPrecio.getText()));
 		return art;
 	}

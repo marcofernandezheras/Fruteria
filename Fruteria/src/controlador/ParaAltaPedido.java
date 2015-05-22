@@ -17,27 +17,26 @@ import vista.AltaPedidoUI;
 
 public class ParaAltaPedido extends AltaPedidoUI {
 	IGestorPedidos gestorPedidos;
-	IListaCliente listaClientes;
-	IListaArticulos listaArticulos;
 
 	public ParaAltaPedido(IGestorPedidos gestorPedidos, IListaArticulos listaArticulos, IListaCliente listaClientes) {
 
 		gestorPedidos.altaPedido();
+		this.gestorPedidos=gestorPedidos;
 		txtNumeroPedido.setText(String.valueOf(gestorPedidos.numeroPedidoActual()));
 		
 
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				txtNombre.setBackground(Color.white);
-				if (listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText()) != null) {
-					txtDatoUno.setText(listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText())
+				if (listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase()) != null) {
+					txtDatoUno.setText(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase())
 							.getDni());
-					txtDatoDos.setText(listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText())
+					txtDatoDos.setText(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase())
 							.getNombre());
-					txtDatoTres.setText(listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText())
+					txtDatoTres.setText(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase())
 							.getApellidos());
-					gestorPedidos.insertarCliente(listaClientes.buscarCliente(txtNombre.getText(),
-							txtApellidos.getText()));
+					gestorPedidos.insertarCliente(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(),
+							txtApellidos.getText().toLowerCase()));
 				} else {
 					txtNombre.setBackground(Color.RED);
 				}
@@ -47,15 +46,15 @@ public class ParaAltaPedido extends AltaPedidoUI {
 
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText()) != null) {
-					txtNombre.setBackground(Color.white);
-					txtDescripcion.setText(listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getDescripcion());
-					txtPrecio.setText(String.valueOf(listaArticulos.buscarArticulo(txtBuscarArticulo.getText())
+				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()) != null) {
+					txtBuscarArticulo.setBackground(Color.white);
+					txtDescripcion.setText(listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getDescripcion());
+					txtPrecio.setText(String.valueOf(listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase())
 							.getPrecio()));
-					txtPrecio.setText(String.valueOf(listaArticulos.buscarArticulo(txtBuscarArticulo.getText())
-							.getPrecio()));
+					txtPvp.setText(String.valueOf(listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase())
+							.getPVP()));
 				} else {
-					txtNombre.setBackground(Color.RED);
+					txtBuscarArticulo.setBackground(Color.RED);
 				}
 
 			}
@@ -64,30 +63,36 @@ public class ParaAltaPedido extends AltaPedidoUI {
 		btnCantidad.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText()) != null
-						&& listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText()) != null) {
+				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()) != null
+						&& listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase()) != null 
+						&& Integer.valueOf(txtCantidad.getText())!=0) {
 					try {
 						txtCantidad.setBackground(Color.white);
 						Integer.parseInt(txtCantidad.getText());
-						gestorPedidos.addLineaPedido(listaArticulos.buscarArticulo(txtBuscarArticulo.getText()),
+						gestorPedidos.addLineaPedido(listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()),
 								Integer.valueOf(txtCantidad.getText()));
 						DefaultTableModel model = (DefaultTableModel) JTabla.getModel();
 						model.addRow(new Object[] {
 
-								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getNombre(),
-								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getDescripcion(),
-								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getPVP(),
+								listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getNombre(),
+								listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getDescripcion(),
+								listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getPVP(),
 								Integer.valueOf(txtCantidad.getText()),
 								Integer.valueOf(txtCantidad.getText())
-										* listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getPVP() });
+										* listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getPVP() });
 
 						txtTotal.setText(String.valueOf(gestorPedidos.totalPedidoActual()));
 						txtBuscarArticulo.setText("");
-						txtDatoUno.setText("");
-						txtDatoDos.setText("");
-						txtDatoTres.setText("");
+						txtDescripcion.setText("");
+						txtCantidad.setText("");
+						txtPrecio.setText("");
+						txtPvp.setText("");
 
 					} catch (Exception e2) {
+						txtCantidad.setBackground(Color.RED);
+					}
+				}else{
+					if(Integer.valueOf(txtCantidad.getText())==0){
 						txtCantidad.setBackground(Color.RED);
 					}
 				}
@@ -98,6 +103,8 @@ public class ParaAltaPedido extends AltaPedidoUI {
 		btnGuardarPedido.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				guardarPedido();
+				gestorPedidos.altaPedido();
+				txtNumeroPedido.setText(String.valueOf(gestorPedidos.numeroPedidoActual()));
 				txtApellidos.setText("");
 				txtBuscarArticulo.setText("");
 				txtCantidad.setText("");
@@ -106,7 +113,6 @@ public class ParaAltaPedido extends AltaPedidoUI {
 				txtDatoUno.setText("");
 				txtDescripcion.setText("");
 				txtNombre.setText("");
-				txtNumeroPedido.setText("");
 				txtPrecio.setText("");
 				txtPvp.setText("");
 				txtTotal.setText("");
