@@ -36,6 +36,7 @@ public class ModClienteUI extends JPanel {
 	protected JLabel lblBuscarApellido = new JLabel("Apellidos");
 	protected JTextField txtBuscarApellido = new JTextField();
 	protected JButton btnBuscar = new JButton("");
+	protected final JButton btnEscogerColor = new JButton("Escoger color");
 
 	/**
 	 * Create the panel.
@@ -45,7 +46,7 @@ public class ModClienteUI extends JPanel {
 		gridBagLayout.columnWidths = new int[] { 30, 10, 10, 0, 10, 30, 10, 10 };
 		gridBagLayout.rowHeights = new int[] { 44, 30, 20, 23, 30, 10, 10, 10, 10, 30, 30, 10, 30, 10 };
 		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE };
-		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
 				0.0 };
 		setLayout(gridBagLayout);
 
@@ -70,7 +71,7 @@ public class ModClienteUI extends JPanel {
 		gbc_panel.gridwidth = 4;
 		gbc_panel.gridheight = 3;
 		gbc_panel.insets = new Insets(0, 0, 5, 5);
-		gbc_panel.fill = GridBagConstraints.BOTH;
+		gbc_panel.fill = GridBagConstraints.HORIZONTAL;
 		gbc_panel.gridx = 2;
 		gbc_panel.gridy = 2;
 		panel.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
@@ -183,40 +184,47 @@ public class ModClienteUI extends JPanel {
 		add(lblColorDePelo, gbc_lblColorDePelo);
 
 		txtColorDePelo = new JTextField();
+		txtColorDePelo.setEditable(false);
 		GridBagConstraints gbc_txtColorDePelo = new GridBagConstraints();
-		gbc_txtColorDePelo.gridwidth = 4;
+		gbc_txtColorDePelo.gridwidth = 3;
 		gbc_txtColorDePelo.insets = new Insets(0, 0, 5, 5);
 		gbc_txtColorDePelo.fill = GridBagConstraints.HORIZONTAL;
 		gbc_txtColorDePelo.gridx = 2;
 		gbc_txtColorDePelo.gridy = 8;
 		add(txtColorDePelo, gbc_txtColorDePelo);
 		txtColorDePelo.setColumns(10);
-
-		GridBagConstraints gbc_lblMensaje = new GridBagConstraints();
-		gbc_lblMensaje.anchor = GridBagConstraints.EAST;
-		gbc_lblMensaje.insets = new Insets(0, 0, 5, 5);
-		gbc_lblMensaje.gridx = 1;
-		gbc_lblMensaje.gridy = 9;
-		add(lblMensaje, gbc_lblMensaje);
-
-		txtMensaje = new JTextField();
-		GridBagConstraints gbc_txtMensaje = new GridBagConstraints();
-		gbc_txtMensaje.gridwidth = 4;
-		gbc_txtMensaje.gridheight = 3;
-		gbc_txtMensaje.insets = new Insets(0, 0, 5, 5);
-		gbc_txtMensaje.fill = GridBagConstraints.BOTH;
-		gbc_txtMensaje.gridx = 2;
-		gbc_txtMensaje.gridy = 9;
-		add(txtMensaje, gbc_txtMensaje);
-		txtMensaje.setColumns(10);
-
-		GridBagConstraints gbc_btnModificar = new GridBagConstraints();
-		gbc_btnModificar.gridwidth = 2;
-		gbc_btnModificar.insets = new Insets(0, 0, 5, 0);
-		gbc_btnModificar.gridx = 5;
-		gbc_btnModificar.gridy = 12;
-		btnModificar.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/pencil.png")));
-		add(btnModificar, gbc_btnModificar);
+		
+		GridBagConstraints gbc_btnEscogerColor = new GridBagConstraints();
+		gbc_btnEscogerColor.insets = new Insets(0, 0, 5, 5);
+		gbc_btnEscogerColor.gridx = 5;
+		gbc_btnEscogerColor.gridy = 8;
+		add(btnEscogerColor, gbc_btnEscogerColor);
+		
+				GridBagConstraints gbc_btnModificar = new GridBagConstraints();
+				gbc_btnModificar.fill = GridBagConstraints.HORIZONTAL;
+				gbc_btnModificar.insets = new Insets(0, 0, 5, 5);
+				gbc_btnModificar.gridx = 5;
+				gbc_btnModificar.gridy = 10;
+				btnModificar.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/pencil.png")));
+				add(btnModificar, gbc_btnModificar);
+				
+						GridBagConstraints gbc_lblMensaje = new GridBagConstraints();
+						gbc_lblMensaje.anchor = GridBagConstraints.EAST;
+						gbc_lblMensaje.insets = new Insets(0, 0, 5, 5);
+						gbc_lblMensaje.gridx = 1;
+						gbc_lblMensaje.gridy = 12;
+						add(lblMensaje, gbc_lblMensaje);
+						
+								txtMensaje = new JTextField();
+								txtMensaje.setEditable(false);
+								GridBagConstraints gbc_txtMensaje = new GridBagConstraints();
+								gbc_txtMensaje.gridwidth = 4;
+								gbc_txtMensaje.insets = new Insets(0, 0, 5, 5);
+								gbc_txtMensaje.fill = GridBagConstraints.BOTH;
+								gbc_txtMensaje.gridx = 2;
+								gbc_txtMensaje.gridy = 12;
+								add(txtMensaje, gbc_txtMensaje);
+								txtMensaje.setColumns(10);
 
 	}
 

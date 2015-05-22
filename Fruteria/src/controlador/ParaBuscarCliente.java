@@ -27,6 +27,7 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 	 * Evento del boton <code>btnBuscar</code>
 	 */
 	private void buscarCliente(){
+		txtMensaje.setText("");
 		if(!txtBuscarNombre.getText().isEmpty() && !txtBuscarApellido.getText().isEmpty())
 		{
 			Cliente cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
@@ -41,7 +42,7 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 			}
 			else
 			{
-				txtMensaje.setText("No existe un cliente con ese nmbre y apellidos");
+				txtMensaje.setText("No existe un cliente con ese nombre y apellidos");
 			}
 		}
 		else

@@ -1,6 +1,7 @@
 package controlador;
 
 import vista.ModClienteUI;
+
 import java.awt.event.ActionListener;
 
 import com.aeat.valida.Validador;
@@ -10,28 +11,47 @@ import modelo.Cliente;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 
+import javax.swing.JColorChooser;
+
 public class ParaModCliente extends ModClienteUI {
 	
 	private IListaCliente listaCliente;
 	private Object identificador;
 	private Cliente cliente;
+	private Color colorActual;
 	public ParaModCliente(IListaCliente listaCliente) {
+		btnEscogerColor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				escogerColor();
+			}
+		});
 		this.listaCliente = listaCliente;
 		btnModificar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				buscarCliente();
+				modificarCliente();
 			}
 		});
 		btnBuscar.addActionListener(new ActionListener() {
 			
 			public void actionPerformed(ActionEvent arg0) {
-				modificarCliente();
+				buscarCliente();
 			}
 			
 		});
 	}
 
+	protected void escogerColor() {
+		Color c = JColorChooser.showDialog(this, "Choose a Color", colorActual);
+	      if (c != null)
+	      {
+	    	  colorActual = c;
+	    	  txtColorDePelo.setText(colorToText(c));
+	    	  txtColorDePelo.setForeground(c);
+	      }		
+	}
+
 	private void buscarCliente() {
+		txtMensaje.setText("");
 		if(!txtBuscarNombre.getText().isEmpty() && !txtBuscarApellido.getText().isEmpty())
 		{
 			cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
@@ -40,11 +60,14 @@ public class ParaModCliente extends ModClienteUI {
 				txtDNI.setText(cliente.getDni());
 				txtNombre.setText(cliente.getNombre());
 				txtApellidos.setText(cliente.getApellidos());
-				txtColorDePelo.setText(cliente.getColorPelo().toString());
+				if(cliente.getColorPelo() != null){
+					txtColorDePelo.setText(colorToText(cliente.getColorPelo()));
+					txtColorDePelo.setForeground(cliente.getColorPelo());
+				}
 			}
 			else
 			{
-				txtMensaje.setText("No existe un cliente con ese nmbre y apellidos");
+				txtMensaje.setText("No existe un cliente con ese nombre y apellidos");
 			}
 		}
 		else
@@ -69,7 +92,7 @@ public class ParaModCliente extends ModClienteUI {
 		        	cliente.setDni(txtDNI.getText());
 		        	cliente.setNombre(txtNombre.getText());
 		        	cliente.setApellidos(txtApellidos.getText());
-		        	cliente.setColorPelo(Color.getColor(txtColorDePelo.getText()));
+		        	cliente.setColorPelo(colorActual);
 		        	if(listaCliente.modificarCliente(cliente, identificador))
 		        	{
 		        		identificador = cliente.identificador();
@@ -94,5 +117,9 @@ public class ParaModCliente extends ModClienteUI {
 			txtMensaje.setText("Debe buscar un cliente a modificar");
 		}
 	}	
+	
+	private String colorToText(Color c){
+		return String.format("#%02x%02x%02x", c.getRed(), c.getGreen(), c.getBlue());
+	}
 }
 
