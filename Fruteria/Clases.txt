@@ -59,17 +59,6 @@ vista
 	|_ PrincipalUI       :	1   hora  <-- Dani    : OK!
 
 controlador
-	|_ ListaArticulos    :	3   horas <-- Maria   : OK!
-	|_ ListaCliente      :	3   horas <-- Maria   : OK!
-	|_ ListaPedidos	     :	3   horas <-- Miguel  : OK!
-	|_ ParaAltaArticulo  :	2	horas <-- Marco   : OK!
-	|_ ParaBuscarArticulo:	1	hora  <-- Marco   : OK!
-	|_ ParaAltaCliente   :	2	horas <-- Maria   : OK!
-	|_ ParaModCliente 	 :	1	hora  <-- Marco   : OK!
-	|_ ParaBuscarCliente :	1	hora  <-- Marco   : OK!
-	|_ ParaAltaPedido 	 :	5	horas <-- Maria   : OK!
-	|_ ParaBuscarPedido  :	2	horas <-- Marco   : OK!
-	|_ ParaPrincipalUI   :	2	horas <-- Marco
 	|_ ListaArticulos    :	3   horas <-- Maria   		: OK!
 	|_ ListaCliente      :	3   horas <-- Maria   		: OK!
 	|_ ListaPedidos	     :	3   horas <-- Miguel  		: OK!
