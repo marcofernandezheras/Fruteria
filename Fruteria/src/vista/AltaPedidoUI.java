@@ -111,9 +111,9 @@ public class AltaPedidoUI extends JPanel {
 		btnGuardarPedido.setMinimumSize(new Dimension(63, 23));
 		btnGuardarPedido.setMaximumSize(new Dimension(63, 23));
 		GridBagConstraints gbc_btnGuardarPedido = new GridBagConstraints();
-		gbc_btnGuardarPedido.gridwidth = 2;
+		gbc_btnGuardarPedido.gridwidth = 3;
 		gbc_btnGuardarPedido.fill = GridBagConstraints.HORIZONTAL;
-		gbc_btnGuardarPedido.gridx = 4;
+		gbc_btnGuardarPedido.gridx = 3;
 		gbc_btnGuardarPedido.gridy = 0;
 		panelNumeroPedido.add(btnGuardarPedido, gbc_btnGuardarPedido);
 		
