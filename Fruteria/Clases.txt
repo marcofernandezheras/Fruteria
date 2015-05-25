@@ -101,9 +101,9 @@ controlador
 	|_ ParaAltaCliente   :	2	horas <-- Maria    :OK!
 	|_ ParaModCliente 	 :	2	hora  <-- Maria    :OK!
 	|_ ParaBuscarCliente :	2	hora  <-- Maria    :OK!
-	|_ ParaAltaPedido 	 :	3	horas <-- Miguel
-	|_ ParaBuscarPedido  :	2	horas 
-	|_ ParaPrincipalUI   :	4	horas 		
+	|_ ParaAltaPedido 	 :	3	horas <-- Dani     :OK!
+	|_ ParaBuscarPedido  :	2	horas <-- Dani     :OK!
+	|_ ParaPrincipalUI   :	4	horas <-- Todos	   :OK!	
 	
 	
 /******************************************
