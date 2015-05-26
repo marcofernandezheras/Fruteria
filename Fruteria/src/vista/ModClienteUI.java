@@ -35,8 +35,10 @@ public class ModClienteUI extends JPanel {
 	protected JLabel lblBuscarApellido = new JLabel("Apellidos");
 	protected JTextField txtBuscarApellido = new JTextField();
 	protected JButton btnBuscar = new JButton("");
-	protected final JButton btnEscogerColor = new JButton("Escoger color");
-	private final JLabel label = new JLabel("Modificar Clientes");
+	protected JButton btnEscogerColor = new JButton("Escoger color");
+	protected JLabel label = new JLabel("Modificar Clientes");
+	protected JLabel label_1 = new JLabel("");
+	protected JLabel label_2 = new JLabel("");
 
 	/**
 	 * Create the panel.
@@ -77,16 +79,22 @@ public class ModClienteUI extends JPanel {
 				add(panel, gbc_panel);
 				GridBagLayout gbl_panel = new GridBagLayout();
 				gbl_panel.columnWidths = new int[]{75, 247, 50, 0, 0};
-				gbl_panel.rowHeights = new int[]{14, 0, 0};
+				gbl_panel.rowHeights = new int[]{0, 14, 0, 0, 0};
 				gbl_panel.columnWeights = new double[]{0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
-				gbl_panel.rowWeights = new double[]{0.0, 0.0, Double.MIN_VALUE};
+				gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 				panel.setLayout(gbl_panel);
+				
+				GridBagConstraints gbc_label_1 = new GridBagConstraints();
+				gbc_label_1.insets = new Insets(0, 0, 5, 5);
+				gbc_label_1.gridx = 1;
+				gbc_label_1.gridy = 0;
+				panel.add(label_1, gbc_label_1);
 				
 				GridBagConstraints gbc_lblBuscarNombre = new GridBagConstraints();
 				gbc_lblBuscarNombre.anchor = GridBagConstraints.NORTHEAST;
 				gbc_lblBuscarNombre.insets = new Insets(0, 0, 5, 5);
 				gbc_lblBuscarNombre.gridx = 0;
-				gbc_lblBuscarNombre.gridy = 0;
+				gbc_lblBuscarNombre.gridy = 1;
 				lblBuscarNombre.setHorizontalAlignment(SwingConstants.CENTER);
 				panel.add(lblBuscarNombre, gbc_lblBuscarNombre);
 				
@@ -94,34 +102,40 @@ public class ModClienteUI extends JPanel {
 				gbc_txtBuscarNombre.fill = GridBagConstraints.BOTH;
 				gbc_txtBuscarNombre.insets = new Insets(0, 0, 5, 5);
 				gbc_txtBuscarNombre.gridx = 1;
-				gbc_txtBuscarNombre.gridy = 0;
+				gbc_txtBuscarNombre.gridy = 1;
 				txtBuscarNombre.setColumns(10);
 				panel.add(txtBuscarNombre, gbc_txtBuscarNombre);
 				
 				GridBagConstraints gbc_btnBuscar = new GridBagConstraints();
+				gbc_btnBuscar.insets = new Insets(0, 0, 5, 0);
 				gbc_btnBuscar.fill = GridBagConstraints.BOTH;
-				gbc_btnBuscar.insets = new Insets(0, 0, 0, 5);
 				gbc_btnBuscar.gridheight = 2;
 				gbc_btnBuscar.gridwidth = 2;
 				gbc_btnBuscar.gridx = 2;
-				gbc_btnBuscar.gridy = 0;
+				gbc_btnBuscar.gridy = 1;
 				btnBuscar.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/magnifier-left.png")));
 				panel.add(btnBuscar, gbc_btnBuscar);
 				
 				GridBagConstraints gbc_lblBuscarApellido = new GridBagConstraints();
 				gbc_lblBuscarApellido.anchor = GridBagConstraints.EAST;
-				gbc_lblBuscarApellido.insets = new Insets(0, 0, 0, 5);
+				gbc_lblBuscarApellido.insets = new Insets(0, 0, 5, 5);
 				gbc_lblBuscarApellido.gridx = 0;
-				gbc_lblBuscarApellido.gridy = 1;
+				gbc_lblBuscarApellido.gridy = 2;
 				panel.add(lblBuscarApellido, gbc_lblBuscarApellido);
 				
 				GridBagConstraints gbc_txtBuscarApellido = new GridBagConstraints();
 				gbc_txtBuscarApellido.fill = GridBagConstraints.HORIZONTAL;
-				gbc_txtBuscarApellido.insets = new Insets(0, 0, 0, 5);
+				gbc_txtBuscarApellido.insets = new Insets(0, 0, 5, 5);
 				gbc_txtBuscarApellido.gridx = 1;
-				gbc_txtBuscarApellido.gridy = 1;
+				gbc_txtBuscarApellido.gridy = 2;
 				txtBuscarApellido.setColumns(10);
 				panel.add(txtBuscarApellido, gbc_txtBuscarApellido);
+				
+				GridBagConstraints gbc_label_2 = new GridBagConstraints();
+				gbc_label_2.insets = new Insets(0, 0, 0, 5);
+				gbc_label_2.gridx = 1;
+				gbc_label_2.gridy = 3;
+				panel.add(label_2, gbc_label_2);
 						
 								GridBagConstraints gbc_lblNombre = new GridBagConstraints();
 								gbc_lblNombre.anchor = GridBagConstraints.EAST;
