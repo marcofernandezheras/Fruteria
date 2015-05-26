@@ -30,16 +30,19 @@ public class ParaAltaPedido extends AltaPedidoUI {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				txtNombre.setBackground(Color.white);
-				if (listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase()) != null) {
-					txtDatoUno.setText(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase())
+				if (listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText()) != null) {
+					txtDatoUno.setText(listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText())
 							.getDni());
-					txtDatoDos.setText(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase())
+					txtDatoDos.setText(listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText())
 							.getNombre());
-					txtDatoTres.setText(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase())
+					txtDatoTres.setText(listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText())
 							.getApellidos());
-					gestorPedidos.insertarCliente(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(),
-							txtApellidos.getText().toLowerCase()));
+					gestorPedidos.insertarCliente(listaClientes.buscarCliente(txtNombre.getText(),
+							txtApellidos.getText()));
 				} else {
+					txtDatoUno.setText("");
+					txtDatoDos.setText("");
+					txtDatoTres.setText("");
 					altaNuevoCliente();
 				}
 
@@ -49,12 +52,12 @@ public class ParaAltaPedido extends AltaPedidoUI {
 
 		btnBuscar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()) != null) {
+				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText()) != null) {
 					txtBuscarArticulo.setBackground(Color.white);
-					txtDescripcion.setText(listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getDescripcion());
-					txtPrecio.setText(String.valueOf(listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase())
+					txtDescripcion.setText(listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getDescripcion());
+					txtPrecio.setText(String.format("%.02",listaArticulos.buscarArticulo(txtBuscarArticulo.getText())
 							.getPrecio()));
-					txtPvp.setText(String.valueOf(listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase())
+					txtPvp.setText(String.format("%.02", listaArticulos.buscarArticulo(txtBuscarArticulo.getText())
 							.getPVP()));
 				} else {
 					txtBuscarArticulo.setBackground(Color.RED);
@@ -66,25 +69,26 @@ public class ParaAltaPedido extends AltaPedidoUI {
 		btnCantidad.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()) != null
-						&& listaClientes.buscarCliente(txtNombre.getText().toLowerCase(), txtApellidos.getText().toLowerCase()) != null 
-						&& Integer.valueOf(txtCantidad.getText())!=0) {
+				
+				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText()) != null
+						&& listaClientes.buscarCliente(txtNombre.getText(), txtApellidos.getText()) != null 
+						&& comprobarCantidad()) {
 					try {
 						txtCantidad.setBackground(Color.white);
 						Integer.parseInt(txtCantidad.getText());
-						gestorPedidos.addLineaPedido(listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()),
+						gestorPedidos.addLineaPedido(listaArticulos.buscarArticulo(txtBuscarArticulo.getText()),
 								Integer.valueOf(txtCantidad.getText()));
 						DefaultTableModel model = (DefaultTableModel) JTabla.getModel();
 						model.addRow(new Object[] {
 
-								listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getNombre(),
-								listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getDescripcion(),
-								listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getPVP(),
+								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getNombre(),
+								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getDescripcion(),
+								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getPVP(),
 								Integer.valueOf(txtCantidad.getText()),
 								Integer.valueOf(txtCantidad.getText())
-										* listaArticulos.buscarArticulo(txtBuscarArticulo.getText().toLowerCase()).getPVP() });
+										* listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getPVP() });
 
-						txtTotal.setText(String.valueOf(gestorPedidos.totalPedidoActual()));
+						txtTotal.setText(String.format("%.02f", gestorPedidos.totalPedidoActual()));
 						txtBuscarArticulo.setText("");
 						txtDescripcion.setText("");
 						txtCantidad.setText("");
@@ -95,12 +99,14 @@ public class ParaAltaPedido extends AltaPedidoUI {
 						txtCantidad.setBackground(Color.RED);
 					}
 				}else{
-					if(Integer.valueOf(txtCantidad.getText())==0){
+					if(!comprobarCantidad()){
 						txtCantidad.setBackground(Color.RED);
 					}
+					
 				}
 
 			}
+
 		});
 
 		btnGuardarPedido.addActionListener(new ActionListener() {
@@ -124,6 +130,21 @@ public class ParaAltaPedido extends AltaPedidoUI {
 			}
 		});
 
+	}
+	private boolean comprobarCantidad() {
+		boolean cantidadCorrecta=false;
+		if (txtCantidad.getText()!=""){
+			
+			try {
+				Integer.parseInt(txtCantidad.getText());
+				if(Integer.valueOf(txtCantidad.getText())!=0){
+					cantidadCorrecta=true;
+				}
+			} catch (Exception e) {
+		
+			}
+		}
+		return cantidadCorrecta;
 	}
 
 	protected void guardarPedido() {
