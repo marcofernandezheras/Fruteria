@@ -56,6 +56,7 @@ public class AltaPedidoUI extends JPanel {
 	/**
 	 * Create the panel.
 	 */
+	@SuppressWarnings("serial")
 	public AltaPedidoUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
 		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0};
@@ -337,7 +338,12 @@ public class AltaPedidoUI extends JPanel {
 			new String[] {
 				"Articulo", "Descripci\u00F3n", "Precio", "Cantidad", "Subtotal"
 			}
-		));
+		){
+			@Override
+		    public boolean isCellEditable(int row, int column) {
+		       return false;
+		    }
+		});
 		scrollPane.setViewportView(JTabla);
 		
 		panelTotal = new JPanel();
