@@ -74,7 +74,7 @@ public class ParaAltaArticulo extends AltaArticuloUI {
 	 * @return Nuevo {@link Articulo}.
 	 */
 	private Articulo generarArticulo() {
-		Articulo art = new Articulo(txtNombre.getText().toLowerCase(), txtDescripcion.getText(),
+		Articulo art = new Articulo(txtNombre.getText(), txtDescripcion.getText(),
 				Float.parseFloat(txtPrecio.getText()));
 		return art;
 	}
@@ -84,7 +84,7 @@ public class ParaAltaArticulo extends AltaArticuloUI {
 			Float pvp;
 			try {
 				pvp = Float.parseFloat(txtPrecio.getText()) * 1.21f;
-				txtPVP.setText(pvp.toString());
+				txtPVP.setText(String.format("%.02f", pvp));
 			} catch (NumberFormatException e) {
 				JOptionPane.showMessageDialog(this, "Formato de precio no válido");
 				txtPrecio.setText("");
