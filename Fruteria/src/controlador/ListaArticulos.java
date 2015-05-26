@@ -46,7 +46,7 @@ public class ListaArticulos implements IListaArticulos {
 	public Articulo buscarArticulo(String nombre) {
 
 		for (int i = 0; i < articulos.size(); i++) {
-			if (nombre.equals(articulos.get(i).getNombre())) {
+			if (nombre.equalsIgnoreCase(articulos.get(i).getNombre())) {
 				return articulos.get(i);
 			}
 		}
