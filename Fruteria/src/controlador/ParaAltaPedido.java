@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JColorChooser;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -17,11 +18,12 @@ import vista.AltaPedidoUI;
 
 public class ParaAltaPedido extends AltaPedidoUI {
 	IGestorPedidos gestorPedidos;
-
+	IListaCliente listaClientes;
 	public ParaAltaPedido(IGestorPedidos gestorPedidos, IListaArticulos listaArticulos, IListaCliente listaClientes) {
 
-		gestorPedidos.altaPedido();
 		this.gestorPedidos=gestorPedidos;
+		this.listaClientes=listaClientes;
+		gestorPedidos.altaPedido();
 		txtNumeroPedido.setText(String.valueOf(gestorPedidos.numeroPedidoActual()));
 		
 
@@ -38,10 +40,11 @@ public class ParaAltaPedido extends AltaPedidoUI {
 					gestorPedidos.insertarCliente(listaClientes.buscarCliente(txtNombre.getText().toLowerCase(),
 							txtApellidos.getText().toLowerCase()));
 				} else {
-					txtNombre.setBackground(Color.RED);
+					altaNuevoCliente();
 				}
 
 			}
+
 		});
 
 		btnBuscar.addActionListener(new ActionListener() {
@@ -130,4 +133,21 @@ public class ParaAltaPedido extends AltaPedidoUI {
 		}
 	}
 
+	private void altaNuevoCliente() {
+		int si_no = JOptionPane.showConfirmDialog(this, "El cliente no existe, ¿Desea crearlo ahora?","¿Crear cliente?",JOptionPane.YES_OPTION);
+		if(si_no == JOptionPane.YES_OPTION)
+		{
+			JDialog d = new JDialog();
+			d.setContentPane(new ParaAltaCliente(listaClientes));
+			d.setModal(true);
+			d.setSize(600, 400);
+			d.setResizable(false);
+			d.setVisible(true);
+		}
+		else
+		{
+			txtNombre.setBackground(Color.RED);			
+		}		
+		
+	}
 }
