@@ -39,15 +39,15 @@ public class ParaAltaArticulo extends AltaArticuloUI {
 	private void crearArticulo() {
 		if (validarDatos()) {
 			if (listaArticulos.insertarArticulo(generarArticulo())) {
-				JOptionPane.showMessageDialog(this, "Art�culo creado con �xito");
+				JOptionPane.showMessageDialog(this, "Artículo creado con éxito");
 				txtPrecio.setText("");
 				txtDescripcion.setText("");
 				txtNombre.setText("");
 				txtPVP.setText("");
 			} else
-				JOptionPane.showMessageDialog(this, "El art�culo ya existe");
+				JOptionPane.showMessageDialog(this, "El artículo ya existe");
 		} else
-			JOptionPane.showMessageDialog(this, "Datos no v�lidos");
+			JOptionPane.showMessageDialog(this, "Datos no válidos");
 	}
 
 	/**
@@ -86,7 +86,7 @@ public class ParaAltaArticulo extends AltaArticuloUI {
 				pvp = Float.parseFloat(txtPrecio.getText()) * 1.21f;
 				txtPVP.setText(pvp.toString());
 			} catch (NumberFormatException e) {
-				JOptionPane.showMessageDialog(this, "Formato de precio no v�lido");
+				JOptionPane.showMessageDialog(this, "Formato de precio no válido");
 				txtPrecio.setText("");
 				txtPVP.setText("");
 			}

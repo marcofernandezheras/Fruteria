@@ -58,4 +58,5 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 	private String colorToText(Color c) {
 		return String.format("#%02x%02x%02x", c.getRed(), c.getGreen(), c.getBlue());
 	}
+	
 }

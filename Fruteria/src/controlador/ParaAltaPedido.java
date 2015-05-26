@@ -134,7 +134,7 @@ public class ParaAltaPedido extends AltaPedidoUI {
 	}
 
 	private void altaNuevoCliente() {
-		int si_no = JOptionPane.showConfirmDialog(this, "El cliente no existe, ¿Desea crearlo ahora?","¿Crear cliente?",JOptionPane.YES_OPTION);
+		int si_no = JOptionPane.showConfirmDialog(this, "El cliente no existe, Â¿Desea crearlo ahora?","Â¿Crear cliente?",JOptionPane.YES_OPTION);
 		if(si_no == JOptionPane.YES_OPTION)
 		{
 			JDialog d = new JDialog();

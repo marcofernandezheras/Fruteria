@@ -26,7 +26,7 @@ public class ParaAltaCliente extends AltaClienteUI {
 	public ParaAltaCliente(IListaCliente listaClientes) {
 		btnEscogerColor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Color c = JColorChooser.showDialog(null, "Choose a Color", colorActual);
+				Color c = JColorChooser.showDialog(null, "Escoger color", colorActual);
 			      if (c != null)
 			      {
 			    	  colorActual = c;
@@ -75,12 +75,12 @@ public class ParaAltaCliente extends AltaClienteUI {
 				{
 					try {
 						Integer.parseInt(txtNombre.getText());
-						JOptionPane.showMessageDialog(this, "El nombre no debe contener numeros");
+						JOptionPane.showMessageDialog(this, "El nombre no debe contener números");
 					} catch (Exception e2) {
 
 						try {
 							Integer.parseInt(txtApellidos.getText());
-							JOptionPane.showMessageDialog(this, "Los apellidos no deben contener numeros");
+							JOptionPane.showMessageDialog(this, "Los apellidos no deben contener números");
 						} catch (Exception e3) {
 							valid = true;
 						}
@@ -88,14 +88,14 @@ public class ParaAltaCliente extends AltaClienteUI {
 				}
 				else
 				{
-					JOptionPane.showMessageDialog(this, "Color no valido");
+					JOptionPane.showMessageDialog(this, "Color no válido");
 				}
 			} else {
 				JOptionPane.showMessageDialog(this, "Algunos campos estan vacios");
 			}
 
 		} else {
-			JOptionPane.showMessageDialog(this, "DNI no valido");
+			JOptionPane.showMessageDialog(this, "DNI no válido");
 		}
 		return valid;
 	}

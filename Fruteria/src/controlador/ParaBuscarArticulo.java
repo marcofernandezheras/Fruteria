@@ -46,6 +46,5 @@ public class ParaBuscarArticulo extends BuscarArticuloUI {
 			txtMensaje.setText("Debe introducir datos para poder buscar");
 		}
 		txtBusquedaNombre.setText("");
-
 	}
 }

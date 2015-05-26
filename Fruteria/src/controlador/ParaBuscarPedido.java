@@ -85,7 +85,6 @@ public class ParaBuscarPedido extends BuscarPedidoUI {
 		DefaultTableModel model = (DefaultTableModel) tablaLineas.getModel();
 		model.setRowCount(0);
 		txtTotal.setText("");
-	}
-	
+	}	
 	
 }

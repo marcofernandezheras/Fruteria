@@ -35,6 +35,7 @@
       </ownedOperation>
     </packagedElement>
     <packagedElement xmi:type="uml:Interface" xmi:id="_74I58PisEeSpVbHaJ2qujg" name="Modificable">
+      <generalization xmi:id="_v13C4AN4EeWTx8XFbamf6A" general="_tzeUYAN4EeWTx8XFbamf6A"/>
       <ownedOperation xmi:id="_CTXQ8PitEeSpVbHaJ2qujg" name="identificador">
         <ownedParameter xmi:id="_EkQVgPitEeSpVbHaJ2qujg" name="identificador" type="_df8mwPicEeS_k4uWeiG0mA" direction="return"/>
       </ownedOperation>
@@ -592,4 +593,5 @@
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sSLEEPmQEeSgCqLRRD762Q" value="1"/>
     </ownedEnd>
   </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_tzeUYAN4EeWTx8XFbamf6A" name="Serializable"/>
 </uml:Model>

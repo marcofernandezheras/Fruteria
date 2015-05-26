@@ -41,7 +41,7 @@ public class ParaModCliente extends ModClienteUI {
 	}
 
 	protected void escogerColor() {
-		Color c = JColorChooser.showDialog(this, "Choose a Color", colorActual);
+		Color c = JColorChooser.showDialog(this, "Escoger color", colorActual);
 	      if (c != null)
 	      {
 	    	  colorActual = c;
@@ -82,7 +82,7 @@ public class ParaModCliente extends ModClienteUI {
 			if(!txtNombre.getText().isEmpty() 
 					&& !txtApellidos.getText().isEmpty()
 					&& !txtDNI.getText().isEmpty()
-					&& !txtColorDePelo.getText().isEmpty() ) /* No hay ning�n valor vacio */
+					&& !txtColorDePelo.getText().isEmpty() ) /* No hay ningún valor vacio */
 			{
 				Validador validador = new Validador();
 		        int e = validador.checkNif(txtDNI.getText());
