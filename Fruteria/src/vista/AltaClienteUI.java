@@ -22,7 +22,7 @@ public class AltaClienteUI extends JPanel {
 	protected JLabel lblDni = new JLabel("DNI");
 	protected JButton btnCrear = new JButton("Crear");
 	protected JLabel lblAltaClientes = new JLabel("Alta Clientes");
-	protected final JButton btnEscogerColor = new JButton("Escoger color");
+	protected JButton btnEscogerColor = new JButton("Escoger color");
 
 	/**
 	 * Create the panel.

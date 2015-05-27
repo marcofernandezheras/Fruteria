@@ -52,14 +52,14 @@ public class AltaPedidoUI extends JPanel {
 	protected JScrollPane scrollPane;
 	protected JTable JTabla;
 	protected JButton btnGuardarPedido;
-	private JLabel label;
-	private JLabel lblNombre;
-	private JLabel lblApellidos;
-	private JLabel lblApellidos_1;
-	private JLabel lblDni;
-	private JLabel label_1;
-	private JLabel label_2;
-	private JLabel lblBsquedaDeArtculos;
+	protected JLabel label;
+	protected JLabel lblNombre;
+	protected JLabel lblApellidos;
+	protected JLabel lblApellidos_1;
+	protected JLabel lblDni;
+	protected JLabel label_1;
+	protected JLabel label_2;
+	protected JLabel lblBsquedaDeArticulos;
 
 	/**
 	 * Create the panel.
@@ -268,14 +268,14 @@ public class AltaPedidoUI extends JPanel {
 		gbl_panelBuscarArticulo.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panelBuscarArticulo.setLayout(gbl_panelBuscarArticulo);
 		
-		lblBsquedaDeArtculos = new JLabel("Búsqueda de Artículos");
-		lblBsquedaDeArtculos.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
-		GridBagConstraints gbc_lblBsquedaDeArtculos = new GridBagConstraints();
-		gbc_lblBsquedaDeArtculos.gridwidth = 5;
-		gbc_lblBsquedaDeArtculos.insets = new Insets(0, 0, 5, 5);
-		gbc_lblBsquedaDeArtculos.gridx = 1;
-		gbc_lblBsquedaDeArtculos.gridy = 0;
-		panelBuscarArticulo.add(lblBsquedaDeArtculos, gbc_lblBsquedaDeArtculos);
+		lblBsquedaDeArticulos = new JLabel("Búsqueda de Artículos");
+		lblBsquedaDeArticulos.setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
+		GridBagConstraints gbc_lblBsquedaDeArticulos = new GridBagConstraints();
+		gbc_lblBsquedaDeArticulos.gridwidth = 5;
+		gbc_lblBsquedaDeArticulos.insets = new Insets(0, 0, 5, 5);
+		gbc_lblBsquedaDeArticulos.gridx = 1;
+		gbc_lblBsquedaDeArticulos.gridy = 0;
+		panelBuscarArticulo.add(lblBsquedaDeArticulos, gbc_lblBsquedaDeArticulos);
 		
 		lblBuscarArticulo = new JLabel("Buscar Artículo");
 		GridBagConstraints gbc_lblBuscarArticulo = new GridBagConstraints();
