@@ -29,16 +29,16 @@ public class AltaClienteUI extends JPanel {
 	 */
 	public AltaClienteUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[] {30, 10, 250, 30, 2, 30};
+		gridBagLayout.columnWidths = new int[] {0, 30, 10, 250, 30, 2, 0};
 		gridBagLayout.rowHeights = new int[] {30, 19, 20, 30, 10, 18};
-		gridBagLayout.columnWeights = new double[] { 0.0, 0.0, 1.0, 0.0, 0.0 };
+		gridBagLayout.columnWeights = new double[] { 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0 };
 		gridBagLayout.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
 		setLayout(gridBagLayout);
 																
 																GridBagConstraints gbc_lblAltaClientes = new GridBagConstraints();
 																gbc_lblAltaClientes.gridwidth = 3;
 																gbc_lblAltaClientes.insets = new Insets(0, 0, 5, 5);
-																gbc_lblAltaClientes.gridx = 2;
+																gbc_lblAltaClientes.gridx = 3;
 																gbc_lblAltaClientes.gridy = 0;
 																lblAltaClientes.setVerticalAlignment(SwingConstants.TOP);
 																lblAltaClientes.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
@@ -47,7 +47,7 @@ public class AltaClienteUI extends JPanel {
 																GridBagConstraints gbc_lblNombre = new GridBagConstraints();
 																gbc_lblNombre.anchor = GridBagConstraints.EAST;
 																gbc_lblNombre.insets = new Insets(0, 0, 5, 5);
-																gbc_lblNombre.gridx = 1;
+																gbc_lblNombre.gridx = 2;
 																gbc_lblNombre.gridy = 1;
 																add(lblNombre, gbc_lblNombre);
 												
@@ -56,7 +56,7 @@ public class AltaClienteUI extends JPanel {
 														gbc_txtNombre.gridwidth = 3;
 														gbc_txtNombre.insets = new Insets(0, 0, 5, 5);
 														gbc_txtNombre.fill = GridBagConstraints.HORIZONTAL;
-														gbc_txtNombre.gridx = 2;
+														gbc_txtNombre.gridx = 3;
 														gbc_txtNombre.gridy = 1;
 														add(txtNombre, gbc_txtNombre);
 														txtNombre.setColumns(10);
@@ -64,7 +64,7 @@ public class AltaClienteUI extends JPanel {
 								GridBagConstraints gbc_lblApellidos = new GridBagConstraints();
 								gbc_lblApellidos.anchor = GridBagConstraints.EAST;
 								gbc_lblApellidos.insets = new Insets(0, 0, 5, 5);
-								gbc_lblApellidos.gridx = 1;
+								gbc_lblApellidos.gridx = 2;
 								gbc_lblApellidos.gridy = 3;
 								add(lblApellidos, gbc_lblApellidos);
 				
@@ -73,7 +73,7 @@ public class AltaClienteUI extends JPanel {
 						gbc_txtApellidos.gridwidth = 3;
 						gbc_txtApellidos.insets = new Insets(0, 0, 5, 5);
 						gbc_txtApellidos.fill = GridBagConstraints.HORIZONTAL;
-						gbc_txtApellidos.gridx = 2;
+						gbc_txtApellidos.gridx = 3;
 						gbc_txtApellidos.gridy = 3;
 						add(txtApellidos, gbc_txtApellidos);
 						txtApellidos.setColumns(10);
@@ -81,7 +81,7 @@ public class AltaClienteUI extends JPanel {
 								GridBagConstraints gbc_lblDni = new GridBagConstraints();
 								gbc_lblDni.anchor = GridBagConstraints.EAST;
 								gbc_lblDni.insets = new Insets(0, 0, 5, 5);
-								gbc_lblDni.gridx = 1;
+								gbc_lblDni.gridx = 2;
 								gbc_lblDni.gridy = 5;
 								add(lblDni, gbc_lblDni);
 				
@@ -90,7 +90,7 @@ public class AltaClienteUI extends JPanel {
 						gbc_txtDNI.gridwidth = 3;
 						gbc_txtDNI.insets = new Insets(0, 0, 5, 5);
 						gbc_txtDNI.fill = GridBagConstraints.HORIZONTAL;
-						gbc_txtDNI.gridx = 2;
+						gbc_txtDNI.gridx = 3;
 						gbc_txtDNI.gridy = 5;
 						add(txtDNI, gbc_txtDNI);
 						txtDNI.setColumns(10);
@@ -99,7 +99,7 @@ public class AltaClienteUI extends JPanel {
 						gbc_lblColorDePelo.gridwidth = 2;
 						gbc_lblColorDePelo.anchor = GridBagConstraints.EAST;
 						gbc_lblColorDePelo.insets = new Insets(0, 0, 5, 5);
-						gbc_lblColorDePelo.gridx = 0;
+						gbc_lblColorDePelo.gridx = 1;
 						gbc_lblColorDePelo.gridy = 7;
 						add(lblColorDePelo, gbc_lblColorDePelo);
 		
@@ -109,14 +109,14 @@ public class AltaClienteUI extends JPanel {
 				gbc_txtColorDePelo.gridwidth = 2;
 				gbc_txtColorDePelo.insets = new Insets(0, 0, 5, 5);
 				gbc_txtColorDePelo.fill = GridBagConstraints.HORIZONTAL;
-				gbc_txtColorDePelo.gridx = 2;
+				gbc_txtColorDePelo.gridx = 3;
 				gbc_txtColorDePelo.gridy = 7;
 				add(txtColorDePelo, gbc_txtColorDePelo);
 				txtColorDePelo.setColumns(10);
 		
 		GridBagConstraints gbc_btnEscogerColor = new GridBagConstraints();
 		gbc_btnEscogerColor.insets = new Insets(0, 0, 5, 5);
-		gbc_btnEscogerColor.gridx = 4;
+		gbc_btnEscogerColor.gridx = 5;
 		gbc_btnEscogerColor.gridy = 7;
 		add(btnEscogerColor, gbc_btnEscogerColor);
 		
@@ -124,7 +124,7 @@ public class AltaClienteUI extends JPanel {
 				gbc_btnCrear.fill = GridBagConstraints.HORIZONTAL;
 				gbc_btnCrear.gridheight = 2;
 				gbc_btnCrear.insets = new Insets(0, 0, 0, 5);
-				gbc_btnCrear.gridx = 4;
+				gbc_btnCrear.gridx = 5;
 				gbc_btnCrear.gridy = 8;
 				btnCrear.setIcon(new ImageIcon(AltaClienteUI.class.getResource("/iconos/plus.png")));
 				add(btnCrear, gbc_btnCrear);

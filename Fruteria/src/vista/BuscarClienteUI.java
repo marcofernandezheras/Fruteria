@@ -15,6 +15,7 @@ import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 import java.awt.Color;
+import java.awt.Rectangle;
 
 public class BuscarClienteUI extends JPanel {
 	protected JTextField txtBuscarNombre;
@@ -34,8 +35,6 @@ public class BuscarClienteUI extends JPanel {
 	protected JLabel lblNewLabel;
 	protected JLabel lblNewLabel_1;
 	protected JPanel panel;
-	protected JLabel lblNewLabel_2;
-	protected JLabel lblNewLabel_3;
 
 	/**
 	 * Create the panel.
@@ -69,32 +68,18 @@ public class BuscarClienteUI extends JPanel {
 		gbc_panel.gridy = 1;
 		add(panel, gbc_panel);
 		GridBagLayout gbl_panel = new GridBagLayout();
-		gbl_panel.columnWidths = new int[]{10, 49, 86, 51, 86, 57, 0, 0, 0, 0, 0};
-		gbl_panel.rowHeights = new int[]{0, 28, 0, 0, 0};
-		gbl_panel.columnWeights = new double[]{0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
-		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.columnWidths = new int[]{20, 49, 86, 51, 86, 57, 0, 0, 0, 0, 20, 0};
+		gbl_panel.rowHeights = new int[]{0, 40, 28, 0, 40, 0, 0};
+		gbl_panel.columnWeights = new double[]{0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_panel.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel.setLayout(gbl_panel);
-		
-		lblNewLabel_2 = new JLabel("");
-		GridBagConstraints gbc_lblNewLabel_2 = new GridBagConstraints();
-		gbc_lblNewLabel_2.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_2.gridx = 4;
-		gbc_lblNewLabel_2.gridy = 0;
-		panel.add(lblNewLabel_2, gbc_lblNewLabel_2);
-		
-		lblNewLabel_3 = new JLabel("");
-		GridBagConstraints gbc_lblNewLabel_3 = new GridBagConstraints();
-		gbc_lblNewLabel_3.insets = new Insets(0, 0, 5, 5);
-		gbc_lblNewLabel_3.gridx = 5;
-		gbc_lblNewLabel_3.gridy = 3;
-		panel.add(lblNewLabel_3, gbc_lblNewLabel_3);
 		
 		lblNewLabel = new JLabel("Nombre");
 		GridBagConstraints gbc_lblNewLabel = new GridBagConstraints();
 		gbc_lblNewLabel.anchor = GridBagConstraints.WEST;
 		gbc_lblNewLabel.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel.gridx = 1;
-		gbc_lblNewLabel.gridy = 1;
+		gbc_lblNewLabel.gridy = 2;
 		panel.add(lblNewLabel, gbc_lblNewLabel);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		
@@ -104,15 +89,16 @@ public class BuscarClienteUI extends JPanel {
 		gbc_txtBuscarNombre.gridwidth = 4;
 		gbc_txtBuscarNombre.insets = new Insets(0, 0, 5, 5);
 		gbc_txtBuscarNombre.gridx = 2;
-		gbc_txtBuscarNombre.gridy = 1;
+		gbc_txtBuscarNombre.gridy = 2;
 		panel.add(txtBuscarNombre, gbc_txtBuscarNombre);
 		txtBuscarNombre.setColumns(10);
 		GridBagConstraints gbc_btnBuscar = new GridBagConstraints();
+		gbc_btnBuscar.insets = new Insets(0, 0, 5, 5);
 		gbc_btnBuscar.gridwidth = 4;
 		gbc_btnBuscar.fill = GridBagConstraints.BOTH;
 		gbc_btnBuscar.gridheight = 2;
 		gbc_btnBuscar.gridx = 6;
-		gbc_btnBuscar.gridy = 1;
+		gbc_btnBuscar.gridy = 2;
 		panel.add(btnBuscar, gbc_btnBuscar);
 		btnBuscar.setIcon(new ImageIcon(BuscarClienteUI.class.getResource("/iconos/magnifier-left.png")));
 		btnBuscar.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -124,9 +110,9 @@ public class BuscarClienteUI extends JPanel {
 		lblNewLabel_1 = new JLabel("Apellidos");
 		GridBagConstraints gbc_lblNewLabel_1 = new GridBagConstraints();
 		gbc_lblNewLabel_1.anchor = GridBagConstraints.WEST;
-		gbc_lblNewLabel_1.insets = new Insets(0, 0, 0, 5);
+		gbc_lblNewLabel_1.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNewLabel_1.gridx = 1;
-		gbc_lblNewLabel_1.gridy = 2;
+		gbc_lblNewLabel_1.gridy = 3;
 		panel.add(lblNewLabel_1, gbc_lblNewLabel_1);
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		
@@ -134,9 +120,9 @@ public class BuscarClienteUI extends JPanel {
 		GridBagConstraints gbc_txtBuscarApellido = new GridBagConstraints();
 		gbc_txtBuscarApellido.gridwidth = 4;
 		gbc_txtBuscarApellido.fill = GridBagConstraints.BOTH;
-		gbc_txtBuscarApellido.insets = new Insets(0, 0, 0, 5);
+		gbc_txtBuscarApellido.insets = new Insets(0, 0, 5, 5);
 		gbc_txtBuscarApellido.gridx = 2;
-		gbc_txtBuscarApellido.gridy = 2;
+		gbc_txtBuscarApellido.gridy = 3;
 		panel.add(txtBuscarApellido, gbc_txtBuscarApellido);
 		txtBuscarApellido.setColumns(10);
 		

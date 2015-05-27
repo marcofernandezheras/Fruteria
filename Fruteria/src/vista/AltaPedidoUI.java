@@ -67,7 +67,7 @@ public class AltaPedidoUI extends JPanel {
 	@SuppressWarnings("serial")
 	public AltaPedidoUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0};
+		gridBagLayout.columnWidths = new int[]{20, 0, 20, 0};
 		gridBagLayout.rowHeights = new int[]{0, 31, 25, 95, 93, 0, 116, 36, 0, 0};
 		gridBagLayout.columnWeights = new double[]{0.0, 1.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
@@ -429,9 +429,9 @@ public class AltaPedidoUI extends JPanel {
 		gbc_panelTotal.gridy = 7;
 		add(panelTotal, gbc_panelTotal);
 		GridBagLayout gbl_panelTotal = new GridBagLayout();
-		gbl_panelTotal.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 46, 0, 0, 0, 84, 0, 0};
+		gbl_panelTotal.columnWidths = new int[]{0, 0, 0};
 		gbl_panelTotal.rowHeights = new int[]{0, 0};
-		gbl_panelTotal.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE, 0.0};
+		gbl_panelTotal.columnWeights = new double[]{1.0, 0.0, 0.0};
 		gbl_panelTotal.rowWeights = new double[]{0.0, Double.MIN_VALUE};
 		panelTotal.setLayout(gbl_panelTotal);
 		
@@ -440,16 +440,14 @@ public class AltaPedidoUI extends JPanel {
 		GridBagConstraints gbc_lblTotal = new GridBagConstraints();
 		gbc_lblTotal.anchor = GridBagConstraints.EAST;
 		gbc_lblTotal.insets = new Insets(0, 0, 0, 5);
-		gbc_lblTotal.gridx = 10;
+		gbc_lblTotal.gridx = 1;
 		gbc_lblTotal.gridy = 0;
 		panelTotal.add(lblTotal, gbc_lblTotal);
 		
 		txtTotal = new JTextField();
 		GridBagConstraints gbc_txtTotal = new GridBagConstraints();
-		gbc_txtTotal.fill = GridBagConstraints.HORIZONTAL;
-		gbc_txtTotal.insets = new Insets(0, 0, 0, 5);
-		gbc_txtTotal.gridwidth = 3;
-		gbc_txtTotal.gridx = 11;
+		gbc_txtTotal.anchor = GridBagConstraints.EAST;
+		gbc_txtTotal.gridx = 2;
 		gbc_txtTotal.gridy = 0;
 		panelTotal.add(txtTotal, gbc_txtTotal);
 		txtTotal.setColumns(10);

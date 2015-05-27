@@ -29,7 +29,7 @@ public class BuscarPedidoUI extends JPanel {
 	@SuppressWarnings("serial")
 	public BuscarPedidoUI() {
 		GridBagLayout gridBagLayout = new GridBagLayout();
-		gridBagLayout.columnWidths = new int[]{0, 0, 0, 0};
+		gridBagLayout.columnWidths = new int[]{20, 0, 20, 0};
 		gridBagLayout.rowHeights = new int[]{0, 0, 32, 32, 76, 0, 0, 0, 0};
 		gridBagLayout.columnWeights = new double[]{0.0, 1.0, 0.0, Double.MIN_VALUE};
 		gridBagLayout.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, Double.MIN_VALUE};
@@ -91,6 +91,7 @@ public class BuscarPedidoUI extends JPanel {
 		btnBuscar = new JButton("");
 		btnBuscar.setIcon(new ImageIcon(BuscarPedidoUI.class.getResource("/iconos/magnifier-left.png")));
 		GridBagConstraints gbc_btnBuscar = new GridBagConstraints();
+		gbc_btnBuscar.anchor = GridBagConstraints.EAST;
 		gbc_btnBuscar.gridx = 3;
 		gbc_btnBuscar.gridy = 0;
 		panelNumeroPedido.add(btnBuscar, gbc_btnBuscar);
@@ -196,7 +197,6 @@ public class BuscarPedidoUI extends JPanel {
 		
 		JPanel panelTotal = new JPanel();
 		GridBagConstraints gbc_panelTotal = new GridBagConstraints();
-		gbc_panelTotal.gridwidth = 2;
 		gbc_panelTotal.anchor = GridBagConstraints.EAST;
 		gbc_panelTotal.insets = new Insets(0, 0, 5, 0);
 		gbc_panelTotal.fill = GridBagConstraints.VERTICAL;
@@ -224,7 +224,7 @@ public class BuscarPedidoUI extends JPanel {
 		GridBagConstraints gbc_txtTotal = new GridBagConstraints();
 		gbc_txtTotal.insets = new Insets(0, 0, 0, 5);
 		gbc_txtTotal.fill = GridBagConstraints.HORIZONTAL;
-		gbc_txtTotal.gridwidth = 3;
+		gbc_txtTotal.gridwidth = 4;
 		gbc_txtTotal.gridx = 12;
 		gbc_txtTotal.gridy = 0;
 		panelTotal.add(txtTotal, gbc_txtTotal);
