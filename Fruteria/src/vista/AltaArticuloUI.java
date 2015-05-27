@@ -45,13 +45,14 @@ public class AltaArticuloUI extends JPanel {
 		lblAltaArticulos.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
 		GridBagConstraints gbc_lblAltaArticulos = new GridBagConstraints();
 		gbc_lblAltaArticulos.anchor = GridBagConstraints.SOUTH;
-		gbc_lblAltaArticulos.gridwidth = 4;
+		gbc_lblAltaArticulos.gridwidth = 5;
 		gbc_lblAltaArticulos.insets = new Insets(0, 0, 5, 5);
-		gbc_lblAltaArticulos.gridx = 3;
+		gbc_lblAltaArticulos.gridx = 2;
 		gbc_lblAltaArticulos.gridy = 0;
 		add(lblAltaArticulos, gbc_lblAltaArticulos);
 
 		GridBagConstraints gbc_lblNombre = new GridBagConstraints();
+		gbc_lblNombre.anchor = GridBagConstraints.EAST;
 		gbc_lblNombre.insets = new Insets(0, 0, 5, 5);
 		gbc_lblNombre.gridx = 1;
 		gbc_lblNombre.gridy = 1;
@@ -60,14 +61,15 @@ public class AltaArticuloUI extends JPanel {
 		txtNombre = new JTextField();
 		GridBagConstraints gbc_txtNombre = new GridBagConstraints();
 		gbc_txtNombre.insets = new Insets(0, 0, 5, 5);
-		gbc_txtNombre.gridwidth = 6;
+		gbc_txtNombre.gridwidth = 7;
 		gbc_txtNombre.fill = GridBagConstraints.HORIZONTAL;
-		gbc_txtNombre.gridx = 3;
+		gbc_txtNombre.gridx = 2;
 		gbc_txtNombre.gridy = 1;
 		add(txtNombre, gbc_txtNombre);
 		txtNombre.setColumns(10);
 
 		GridBagConstraints gbc_lblPrecio = new GridBagConstraints();
+		gbc_lblPrecio.anchor = GridBagConstraints.EAST;
 		gbc_lblPrecio.insets = new Insets(0, 0, 5, 5);
 		gbc_lblPrecio.gridx = 1;
 		gbc_lblPrecio.gridy = 3;
@@ -75,9 +77,10 @@ public class AltaArticuloUI extends JPanel {
 
 		txtPrecio = new JTextField();
 		GridBagConstraints gbc_txtPrecio = new GridBagConstraints();
+		gbc_txtPrecio.gridwidth = 2;
 		gbc_txtPrecio.insets = new Insets(0, 0, 5, 5);
 		gbc_txtPrecio.fill = GridBagConstraints.HORIZONTAL;
-		gbc_txtPrecio.gridx = 3;
+		gbc_txtPrecio.gridx = 2;
 		gbc_txtPrecio.gridy = 3;
 		add(txtPrecio, gbc_txtPrecio);
 		txtPrecio.setColumns(10);

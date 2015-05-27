@@ -17,7 +17,7 @@ public class BuscarArticuloUI extends JPanel {
 	protected JTextField txtPVP;
 	protected JTextField txtDescripcion;
 	protected JTextField txtMensaje;
-	protected JLabel lblBsquedaDeArticulos = new JLabel("B\u00FAsqueda de articulos");
+	protected JLabel lblBsquedaDeArticulos = new JLabel("Búsqueda de artículos");
 	protected JLabel lblBusquedaNombre = new JLabel("Búsqueda Nombre");
 	protected JButton btnBuscar = new JButton("");
 	protected JLabel lblNombre = new JLabel("Nombre");
