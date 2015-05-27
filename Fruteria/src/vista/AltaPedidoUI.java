@@ -199,7 +199,7 @@ public class AltaPedidoUI extends JPanel {
 		gbc_button.gridy = 1;
 		panelBuscarCliente.add(button, gbc_button);
 		
-		lblDatos = new JLabel("Nombre");
+		lblDatos = new JLabel("DNI");
 		GridBagConstraints gbc_lblDatos = new GridBagConstraints();
 		gbc_lblDatos.anchor = GridBagConstraints.EAST;
 		gbc_lblDatos.insets = new Insets(0, 0, 5, 5);
@@ -217,7 +217,7 @@ public class AltaPedidoUI extends JPanel {
 		panelBuscarCliente.add(txtDatoUno, gbc_txtDatoUno);
 		txtDatoUno.setColumns(10);
 		
-		lblApellidos_1 = new JLabel("Apellidos");
+		lblApellidos_1 = new JLabel("Nombre");
 		GridBagConstraints gbc_lblApellidos_1 = new GridBagConstraints();
 		gbc_lblApellidos_1.insets = new Insets(0, 0, 5, 5);
 		gbc_lblApellidos_1.anchor = GridBagConstraints.EAST;
@@ -235,7 +235,7 @@ public class AltaPedidoUI extends JPanel {
 		panelBuscarCliente.add(txtDatoDos, gbc_txtDatoDos);
 		txtDatoDos.setColumns(10);
 		
-		lblDni = new JLabel("DNI");
+		lblDni = new JLabel("Apellidos");
 		GridBagConstraints gbc_lblDni = new GridBagConstraints();
 		gbc_lblDni.insets = new Insets(0, 0, 5, 5);
 		gbc_lblDni.anchor = GridBagConstraints.EAST;

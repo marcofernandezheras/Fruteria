@@ -55,9 +55,9 @@ public class ParaAltaPedido extends AltaPedidoUI {
 				if (listaArticulos.buscarArticulo(txtBuscarArticulo.getText()) != null) {
 					txtBuscarArticulo.setBackground(Color.white);
 					txtDescripcion.setText(listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getDescripcion());
-					txtPrecio.setText(String.format("%.02",listaArticulos.buscarArticulo(txtBuscarArticulo.getText())
+					txtPrecio.setText(String.format("%.02f",listaArticulos.buscarArticulo(txtBuscarArticulo.getText())
 							.getPrecio()));
-					txtPvp.setText(String.format("%.02", listaArticulos.buscarArticulo(txtBuscarArticulo.getText())
+					txtPvp.setText(String.format("%.02f", listaArticulos.buscarArticulo(txtBuscarArticulo.getText())
 							.getPVP()));
 				} else {
 					txtBuscarArticulo.setBackground(Color.RED);
@@ -83,10 +83,10 @@ public class ParaAltaPedido extends AltaPedidoUI {
 
 								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getNombre(),
 								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getDescripcion(),
-								listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getPVP(),
+								String.format("%.02f",listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getPVP()),
 								Integer.valueOf(txtCantidad.getText()),
-								Integer.valueOf(txtCantidad.getText())
-										* listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getPVP() });
+								String.format("%.02f",Integer.valueOf(txtCantidad.getText())
+										* listaArticulos.buscarArticulo(txtBuscarArticulo.getText()).getPVP()) });
 
 						txtTotal.setText(String.format("%.02f", gestorPedidos.totalPedidoActual()));
 						txtBuscarArticulo.setText("");

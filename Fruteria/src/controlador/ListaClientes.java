@@ -59,7 +59,7 @@ public class ListaClientes implements IListaCliente {
 
 		for (int i = 0; i < clientes.size(); i++) {
 
-			if (nombre.equalsIgnoreCase(clientes.get(i).getNombre()) && apellidos.equals(clientes.get(i).getApellidos())) {
+			if (nombre.equalsIgnoreCase(clientes.get(i).getNombre()) && apellidos.equalsIgnoreCase(clientes.get(i).getApellidos())) {
 				return clientes.get(i);
 			}
 

@@ -33,7 +33,7 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 	private void buscarCliente() {
 		txtMensaje.setText("");
 		if (!txtBuscarNombre.getText().isEmpty() && !txtBuscarApellido.getText().isEmpty()) {
-			Cliente cliente = listaCliente.buscarCliente(txtBuscarNombre.getText().toLowerCase(), txtBuscarApellido.getText().toLowerCase());
+			Cliente cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
 			if (cliente != null) {
 				txtMensaje.setText("");
 				txtDNI.setText(cliente.getDni());

@@ -56,9 +56,9 @@ public class ParaBuscarPedido extends BuscarPedidoUI {
 					model.addRow(new Object[]{
 							articulo.getNombre(),
 							articulo.getDescripcion(),
-							articulo.getPVP(),
+							String.format("%.02f",articulo.getPVP()),
 							lineaPedido.getCantidad(),
-							lineaPedido.getTotalLinea()
+							String.format("%.02f",lineaPedido.getTotalLinea())
 					});
 				}
 				
