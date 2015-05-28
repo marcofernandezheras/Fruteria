@@ -116,7 +116,9 @@ public class ParaPrincipalUI extends PrincipalUI {
 	}
 
 	protected void buscarArticulo() {
-		cambiarPanel(new ParaBuscarArticulo(listaArticulos));
+		ParaBuscarArticulo paraBuscarArticulo = new ParaBuscarArticulo(listaArticulos);
+		cambiarPanel(paraBuscarArticulo);
+		paraBuscarArticulo.initCompleter();
 	}
 
 	protected void altaArticulo() {
