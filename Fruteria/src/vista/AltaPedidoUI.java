@@ -92,7 +92,7 @@ public class AltaPedidoUI extends JPanel {
 		add(panelNumeroPedido, gbc_panelNumeroPedido);
 		GridBagLayout gbl_panelNumeroPedido = new GridBagLayout();
 		gbl_panelNumeroPedido.columnWidths = new int[]{20, 28, 107, 122, 160, 0, 0, 0};
-		gbl_panelNumeroPedido.rowHeights = new int[]{10, 0, 10, 0};
+		gbl_panelNumeroPedido.rowHeights = new int[]{10, 33, 10, 0};
 		gbl_panelNumeroPedido.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, Double.MIN_VALUE};
 		gbl_panelNumeroPedido.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panelNumeroPedido.setLayout(gbl_panelNumeroPedido);
@@ -117,12 +117,14 @@ public class AltaPedidoUI extends JPanel {
 		txtNumeroPedido.setColumns(10);
 		
 		btnGuardarPedido = new JButton("Guardar y nuevo");
+		btnGuardarPedido.setIconTextGap(2);
+		btnGuardarPedido.setIcon(new ImageIcon(AltaPedidoUI.class.getResource("/iconos/disk-black.png")));
 		btnGuardarPedido.setPreferredSize(new Dimension(63, 23));
-		btnGuardarPedido.setMinimumSize(new Dimension(63, 23));
+		btnGuardarPedido.setMinimumSize(new Dimension(63, 33));
 		btnGuardarPedido.setMaximumSize(new Dimension(63, 23));
 		GridBagConstraints gbc_btnGuardarPedido = new GridBagConstraints();
 		gbc_btnGuardarPedido.insets = new Insets(0, 0, 5, 5);
-		gbc_btnGuardarPedido.fill = GridBagConstraints.HORIZONTAL;
+		gbc_btnGuardarPedido.fill = GridBagConstraints.BOTH;
 		gbc_btnGuardarPedido.gridx = 4;
 		gbc_btnGuardarPedido.gridy = 1;
 		panelNumeroPedido.add(btnGuardarPedido, gbc_btnGuardarPedido);
