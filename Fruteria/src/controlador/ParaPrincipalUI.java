@@ -3,6 +3,7 @@ import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.border.EmptyBorder;
@@ -51,12 +52,29 @@ public class ParaPrincipalUI extends PrincipalUI {
 	 * Create the frame.
 	 */
 	public ParaPrincipalUI() {
+		mntmAcercaDe.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dialogoAbout();
+			}
+		});
 		listaArticulos = new ListaArticulos();
 		listaCliente = new ListaClientes();
 		gestorPedidos=new ListaPedidos();
 		eventos();
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);		
+	}
+
+	protected void dialogoAbout() {
+		JOptionPane.showMessageDialog(this, 
+				"P R O Y E C T O   F R U T E R  Í  A\n"
+				+"Hecho por:\n"
+				+"   María Cabeza Castillo.\n"
+				+"   Miguel Hidalgo Castro.\n"
+				+"   Marco A. Fernández Heras.\n"
+				+"   Daniel Vargas Gonzalez.\n"
+				+"   Eduardo Acedo García.\n",
+				"Acerca de", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 	private void eventos() {

@@ -3,6 +3,9 @@ package controlador;
 import vista.BuscarClienteUI;
 
 import java.awt.event.ActionListener;
+
+import javax.swing.JOptionPane;
+
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 
@@ -31,11 +34,9 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 	 * Evento del boton <code>btnBuscar</code>
 	 */
 	private void buscarCliente() {
-		txtMensaje.setText("");
 		if (!txtBuscarNombre.getText().isEmpty() && !txtBuscarApellido.getText().isEmpty()) {
 			Cliente cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
 			if (cliente != null) {
-				txtMensaje.setText("");
 				txtDNI.setText(cliente.getDni());
 				txtNombre.setText(cliente.getNombre());
 				txtApellido.setText(cliente.getApellidos());
@@ -46,12 +47,14 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 				txtBuscarNombre.setText("");
 				txtBuscarApellido.setText("");
 			} else {
-				txtMensaje.setText("No existe un cliente con ese nombre y apellidos");
+				JOptionPane.showMessageDialog(this, "No existe un cliente con ese nombre y apellidos", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 			}
 			txtBuscarNombre.setText("");
 			txtBuscarApellido.setText("");
 		} else {
-			txtMensaje.setText("Debe introducir datos para poder buscar");
+			JOptionPane.showMessageDialog(this, "Debe introducir datos para poder buscar", 
+					"Error", JOptionPane.WARNING_MESSAGE);
 		}
 	}
 

@@ -18,13 +18,11 @@ public class BuscarArticuloUI extends JPanel {
 	protected JTextField txtPrecio;
 	protected JTextField txtPVP;
 	protected JTextField txtDescripcion;
-	protected JTextField txtMensaje;
 	protected JLabel lblBsquedaDeArticulos = new JLabel("Búsqueda de artículos");
 	protected JLabel lblBusquedaNombre = new JLabel("Búsqueda Nombre");
 	protected JButton btnBuscar = new JButton("");
 	protected JLabel lblNombre = new JLabel("Nombre");
 	protected JLabel lblPrecio = new JLabel("Precio");
-	protected JLabel lblMensaje = new JLabel("Mensaje");
 	protected JLabel label = new JLabel("\u20AC");
 	protected JLabel lblDescripcin = new JLabel("Descripci\u00F3n");
 	protected JLabel lblPvp = new JLabel("PVP");
@@ -190,24 +188,6 @@ public class BuscarArticuloUI extends JPanel {
 		gbc_label_1.gridx = 8;
 		gbc_label_1.gridy = 7;
 		add(label_1, gbc_label_1);
-
-		GridBagConstraints gbc_lblMensaje = new GridBagConstraints();
-		gbc_lblMensaje.anchor = GridBagConstraints.EAST;
-		gbc_lblMensaje.insets = new Insets(0, 0, 5, 5);
-		gbc_lblMensaje.gridx = 1;
-		gbc_lblMensaje.gridy = 9;
-		add(lblMensaje, gbc_lblMensaje);
-
-		txtMensaje = new JTextField();
-		txtMensaje.setEditable(false);
-		GridBagConstraints gbc_txtMensaje = new GridBagConstraints();
-		gbc_txtMensaje.insets = new Insets(0, 0, 5, 5);
-		gbc_txtMensaje.gridwidth = 6;
-		gbc_txtMensaje.fill = GridBagConstraints.HORIZONTAL;
-		gbc_txtMensaje.gridx = 2;
-		gbc_txtMensaje.gridy = 9;
-		add(txtMensaje, gbc_txtMensaje);
-		txtMensaje.setColumns(10);
 
 	}
 

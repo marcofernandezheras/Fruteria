@@ -47,7 +47,9 @@ public class PrincipalUI extends JFrame {
 	protected JMenuItem mntmModificarCliente;
 	protected JMenuItem mntmBuscarPedido;
 	protected JMenuItem mntmAltaPedido;
-	private JLabel lblNewLabel;
+	protected JLabel lblNewLabel;
+	protected JMenuItem mntmAcercaDe;
+	protected JMenu mnAcercaDe;
 
 	/**
 	 * Launch the application.
@@ -130,6 +132,14 @@ public class PrincipalUI extends JFrame {
 		mntmAltaPedido = new JMenuItem("Alta");
 		mntmAltaPedido.setIcon(new ImageIcon(PrincipalUI.class.getResource("/iconos/plus.png")));
 		mnPedido.add(mntmAltaPedido);
+		
+		mnAcercaDe = new JMenu("Acerca de");
+		mnAcercaDe.setIcon(new ImageIcon(PrincipalUI.class.getResource("/iconos/information.png")));
+		menuBar.add(mnAcercaDe);
+		
+		mntmAcercaDe = new JMenuItem("Acerca de");
+		mnAcercaDe.add(mntmAcercaDe);
+		mntmAcercaDe.setIcon(new ImageIcon(PrincipalUI.class.getResource("/iconos/information.png")));
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

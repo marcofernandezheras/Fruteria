@@ -45,9 +45,11 @@ public class ParaAltaArticulo extends AltaArticuloUI {
 				txtNombre.setText("");
 				txtPVP.setText("");
 			} else
-				JOptionPane.showMessageDialog(this, "El artículo ya existe");
+				JOptionPane.showMessageDialog(this, "El artículo ya existe", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 		} else
-			JOptionPane.showMessageDialog(this, "Datos no válidos");
+			JOptionPane.showMessageDialog(this, "Datos no válidos", 
+					"Error", JOptionPane.WARNING_MESSAGE);
 	}
 
 	/**
@@ -86,7 +88,8 @@ public class ParaAltaArticulo extends AltaArticuloUI {
 				pvp = Float.parseFloat(txtPrecio.getText()) * 1.21f;
 				txtPVP.setText(String.format("%.02f", pvp));
 			} catch (NumberFormatException e) {
-				JOptionPane.showMessageDialog(this, "Formato de precio no válido");
+				JOptionPane.showMessageDialog(this, "Formato de precio no válido", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 				txtPrecio.setText("");
 				txtPVP.setText("");
 			}

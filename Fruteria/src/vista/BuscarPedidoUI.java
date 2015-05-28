@@ -66,7 +66,7 @@ public class BuscarPedidoUI extends JPanel {
 		gbc_panelNumeroPedido.gridy = 3;
 		add(panelNumeroPedido, gbc_panelNumeroPedido);
 		GridBagLayout gbl_panelNumeroPedido = new GridBagLayout();
-		gbl_panelNumeroPedido.columnWidths = new int[]{66, 84, 122, 97, 0};
+		gbl_panelNumeroPedido.columnWidths = new int[]{20, 0, 122, 97, 0};
 		gbl_panelNumeroPedido.rowHeights = new int[]{10, 0, 10, 0};
 		gbl_panelNumeroPedido.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gbl_panelNumeroPedido.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
@@ -74,6 +74,7 @@ public class BuscarPedidoUI extends JPanel {
 		
 		JLabel label = new JLabel("N\u00BA Pedido");
 		GridBagConstraints gbc_label = new GridBagConstraints();
+		gbc_label.anchor = GridBagConstraints.WEST;
 		gbc_label.insets = new Insets(0, 0, 5, 5);
 		gbc_label.gridx = 1;
 		gbc_label.gridy = 1;

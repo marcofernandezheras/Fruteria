@@ -118,6 +118,7 @@ public class AltaClienteUI extends JPanel {
 		gbc_btnEscogerColor.insets = new Insets(0, 0, 5, 5);
 		gbc_btnEscogerColor.gridx = 5;
 		gbc_btnEscogerColor.gridy = 7;
+		btnEscogerColor.setIcon(new ImageIcon(AltaClienteUI.class.getResource("/iconos/color.png")));
 		add(btnEscogerColor, gbc_btnEscogerColor);
 		
 				GridBagConstraints gbc_btnCrear = new GridBagConstraints();

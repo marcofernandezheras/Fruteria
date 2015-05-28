@@ -35,7 +35,8 @@ public class ParaBuscarPedido extends BuscarPedidoUI {
 			try {
 				numero = Integer.parseInt(txtBuscar.getText());
 			} catch (NumberFormatException e) {
-				JOptionPane.showMessageDialog(this, "Debe introducir un número de pedido a buscar");
+				JOptionPane.showMessageDialog(this, "Debe introducir un número de pedido a buscar", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 				return;
 			}
 			

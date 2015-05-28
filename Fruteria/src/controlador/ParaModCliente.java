@@ -28,9 +28,7 @@ public class ParaModCliente extends ModClienteUI {
 		txtDNI.setEditable(false);
 		btnEscogerColor.setEnabled(false);
 		btnModificar.setEnabled(false);
-		//PARA NO ELIMINARLO
-		txtMensaje.setVisible(false);
-		lblMensaje.setVisible(false);
+
 		btnEscogerColor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				escogerColor();
@@ -61,7 +59,6 @@ public class ParaModCliente extends ModClienteUI {
 	}
 
 	private void buscarCliente() {
-		txtMensaje.setText("");
 		if (!txtBuscarNombre.getText().isEmpty() && !txtBuscarApellido.getText().isEmpty()) {
 			cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
 			if (cliente != null) {
@@ -83,12 +80,12 @@ public class ParaModCliente extends ModClienteUI {
 					btnModificar.setEnabled(true);
 				}
 			} else {
-				JOptionPane.showMessageDialog(this, "No existe un cliente con ese nombre y apellido");
-//				txtMensaje.setText("No existe un cliente con ese nombre y apellidos");
+				JOptionPane.showMessageDialog(this, "No existe un cliente con ese nombre y apellido", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 			}
 		} else {
-			JOptionPane.showMessageDialog(this, "Debe introducir datos para poder buscar");
-//			txtMensaje.setText("Debe introducir datos para poder buscar");
+			JOptionPane.showMessageDialog(this, "Debe introducir datos para poder buscar", 
+					"Error", JOptionPane.WARNING_MESSAGE);
 		}
 
 	}
@@ -121,20 +118,20 @@ public class ParaModCliente extends ModClienteUI {
 						btnEscogerColor.setEnabled(false);
 						btnModificar.setEnabled(false);
 					} else {
-						JOptionPane.showMessageDialog(this, "Error interno al modificar");
-//						txtMensaje.setText("Error interno al modificar");
+						JOptionPane.showMessageDialog(this, "Error interno al modificar", 
+								"Error", JOptionPane.WARNING_MESSAGE);
 					}
 				} else {
-					JOptionPane.showMessageDialog(this, "DNI erroneo");
-//					txtMensaje.setText("DNI erroneo");
+					JOptionPane.showMessageDialog(this, "DNI erroneo", 
+							"Error", JOptionPane.WARNING_MESSAGE);
 				}
 			} else {
-				JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios");
-//				txtMensaje.setText("Todos los campos son obligatorios");
+				JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 			}
 		} else {
-			JOptionPane.showMessageDialog(this, "Debe buscar un cliente a modificar");
-//			txtMensaje.setText("Debe buscar un cliente a modificar");
+			JOptionPane.showMessageDialog(this, "Debe buscar un cliente a modificar", 
+					"Error", JOptionPane.WARNING_MESSAGE);
 		}
 	}
 

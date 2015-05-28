@@ -3,6 +3,8 @@ package controlador;
 import vista.BuscarArticuloUI;
 import java.awt.event.ActionListener;
 
+import javax.swing.JOptionPane;
+
 import modelo.Articulo;
 
 import java.awt.event.ActionEvent;
@@ -29,12 +31,11 @@ public class ParaBuscarArticulo extends BuscarArticuloUI {
 				txtNombre.setText(articulo.getNombre());
 				txtPrecio.setText(String.format("%.2f", articulo.getPrecio()));
 				txtPVP.setText(String.format("%.2f", articulo.getPVP()));
-
-				txtMensaje.setText("");
 			}
 			else
 			{
-				txtMensaje.setText("No existe un artículo con ese nombre");
+				JOptionPane.showMessageDialog(this, "No existe un artículo con ese nombre", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 				txtPrecio.setText("");
 				txtDescripcion.setText("");
 				txtNombre.setText("");
@@ -43,7 +44,8 @@ public class ParaBuscarArticulo extends BuscarArticuloUI {
 		}
 		else
 		{
-			txtMensaje.setText("Debe introducir datos para poder buscar");
+			JOptionPane.showMessageDialog(this, "Debe introducir datos para poder buscar", 
+					"Error", JOptionPane.WARNING_MESSAGE);
 		}
 		txtBusquedaNombre.setText("");
 	}

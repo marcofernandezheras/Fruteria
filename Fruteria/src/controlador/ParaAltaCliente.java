@@ -26,13 +26,7 @@ public class ParaAltaCliente extends AltaClienteUI {
 	public ParaAltaCliente(IListaCliente listaClientes) {
 		btnEscogerColor.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Color c = JColorChooser.showDialog(null, "Escoger color", colorActual);
-			      if (c != null)
-			      {
-			    	  colorActual = c;
-			    	  txtColorDePelo.setText(colorToText(c));
-			    	  txtColorDePelo.setForeground(c);
-			      }
+				escogerColor();
 			}
 		});
 		this.listaClientes = listaClientes;
@@ -55,7 +49,8 @@ public class ParaAltaCliente extends AltaClienteUI {
 				colorActual = null;
 				JOptionPane.showMessageDialog(this, "Cliente creado con éxito");
 			} else {
-				JOptionPane.showMessageDialog(this, "El cliente ya existe");
+				JOptionPane.showMessageDialog(this, "El cliente ya existe", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 			}
 		}
 
@@ -75,27 +70,32 @@ public class ParaAltaCliente extends AltaClienteUI {
 				{
 					try {
 						Integer.parseInt(txtNombre.getText());
-						JOptionPane.showMessageDialog(this, "El nombre no debe contener números");
+						JOptionPane.showMessageDialog(this, "El nombre no debe contener números", 
+								"Error", JOptionPane.WARNING_MESSAGE);
 					} catch (Exception e2) {
 
 						try {
 							Integer.parseInt(txtApellidos.getText());
-							JOptionPane.showMessageDialog(this, "Los apellidos no deben contener números");
+							JOptionPane.showMessageDialog(this,  "Los apellidos no deben contener números", 
+									"Error", JOptionPane.WARNING_MESSAGE);
 						} catch (Exception e3) {
 							valid = true;
 						}
 					}
 				}
 				else
-				{
-					JOptionPane.showMessageDialog(this, "Color no válido");
+				{				
+					JOptionPane.showMessageDialog(this, "Color no válido", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 				}
 			} else {
-				JOptionPane.showMessageDialog(this, "Algunos campos estan vacios");
+				JOptionPane.showMessageDialog(this, "Algunos campos estan vacios", 
+						"Error", JOptionPane.WARNING_MESSAGE);
 			}
 
 		} else {
-			JOptionPane.showMessageDialog(this, "DNI no válido");
+			JOptionPane.showMessageDialog(this, "DNI no válido", 
+					"Error", JOptionPane.WARNING_MESSAGE);
 		}
 		return valid;
 	}
@@ -108,6 +108,16 @@ public class ParaAltaCliente extends AltaClienteUI {
 
 	private String colorToText(Color c){
 		return String.format("#%02x%02x%02x", c.getRed(), c.getGreen(), c.getBlue());
+	}
+
+	private void escogerColor() {
+		Color c = JColorChooser.showDialog(this, "Escoger color", colorActual);
+		  if (c != null)
+		  {
+			  colorActual = c;
+			  txtColorDePelo.setText(colorToText(c));
+			  txtColorDePelo.setForeground(c);
+		  }
 	}
 }
 

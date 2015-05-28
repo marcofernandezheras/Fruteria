@@ -28,8 +28,6 @@ public class BuscarClienteUI extends JPanel {
 	protected JTextField txtDNI;
 	protected JLabel lblColorPelo;
 	protected JTextField txtColorPelo;
-	protected JLabel lblMensaje;
-	protected JTextField txtMensaje;
 	protected JLabel lblBuscarCliente;
 	protected JTextField txtBuscarApellido;
 	protected JLabel lblNewLabel;
@@ -49,7 +47,7 @@ public class BuscarClienteUI extends JPanel {
 		
 		lblBuscarCliente = new JLabel("BUSCAR CLIENTE");
 		lblBuscarCliente.setIcon(null);
-		lblBuscarCliente.setFont(new Font("Comic Sans MS", Font.PLAIN, 18));
+		lblBuscarCliente.setFont(new Font("Comic Sans MS", Font.PLAIN, 17));
 		GridBagConstraints gbc_lblBuscarCliente = new GridBagConstraints();
 		gbc_lblBuscarCliente.insets = new Insets(0, 0, 5, 5);
 		gbc_lblBuscarCliente.gridx = 2;
@@ -81,7 +79,7 @@ public class BuscarClienteUI extends JPanel {
 		gbc_lblNewLabel.gridx = 1;
 		gbc_lblNewLabel.gridy = 2;
 		panel.add(lblNewLabel, gbc_lblNewLabel);
-		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		
 		txtBuscarNombre = new JTextField();
 		GridBagConstraints gbc_txtBuscarNombre = new GridBagConstraints();
@@ -114,7 +112,7 @@ public class BuscarClienteUI extends JPanel {
 		gbc_lblNewLabel_1.gridx = 1;
 		gbc_lblNewLabel_1.gridy = 3;
 		panel.add(lblNewLabel_1, gbc_lblNewLabel_1);
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		
 		txtBuscarApellido = new JTextField();
 		GridBagConstraints gbc_txtBuscarApellido = new GridBagConstraints();
@@ -127,7 +125,7 @@ public class BuscarClienteUI extends JPanel {
 		txtBuscarApellido.setColumns(10);
 		
 		lblNombre = new JLabel(" Nombre");
-		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		GridBagConstraints gbc_lblNombre = new GridBagConstraints();
 		gbc_lblNombre.anchor = GridBagConstraints.EAST;
 		gbc_lblNombre.insets = new Insets(0, 0, 5, 5);
@@ -146,7 +144,7 @@ public class BuscarClienteUI extends JPanel {
 		txtNombre.setColumns(10);
 		
 		lblApellido = new JLabel("Apellido");
-		lblApellido.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblApellido.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		GridBagConstraints gbc_lblApellido = new GridBagConstraints();
 		gbc_lblApellido.anchor = GridBagConstraints.EAST;
 		gbc_lblApellido.insets = new Insets(0, 0, 5, 5);
@@ -165,7 +163,7 @@ public class BuscarClienteUI extends JPanel {
 		txtApellido.setColumns(10);
 		
 		lblDNI = new JLabel("DNI");
-		lblDNI.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblDNI.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		GridBagConstraints gbc_lblDNI = new GridBagConstraints();
 		gbc_lblDNI.anchor = GridBagConstraints.EAST;
 		gbc_lblDNI.insets = new Insets(0, 0, 5, 5);
@@ -184,7 +182,7 @@ public class BuscarClienteUI extends JPanel {
 		txtDNI.setColumns(10);
 		
 		lblColorPelo = new JLabel("Color Pelo");
-		lblColorPelo.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblColorPelo.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		GridBagConstraints gbc_lblColorPelo = new GridBagConstraints();
 		gbc_lblColorPelo.anchor = GridBagConstraints.EAST;
 		gbc_lblColorPelo.insets = new Insets(0, 0, 5, 5);
@@ -201,25 +199,6 @@ public class BuscarClienteUI extends JPanel {
 		gbc_txtColorPelo.gridy = 7;
 		add(txtColorPelo, gbc_txtColorPelo);
 		txtColorPelo.setColumns(10);
-		
-		lblMensaje = new JLabel("Mensaje");
-		lblMensaje.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		GridBagConstraints gbc_lblMensaje = new GridBagConstraints();
-		gbc_lblMensaje.anchor = GridBagConstraints.EAST;
-		gbc_lblMensaje.insets = new Insets(0, 0, 5, 5);
-		gbc_lblMensaje.gridx = 1;
-		gbc_lblMensaje.gridy = 9;
-		add(lblMensaje, gbc_lblMensaje);
-		
-		txtMensaje = new JTextField();
-		txtMensaje.setEditable(false);
-		GridBagConstraints gbc_txtMensaje = new GridBagConstraints();
-		gbc_txtMensaje.insets = new Insets(0, 0, 5, 5);
-		gbc_txtMensaje.fill = GridBagConstraints.HORIZONTAL;
-		gbc_txtMensaje.gridx = 2;
-		gbc_txtMensaje.gridy = 9;
-		add(txtMensaje, gbc_txtMensaje);
-		txtMensaje.setColumns(10);
 
 	}
 

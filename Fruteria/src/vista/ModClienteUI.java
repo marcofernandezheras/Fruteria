@@ -22,11 +22,9 @@ public class ModClienteUI extends JPanel {
 	protected JTextField txtApellidos;
 	protected JTextField txtDNI;
 	protected JTextField txtColorDePelo;
-	protected JTextField txtMensaje;
 	protected JLabel lblNombre = new JLabel("Nombre");
 	protected JLabel lblApellidos = new JLabel("Apellidos");
 	protected JLabel lblColorDePelo = new JLabel("Color de Pelo");
-	protected JLabel lblMensaje = new JLabel("Mensaje");
 	protected JButton btnModificar = new JButton("Modificar");
 	protected JLabel lblBuscarClientes = new JLabel("Buscar Clientes Existentes");
 	protected JPanel panel = new JPanel();
@@ -212,25 +210,8 @@ public class ModClienteUI extends JPanel {
 		gbc_btnEscogerColor.insets = new Insets(0, 0, 5, 5);
 		gbc_btnEscogerColor.gridx = 5;
 		gbc_btnEscogerColor.gridy = 10;
+		btnEscogerColor.setIcon(new ImageIcon(ModClienteUI.class.getResource("/iconos/color.png")));
 		add(btnEscogerColor, gbc_btnEscogerColor);
-								
-										GridBagConstraints gbc_lblMensaje = new GridBagConstraints();
-										gbc_lblMensaje.anchor = GridBagConstraints.EAST;
-										gbc_lblMensaje.insets = new Insets(0, 0, 5, 5);
-										gbc_lblMensaje.gridx = 1;
-										gbc_lblMensaje.gridy = 11;
-										add(lblMensaje, gbc_lblMensaje);
-						
-								txtMensaje = new JTextField();
-								txtMensaje.setEditable(false);
-								GridBagConstraints gbc_txtMensaje = new GridBagConstraints();
-								gbc_txtMensaje.gridwidth = 4;
-								gbc_txtMensaje.insets = new Insets(0, 0, 5, 5);
-								gbc_txtMensaje.fill = GridBagConstraints.BOTH;
-								gbc_txtMensaje.gridx = 2;
-								gbc_txtMensaje.gridy = 11;
-								add(txtMensaje, gbc_txtMensaje);
-								txtMensaje.setColumns(10);
 										
 												GridBagConstraints gbc_btnModificar = new GridBagConstraints();
 												gbc_btnModificar.fill = GridBagConstraints.HORIZONTAL;

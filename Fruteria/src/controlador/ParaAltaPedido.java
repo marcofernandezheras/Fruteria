@@ -149,8 +149,8 @@ public class ParaAltaPedido extends AltaPedidoUI {
 
 	protected void guardarPedido() {
 		if (!gestorPedidos.guardarPedido()) {
-			JOptionPane.showMessageDialog(this, "El pedidido no se ha guardado con exito");
-
+			JOptionPane.showMessageDialog(this, "El pedido no se ha guardado con exito", 
+					"Error", JOptionPane.WARNING_MESSAGE);
 		}
 	}
 
