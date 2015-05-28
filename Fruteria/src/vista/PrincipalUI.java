@@ -17,6 +17,8 @@ import javax.swing.JMenuItem;
 import javax.swing.ImageIcon;
 import java.awt.Toolkit;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
+import javax.swing.JLabel;
 
 public class PrincipalUI extends JFrame {
 
@@ -45,6 +47,7 @@ public class PrincipalUI extends JFrame {
 	protected JMenuItem mntmModificarCliente;
 	protected JMenuItem mntmBuscarPedido;
 	protected JMenuItem mntmAltaPedido;
+	private JLabel lblNewLabel;
 
 	/**
 	 * Launch the application.
@@ -130,12 +133,11 @@ public class PrincipalUI extends JFrame {
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.columnWidths = new int[] { 0 };
-		gbl_contentPane.rowHeights = new int[] { 0 };
-		gbl_contentPane.columnWeights = new double[] { Double.MIN_VALUE };
-		gbl_contentPane.rowWeights = new double[] { Double.MIN_VALUE };
-		contentPane.setLayout(gbl_contentPane);
+		contentPane.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
+		lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(PrincipalUI.class.getResource("/iconos/4fruit.png")));
+		contentPane.add(lblNewLabel);
 	}
 
 }
