@@ -73,7 +73,7 @@ public class ParaModCliente extends ModClienteUI {
 					txtBuscarNombre.setText("");
 					txtBuscarApellido.setText("");
 
-
+					//He borrado aqui
 					btnEscogerColor.setEnabled(true);
 					btnModificar.setEnabled(true);
 				}
