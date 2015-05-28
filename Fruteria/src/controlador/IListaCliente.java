@@ -1,5 +1,8 @@
 package controlador;
 
+import java.util.Collection;
+import java.util.List;
+
 import modelo.Cliente;
 
 public interface IListaCliente {
@@ -25,5 +28,7 @@ public interface IListaCliente {
 	 * @return <code>true</code> en caso de éxito, <code>false</code> en caso contrario.
 	 */
 	public boolean modificarCliente(Cliente cliente, Object identificador);
+
+	public List<Cliente> listarClientes();
 
 }

@@ -126,7 +126,9 @@ public class ParaPrincipalUI extends PrincipalUI {
 	}
 
 	protected void buscarCliente() {
-		cambiarPanel(new ParaBuscarCliente(listaCliente));	
+		ParaBuscarCliente paraBuscarCliente = new ParaBuscarCliente(listaCliente);
+		cambiarPanel(paraBuscarCliente);	
+		paraBuscarCliente.initCompleter();
 	}
 
 	protected void altaCliente() {
@@ -142,7 +144,9 @@ public class ParaPrincipalUI extends PrincipalUI {
 	}
 
 	protected void altaPedido() {
-		cambiarPanel(new ParaAltaPedido(gestorPedidos,listaArticulos,listaCliente));	
+		ParaAltaPedido p = new ParaAltaPedido(gestorPedidos,listaArticulos,listaCliente);
+		cambiarPanel(p);
+		p.initCompleter();
 		
 	}
 	
