@@ -73,9 +73,7 @@ public class ParaModCliente extends ModClienteUI {
 					txtBuscarNombre.setText("");
 					txtBuscarApellido.setText("");
 
-					txtNombre.setEditable(true);
-					txtApellidos.setEditable(true);
-					txtDNI.setEditable(true);
+
 					btnEscogerColor.setEnabled(true);
 					btnModificar.setEnabled(true);
 				}
