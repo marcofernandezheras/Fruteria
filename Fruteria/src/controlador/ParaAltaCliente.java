@@ -60,7 +60,7 @@ public class ParaAltaCliente extends AltaClienteUI {
 
 		boolean valid = false;
 		Validador validador = new Validador();
-		int e = validador.checkNif(txtDNI.getText());
+		int e = validador.checkNif(txtDNI.getText().toUpperCase());
 
 		if (e > 0) {
 			if (!txtNombre.getText().isEmpty() && !txtApellidos.getText().isEmpty()

@@ -37,7 +37,7 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 		if (!txtBuscarNombre.getText().isEmpty() && !txtBuscarApellido.getText().isEmpty()) {
 			Cliente cliente = listaCliente.buscarCliente(txtBuscarNombre.getText(), txtBuscarApellido.getText());
 			if (cliente != null) {
-				txtDNI.setText(cliente.getDni());
+				txtDNI.setText(cliente.getDni().toUpperCase());
 				txtNombre.setText(cliente.getNombre());
 				txtApellido.setText(cliente.getApellidos());
 				if (cliente.getColorPelo() != null) {
