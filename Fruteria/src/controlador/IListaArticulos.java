@@ -1,5 +1,8 @@
 package controlador;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import modelo.Articulo;
 
 public interface IListaArticulos {
@@ -18,4 +21,5 @@ public interface IListaArticulos {
 	 */
 	public boolean insertarArticulo(Articulo articulo);
 
+	public List<Articulo> listarArticulo();
 }

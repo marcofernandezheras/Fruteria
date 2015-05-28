@@ -2,6 +2,8 @@ package controlador;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 import modelo.AccesoFichero;
@@ -67,6 +69,11 @@ public class ListaArticulos implements IListaArticulos {
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public List<Articulo> listarArticulo() {
+		return this.articulos;
 	}
 
 }

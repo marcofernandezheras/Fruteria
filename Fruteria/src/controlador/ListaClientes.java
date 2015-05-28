@@ -2,6 +2,7 @@ package controlador;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.Vector;
 
 import modelo.AccesoFichero;
@@ -116,6 +117,11 @@ public class ListaClientes implements IListaCliente {
 
 		return false;
 
+	}
+
+	@Override
+	public List<Cliente> listarClientes() {
+		return clientes;
 	}
 
 }

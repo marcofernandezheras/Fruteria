@@ -143,6 +143,7 @@ public class ModClienteUI extends JPanel {
 								add(lblNombre, gbc_lblNombre);
 				
 						txtNombre = new JTextField();
+						txtNombre.setEditable(false);
 						GridBagConstraints gbc_txtNombre = new GridBagConstraints();
 						gbc_txtNombre.gridwidth = 4;
 						gbc_txtNombre.insets = new Insets(0, 0, 5, 5);
@@ -160,6 +161,7 @@ public class ModClienteUI extends JPanel {
 														add(lblApellidos, gbc_lblApellidos);
 														
 																txtApellidos = new JTextField();
+																txtApellidos.setEditable(false);
 																GridBagConstraints gbc_txtApellidos = new GridBagConstraints();
 																gbc_txtApellidos.gridwidth = 4;
 																gbc_txtApellidos.insets = new Insets(0, 0, 5, 5);
@@ -178,6 +180,7 @@ public class ModClienteUI extends JPanel {
 														add(lblDni, gbc_lblDni);
 						
 								txtDNI = new JTextField();
+								txtDNI.setEditable(false);
 								GridBagConstraints gbc_txtDNI = new GridBagConstraints();
 								gbc_txtDNI.gridwidth = 4;
 								gbc_txtDNI.insets = new Insets(0, 0, 5, 5);

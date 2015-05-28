@@ -23,9 +23,6 @@ public class ParaModCliente extends ModClienteUI {
 
 	public ParaModCliente(IListaCliente listaCliente) {
 		btnBuscar.setFocusable(false);
-		txtNombre.setEditable(false);
-		txtApellidos.setEditable(false);
-		txtDNI.setEditable(false);
 		btnEscogerColor.setEnabled(false);
 		btnModificar.setEnabled(false);
 
@@ -72,10 +69,6 @@ public class ParaModCliente extends ModClienteUI {
 					txtColorDePelo.setForeground(cliente.getColorPelo());
 					txtBuscarNombre.setText("");
 					txtBuscarApellido.setText("");
-
-					txtNombre.setEditable(true);
-					txtApellidos.setEditable(true);
-					txtDNI.setEditable(true);
 					btnEscogerColor.setEnabled(true);
 					btnModificar.setEnabled(true);
 				}

@@ -3,14 +3,17 @@ package controlador;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Window;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JColorChooser;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
@@ -19,10 +22,12 @@ import vista.AltaPedidoUI;
 public class ParaAltaPedido extends AltaPedidoUI {
 	IGestorPedidos gestorPedidos;
 	IListaCliente listaClientes;
+	IListaArticulos listaArticulos;
 	public ParaAltaPedido(IGestorPedidos gestorPedidos, IListaArticulos listaArticulos, IListaCliente listaClientes) {
 
 		this.gestorPedidos=gestorPedidos;
 		this.listaClientes=listaClientes;
+		this.listaArticulos = listaArticulos;
 		gestorPedidos.altaPedido();
 		txtNumeroPedido.setText(String.valueOf(gestorPedidos.numeroPedidoActual()));
 		
@@ -147,6 +152,60 @@ public class ParaAltaPedido extends AltaPedidoUI {
 		return cantidadCorrecta;
 	}
 
+	public void initCompleter() {
+		Window windowAncestor = SwingUtilities.getWindowAncestor(this);
+		AutoSuggestor autoSuggestor = new AutoSuggestor(txtNombre, windowAncestor , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
+            @Override
+            boolean wordTyped(String typedWord) {
+
+                //create list for dictionary this in your case might be done via calling a method which queries db and returns results as arraylist
+                ArrayList<String> words = new ArrayList<>();
+                
+                listaClientes.listarClientes().stream()
+                .filter(a -> a.getNombre().toUpperCase().contains(typedWord.toUpperCase()))
+                .forEach(a -> words.add(a.getNombre()));
+                setDictionary(words);
+
+
+                return super.wordTyped(typedWord);//now call super to check for any matches against newest dictionary
+            }
+        };
+        
+        AutoSuggestor autoSuggestor2 = new AutoSuggestor(txtApellidos, windowAncestor , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
+            @Override
+            boolean wordTyped(String typedWord) {
+
+                //create list for dictionary this in your case might be done via calling a method which queries db and returns results as arraylist
+                ArrayList<String> words = new ArrayList<>();
+                
+                listaClientes.listarClientes().stream()
+                .filter(a -> a.getApellidos().toUpperCase().contains(typedWord.toUpperCase()))
+                .forEach(a -> words.add(a.getApellidos()));
+                setDictionary(words);
+
+
+                return super.wordTyped(typedWord);//now call super to check for any matches against newest dictionary
+            }
+        };
+        
+        AutoSuggestor autoSuggestor3 = new AutoSuggestor(txtBuscarArticulo, windowAncestor , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
+            @Override
+            boolean wordTyped(String typedWord) {
+
+                //create list for dictionary this in your case might be done via calling a method which queries db and returns results as arraylist
+                ArrayList<String> words = new ArrayList<>();
+                
+                listaArticulos.listarArticulo().stream()
+                .filter(a -> a.getNombre().toUpperCase().contains(typedWord.toUpperCase()))
+                .forEach(a -> words.add(a.getNombre()));
+                setDictionary(words);
+
+
+                return super.wordTyped(typedWord);//now call super to check for any matches against newest dictionary
+            }
+        };
+	}
+	
 	protected void guardarPedido() {
 		if (!gestorPedidos.guardarPedido()) {
 			JOptionPane.showMessageDialog(this, "El pedido no se ha guardado con exito", 

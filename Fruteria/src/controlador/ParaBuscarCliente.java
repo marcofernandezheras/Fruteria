@@ -3,10 +3,13 @@ package controlador;
 import vista.BuscarClienteUI;
 
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 import java.awt.Color;
+import java.awt.Window;
 import java.awt.event.ActionEvent;
 
 import modelo.Cliente;
@@ -30,6 +33,42 @@ public class ParaBuscarCliente extends BuscarClienteUI {
 		this.listaCliente = listaCliente;
 	}
 
+	public void initCompleter() {
+		Window windowAncestor = SwingUtilities.getWindowAncestor(this);
+		AutoSuggestor autoSuggestor = new AutoSuggestor(txtBuscarNombre, windowAncestor , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
+            @Override
+            boolean wordTyped(String typedWord) {
+
+                //create list for dictionary this in your case might be done via calling a method which queries db and returns results as arraylist
+                ArrayList<String> words = new ArrayList<>();
+                
+                listaCliente.listarClientes().stream()
+                .filter(a -> a.getNombre().toUpperCase().contains(typedWord.toUpperCase()))
+                .forEach(a -> words.add(a.getNombre()));
+                setDictionary(words);
+
+
+                return super.wordTyped(typedWord);//now call super to check for any matches against newest dictionary
+            }
+        };
+        
+        AutoSuggestor autoSuggestor2 = new AutoSuggestor(txtBuscarApellido, windowAncestor , null, Color.WHITE.brighter(), Color.BLUE, Color.RED, 0.75f) {
+            @Override
+            boolean wordTyped(String typedWord) {
+
+                //create list for dictionary this in your case might be done via calling a method which queries db and returns results as arraylist
+                ArrayList<String> words = new ArrayList<>();
+                
+                listaCliente.listarClientes().stream()
+                .filter(a -> a.getApellidos().toUpperCase().contains(typedWord.toUpperCase()))
+                .forEach(a -> words.add(a.getApellidos()));
+                setDictionary(words);
+
+
+                return super.wordTyped(typedWord);//now call super to check for any matches against newest dictionary
+            }
+        };
+	}
 	/**
 	 * Evento del boton <code>btnBuscar</code>
 	 */
